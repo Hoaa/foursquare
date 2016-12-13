@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F91E87C1DFEB86D0053DFC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E87B1DFEB86D0053DFC7 /* AppDelegate.swift */; };
-		3F91E87E1DFEB86D0053DFC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E87D1DFEB86D0053DFC7 /* ViewController.swift */; };
-		3F91E8811DFEB86D0053DFC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F91E87F1DFEB86D0053DFC7 /* Main.storyboard */; };
-		3F91E8831DFEB86D0053DFC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F91E8821DFEB86D0053DFC7 /* Assets.xcassets */; };
-		3F91E8861DFEB86D0053DFC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F91E8841DFEB86D0053DFC7 /* LaunchScreen.storyboard */; };
 		3F91E8911DFEB86D0053DFC7 /* FourSquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E8901DFEB86D0053DFC7 /* FourSquareTests.swift */; };
 		3F91E89C1DFEB86D0053DFC7 /* FourSquareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E89B1DFEB86D0053DFC7 /* FourSquareUITests.swift */; };
+		3F91E8BB1DFEB9900053DFC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E8AB1DFEB9900053DFC7 /* AppDelegate.swift */; };
+		3F91E8BC1DFEB9900053DFC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F91E8AE1DFEB9900053DFC7 /* LaunchScreen.storyboard */; };
+		3F91E8BE1DFEB9900053DFC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F91E8B81DFEB9900053DFC7 /* Assets.xcassets */; };
 		8D9B028509B0C8C317BF964D /* Pods_FourSquareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29150974DC848B7554E48ED6 /* Pods_FourSquareUITests.framework */; };
 		C274D9DB965FD6BCE9C95625 /* Pods_FourSquareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9100CA4EE635A032CCE56AF /* Pods_FourSquareTests.framework */; };
 		F3CA64A549E93BC50331F03A /* Pods_FourSquare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A373623929F7FBB2BC54D4C /* Pods_FourSquare.framework */; };
@@ -40,18 +38,16 @@
 		0D917DDDD19EDD78A4F81F00 /* Pods-FourSquareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquareUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquareUITests/Pods-FourSquareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		29150974DC848B7554E48ED6 /* Pods_FourSquareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourSquareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F91E8781DFEB86D0053DFC7 /* FourSquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourSquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F91E87B1DFEB86D0053DFC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F91E87D1DFEB86D0053DFC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3F91E8801DFEB86D0053DFC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3F91E8821DFEB86D0053DFC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3F91E8851DFEB86D0053DFC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3F91E8871DFEB86D0053DFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F91E88C1DFEB86D0053DFC7 /* FourSquareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FourSquareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F91E8901DFEB86D0053DFC7 /* FourSquareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareTests.swift; sourceTree = "<group>"; };
 		3F91E8921DFEB86D0053DFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F91E8971DFEB86D0053DFC7 /* FourSquareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FourSquareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F91E89B1DFEB86D0053DFC7 /* FourSquareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareUITests.swift; sourceTree = "<group>"; };
 		3F91E89D1DFEB86D0053DFC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F91E8AB1DFEB9900053DFC7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3F91E8AF1DFEB9900053DFC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3F91E8B41DFEB9900053DFC7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F91E8B81DFEB9900053DFC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A373623929F7FBB2BC54D4C /* Pods_FourSquare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourSquare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		952A99CDB84E9D2046C71497 /* Pods-FourSquareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquareTests/Pods-FourSquareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A9100CA4EE635A032CCE56AF /* Pods_FourSquareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourSquareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,12 +110,15 @@
 		3F91E87A1DFEB86D0053DFC7 /* FourSquare */ = {
 			isa = PBXGroup;
 			children = (
-				3F91E87B1DFEB86D0053DFC7 /* AppDelegate.swift */,
-				3F91E87D1DFEB86D0053DFC7 /* ViewController.swift */,
-				3F91E87F1DFEB86D0053DFC7 /* Main.storyboard */,
-				3F91E8821DFEB86D0053DFC7 /* Assets.xcassets */,
-				3F91E8841DFEB86D0053DFC7 /* LaunchScreen.storyboard */,
-				3F91E8871DFEB86D0053DFC7 /* Info.plist */,
+				3F91E8A91DFEB9900053DFC7 /* Controllers */,
+				3F91E8B01DFEB9900053DFC7 /* Define */,
+				3F91E8B11DFEB9900053DFC7 /* Extensions */,
+				3F91E8B31DFEB9900053DFC7 /* Info */,
+				3F91E8B51DFEB9900053DFC7 /* Libraries */,
+				3F91E8B61DFEB9900053DFC7 /* Models */,
+				3F91E8B71DFEB9900053DFC7 /* Resources */,
+				3F91E8B91DFEB9900053DFC7 /* Services */,
+				3F91E8BA1DFEB9900053DFC7 /* Views */,
 			);
 			path = FourSquare;
 			sourceTree = "<group>";
@@ -140,6 +139,105 @@
 				3F91E89D1DFEB86D0053DFC7 /* Info.plist */,
 			);
 			path = FourSquareUITests;
+			sourceTree = "<group>";
+		};
+		3F91E8A91DFEB9900053DFC7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3F91E8AA1DFEB9900053DFC7 /* AppDelegate */,
+				3F91E8AC1DFEB9900053DFC7 /* Base */,
+				3F91E8AD1DFEB9900053DFC7 /* LaunchScreen */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3F91E8AA1DFEB9900053DFC7 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3F91E8AB1DFEB9900053DFC7 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		3F91E8AC1DFEB9900053DFC7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		3F91E8AD1DFEB9900053DFC7 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3F91E8AE1DFEB9900053DFC7 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		3F91E8B01DFEB9900053DFC7 /* Define */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Define;
+			sourceTree = "<group>";
+		};
+		3F91E8B11DFEB9900053DFC7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3F91E8B21DFEB9900053DFC7 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3F91E8B21DFEB9900053DFC7 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		3F91E8B31DFEB9900053DFC7 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				3F91E8B41DFEB9900053DFC7 /* Info.plist */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		3F91E8B51DFEB9900053DFC7 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		3F91E8B61DFEB9900053DFC7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3F91E8B71DFEB9900053DFC7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F91E8B81DFEB9900053DFC7 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3F91E8B91DFEB9900053DFC7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3F91E8BA1DFEB9900053DFC7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		62A37044AADA7146A121FC89 /* Pods */ = {
@@ -178,6 +276,7 @@
 				3F91E8761DFEB86D0053DFC7 /* Resources */,
 				40ECB9A285B3175DA3C957F8 /* [CP] Embed Pods Frameworks */,
 				1474809629F32AF29DF838A3 /* [CP] Copy Pods Resources */,
+				3FA32A2B1DFFA2A7005042B2 /* Swiftlink */,
 			);
 			buildRules = (
 			);
@@ -282,9 +381,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F91E8861DFEB86D0053DFC7 /* LaunchScreen.storyboard in Resources */,
-				3F91E8831DFEB86D0053DFC7 /* Assets.xcassets in Resources */,
-				3F91E8811DFEB86D0053DFC7 /* Main.storyboard in Resources */,
+				3F91E8BE1DFEB9900053DFC7 /* Assets.xcassets in Resources */,
+				3F91E8BC1DFEB9900053DFC7 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +432,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FourSquareUITests/Pods-FourSquareUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		3FA32A2B1DFFA2A7005042B2 /* Swiftlink */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlink;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		40ECB9A285B3175DA3C957F8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -447,8 +559,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F91E87E1DFEB86D0053DFC7 /* ViewController.swift in Sources */,
-				3F91E87C1DFEB86D0053DFC7 /* AppDelegate.swift in Sources */,
+				3F91E8BB1DFEB9900053DFC7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,18 +595,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3F91E87F1DFEB86D0053DFC7 /* Main.storyboard */ = {
+		3F91E8AE1DFEB9900053DFC7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3F91E8801DFEB86D0053DFC7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3F91E8841DFEB86D0053DFC7 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3F91E8851DFEB86D0053DFC7 /* Base */,
+				3F91E8AF1DFEB9900053DFC7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -521,6 +624,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -570,6 +674,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -600,7 +705,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B3D8J6662Y;
-				INFOPLIST_FILE = FourSquare/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FourSquare/Info/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.duylinh.FourSquare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -614,7 +719,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B3D8J6662Y;
-				INFOPLIST_FILE = FourSquare/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FourSquare/Info/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.duylinh.FourSquare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -699,6 +804,7 @@
 				3F91E8A21DFEB86D0053DFC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F91E8A31DFEB86D0053DFC7 /* Build configuration list for PBXNativeTarget "FourSquareTests" */ = {
 			isa = XCConfigurationList;
@@ -707,6 +813,7 @@
 				3F91E8A51DFEB86D0053DFC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F91E8A61DFEB86D0053DFC7 /* Build configuration list for PBXNativeTarget "FourSquareUITests" */ = {
 			isa = XCConfigurationList;
@@ -715,6 +822,7 @@
 				3F91E8A81DFEB86D0053DFC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
