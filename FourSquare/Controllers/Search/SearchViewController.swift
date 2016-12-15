@@ -8,17 +8,11 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: ViewController {
 
     // MARK: - Cycle Life
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureNavigationBar()
-        configureUI()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 
     // MARK: - Private Function
@@ -27,6 +21,7 @@ class SearchViewController: UIViewController {
             UIColor(red: 0, green: 153/255, blue: 255/255, alpha: 1)
     }
 
-    private func configureUI() {
+    override func configureUI() {
+        super.configureUI()
     }
 }

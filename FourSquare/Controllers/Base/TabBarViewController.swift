@@ -22,20 +22,20 @@ class TabBarViewController: UITabBarController {
 
     // MARK: - Private Functions
     private func configItemViewController() {
-        let listVC = ListViewController(nibName: "ListViewController", bundle: nil)
+        let listVC = ListViewController()
         let naviListVC = UINavigationController(rootViewController: listVC)
         naviListVC.navigationBar.isTranslucent = false
-        let searchVC = SearchViewController(nibName: "SearchViewController", bundle: nil)
+        let searchVC = SearchViewController()
         let naviSearchVC = UINavigationController(rootViewController: searchVC)
         naviSearchVC.navigationBar.isTranslucent = false
-        let historyVC = HistoryViewController(nibName: "HistoryViewController", bundle: nil)
+        let historyVC = HistoryViewController()//override init
         let naviHistoryVC = UINavigationController(rootViewController: historyVC)
         naviHistoryVC.navigationBar.isTranslucent = false
         let profileVC = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
         let naviProfileVC = UINavigationController(rootViewController: profileVC)
         naviProfileVC.navigationBar.isTranslucent = false
-        self.viewControllers = [naviListVC,
-                                naviSearchVC,
+        self.viewControllers = [naviSearchVC,
+                                naviListVC,
                                 naviHistoryVC,
                                 naviProfileVC]
         let itemList = UITabBarItem(title: "List", image: #imageLiteral(resourceName: "Lists"), tag: 0)

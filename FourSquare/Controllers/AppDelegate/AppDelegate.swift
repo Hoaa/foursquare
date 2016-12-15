@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     func changeRootToTabBar() {
+        
         let tabBarVC = TabBarViewController(nibName: "TabBarViewController", bundle: nil)
         window?.rootViewController = tabBarVC
     }

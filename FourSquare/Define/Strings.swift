@@ -11,5 +11,4 @@ struct Strings {
     static let MainMenuListTitle = "Lists"
     static let MainMenuHistoryTitle = "History"
     static let MenuItemsProfileTitle = "Your Profile"
-    
 }

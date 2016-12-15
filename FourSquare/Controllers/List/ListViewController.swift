@@ -10,11 +10,11 @@ import GoogleMaps
 import GooglePlaces
 import GooglePlacePicker
 
-class ListViewController: UIViewController {
+class ListViewController: ViewController {
     
     // MARK: - Property
     @IBOutlet weak var mapContainerView: UIView!
-    @IBOutlet weak var topView: NSLayoutConstraint!
+    @IBOutlet private weak var topView: NSLayoutConstraint!
     @IBOutlet weak var collectionView: UICollectionView!
     let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 5, right: 10)
     var changeStyle: Int = 1 {
@@ -71,8 +71,8 @@ class ListViewController: UIViewController {
         addRightBarButtonItem()
     }
     
-    private func configureUI() {
-        loadData()
+    internal override func configureUI() {
+        loadData()//register tableviewcell, collectionviewcell by generic type
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
@@ -117,7 +117,7 @@ class ListViewController: UIViewController {
         }
     }
     
-    private func loadData() {
+    internal override func loadData() {
         let venue1 = ("ABC", CLLocationCoordinate2D(latitude: 16.0748304, longitude: 108.2219308))
         let venue2 = ("DEF", CLLocationCoordinate2D(latitude: 16.07431, longitude: 108.22132))
         let venue3 = ("GHI", CLLocationCoordinate2D(latitude: 16.07432, longitude: 108.22933))

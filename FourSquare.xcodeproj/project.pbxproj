@@ -19,11 +19,14 @@
 		043B70ED1E0109CF00D955F9 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B70EB1E0109CF00D955F9 /* SearchViewController.xib */; };
 		043B70F01E0109E400D955F9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B70EE1E0109E400D955F9 /* ListViewController.swift */; };
 		043B70F11E0109E400D955F9 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B70EF1E0109E400D955F9 /* ListViewController.xib */; };
+		04515A2E1E030D4B00319D93 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04515A2D1E030D4B00319D93 /* UIColor.swift */; };
+		045D9FD41E02AA4D00E7C3E3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D9FD31E02AA4D00E7C3E3 /* TabBarController.swift */; };
 		046A54561E0105BB003F96A5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A54541E0105BB003F96A5 /* TabBarViewController.swift */; };
 		046A54571E0105BB003F96A5 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046A54551E0105BB003F96A5 /* TabBarViewController.xib */; };
 		04D476F41E012BF600DBAEFE /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D476F31E012BF600DBAEFE /* Strings.swift */; };
 		04D5A0221E0236CB00B3FD74 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5A0201E0236CB00B3FD74 /* ListCollectionViewCell.swift */; };
 		04D5A0231E0236CB00B3FD74 /* ListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D5A0211E0236CB00B3FD74 /* ListCollectionViewCell.xib */; };
+		04FFAB351E02A1AD004F3347 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFAB341E02A1AD004F3347 /* ViewController.swift */; };
 		3F91E8911DFEB86D0053DFC7 /* FourSquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E8901DFEB86D0053DFC7 /* FourSquareTests.swift */; };
 		3F91E89C1DFEB86D0053DFC7 /* FourSquareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E89B1DFEB86D0053DFC7 /* FourSquareUITests.swift */; };
 		3F91E8BB1DFEB9900053DFC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E8AB1DFEB9900053DFC7 /* AppDelegate.swift */; };
@@ -66,11 +69,14 @@
 		043B70EB1E0109CF00D955F9 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchViewController.xib; path = Search/SearchViewController.xib; sourceTree = "<group>"; };
 		043B70EE1E0109E400D955F9 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = List/ListViewController.swift; sourceTree = "<group>"; };
 		043B70EF1E0109E400D955F9 /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListViewController.xib; path = List/ListViewController.xib; sourceTree = "<group>"; };
+		04515A2D1E030D4B00319D93 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		045D9FD31E02AA4D00E7C3E3 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		046A54541E0105BB003F96A5 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		046A54551E0105BB003F96A5 /* TabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		04D476F31E012BF600DBAEFE /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		04D5A0201E0236CB00B3FD74 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListCollectionViewCell.swift; path = ListCollectionViewCell/ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		04D5A0211E0236CB00B3FD74 /* ListCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListCollectionViewCell.xib; path = ListCollectionViewCell/ListCollectionViewCell.xib; sourceTree = "<group>"; };
+		04FFAB341E02A1AD004F3347 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0CE5188E0325E3C8E2C28B46 /* Pods-FourSquare-FourSquareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare-FourSquareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquare-FourSquareTests/Pods-FourSquare-FourSquareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0D917DDDD19EDD78A4F81F00 /* Pods-FourSquareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquareUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquareUITests/Pods-FourSquareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1445D1CFC26AE55BE8AFEF40 /* Pods-FourSquare-FourSquareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare-FourSquareTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquare-FourSquareTests/Pods-FourSquare-FourSquareTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,7 +156,8 @@
 		043B70DE1E01095E00D955F9 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				04D5A0111E0233E500B3FD74 /* ListDefaultView */,
+				043B70EE1E0109E400D955F9 /* ListViewController.swift */,
+				043B70EF1E0109E400D955F9 /* ListViewController.xib */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -180,15 +187,6 @@
 				043B70E31E01098E00D955F9 /* ProfileViewController.xib */,
 			);
 			name = Profile;
-			sourceTree = "<group>";
-		};
-		04D5A0111E0233E500B3FD74 /* ListDefaultView */ = {
-			isa = PBXGroup;
-			children = (
-				043B70EE1E0109E400D955F9 /* ListViewController.swift */,
-				043B70EF1E0109E400D955F9 /* ListViewController.xib */,
-			);
-			name = ListDefaultView;
 			sourceTree = "<group>";
 		};
 		04D5A01F1E0236AA00B3FD74 /* ListCollectionViewCell */ = {
@@ -262,8 +260,8 @@
 				3F91E8AD1DFEB9900053DFC7 /* LaunchScreen */,
 				3F91E8AA1DFEB9900053DFC7 /* AppDelegate */,
 				3F91E8AC1DFEB9900053DFC7 /* Base */,
-				043B70DE1E01095E00D955F9 /* List */,
 				043B70DF1E01096400D955F9 /* Search */,
+				043B70DE1E01095E00D955F9 /* List */,
 				043B70E01E01096E00D955F9 /* History */,
 				043B70E11E01097500D955F9 /* Profile */,
 			);
@@ -283,6 +281,8 @@
 			children = (
 				046A54541E0105BB003F96A5 /* TabBarViewController.swift */,
 				046A54551E0105BB003F96A5 /* TabBarViewController.xib */,
+				045D9FD31E02AA4D00E7C3E3 /* TabBarController.swift */,
+				04FFAB341E02A1AD004F3347 /* ViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -314,6 +314,7 @@
 		3F91E8B21DFEB9900053DFC7 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				04515A2D1E030D4B00319D93 /* UIColor.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -687,10 +688,13 @@
 				0416D9AA1E0279760026B3E4 /* ListMapCollectionViewCell.swift in Sources */,
 				043B70E41E01098E00D955F9 /* ProfileViewController.swift in Sources */,
 				043B70F01E0109E400D955F9 /* ListViewController.swift in Sources */,
+				04FFAB351E02A1AD004F3347 /* ViewController.swift in Sources */,
 				046A54561E0105BB003F96A5 /* TabBarViewController.swift in Sources */,
 				0416D9A41E02724C0026B3E4 /* ListDefaultCollectionViewCell.swift in Sources */,
 				04D476F41E012BF600DBAEFE /* Strings.swift in Sources */,
 				04D5A0221E0236CB00B3FD74 /* ListCollectionViewCell.swift in Sources */,
+				04515A2E1E030D4B00319D93 /* UIColor.swift in Sources */,
+				045D9FD41E02AA4D00E7C3E3 /* TabBarController.swift in Sources */,
 				3F91E8BB1DFEB9900053DFC7 /* AppDelegate.swift in Sources */,
 				043B70E81E0109AE00D955F9 /* HistoryViewController.swift in Sources */,
 			);

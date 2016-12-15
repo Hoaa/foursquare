@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="FourSquare" customModuleProvider="target">
             <connections>
+                <outlet property="searchDisplayController" destination="mic-IE-vFf" id="NB9-Ug-jJX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,5 +21,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </view>
+        <searchDisplayController id="mic-IE-vFf">
+            <connections>
+                <outlet property="delegate" destination="-1" id="v4Q-pc-Gzu"/>
+                <outlet property="searchContentsController" destination="-1" id="bCE-8t-ugo"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="hbv-PK-iNy"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="sD9-uK-G1W"/>
+            </connections>
+        </searchDisplayController>
     </objects>
 </document>
