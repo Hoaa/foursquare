@@ -17,6 +17,9 @@
 		043B70F11E0109E400D955F9 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B70EF1E0109E400D955F9 /* ListViewController.xib */; };
 		046A54561E0105BB003F96A5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A54541E0105BB003F96A5 /* TabBarViewController.swift */; };
 		046A54571E0105BB003F96A5 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046A54551E0105BB003F96A5 /* TabBarViewController.xib */; };
+		04A1665C1E01508000ACE484 /* ListDefaultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1665A1E01508000ACE484 /* ListDefaultCollectionViewCell.swift */; };
+		04A1665D1E01508000ACE484 /* ListDefaultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A1665B1E01508000ACE484 /* ListDefaultCollectionViewCell.xib */; };
+		04D476F41E012BF600DBAEFE /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D476F31E012BF600DBAEFE /* Strings.swift */; };
 		3F91E8911DFEB86D0053DFC7 /* FourSquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E8901DFEB86D0053DFC7 /* FourSquareTests.swift */; };
 		3F91E89C1DFEB86D0053DFC7 /* FourSquareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E89B1DFEB86D0053DFC7 /* FourSquareUITests.swift */; };
 		3F91E8BB1DFEB9900053DFC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E8AB1DFEB9900053DFC7 /* AppDelegate.swift */; };
@@ -55,6 +58,9 @@
 		043B70EF1E0109E400D955F9 /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListViewController.xib; path = List/ListViewController.xib; sourceTree = "<group>"; };
 		046A54541E0105BB003F96A5 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		046A54551E0105BB003F96A5 /* TabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
+		04A1665A1E01508000ACE484 /* ListDefaultCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDefaultCollectionViewCell.swift; sourceTree = "<group>"; };
+		04A1665B1E01508000ACE484 /* ListDefaultCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListDefaultCollectionViewCell.xib; sourceTree = "<group>"; };
+		04D476F31E012BF600DBAEFE /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		0D917DDDD19EDD78A4F81F00 /* Pods-FourSquareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquareUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquareUITests/Pods-FourSquareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		29150974DC848B7554E48ED6 /* Pods_FourSquareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourSquareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F91E8781DFEB86D0053DFC7 /* FourSquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourSquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +147,15 @@
 			name = Profile;
 			sourceTree = "<group>";
 		};
+		04A166591E014E3F00ACE484 /* ListCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				04A1665A1E01508000ACE484 /* ListDefaultCollectionViewCell.swift */,
+				04A1665B1E01508000ACE484 /* ListDefaultCollectionViewCell.xib */,
+			);
+			name = ListCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		3F91E86F1DFEB86D0053DFC7 = {
 			isa = PBXGroup;
 			children = (
@@ -200,13 +215,13 @@
 		3F91E8A91DFEB9900053DFC7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				043B70E11E01097500D955F9 /* Profile */,
-				043B70E01E01096E00D955F9 /* History */,
-				043B70DF1E01096400D955F9 /* Search */,
-				043B70DE1E01095E00D955F9 /* List */,
+				3F91E8AD1DFEB9900053DFC7 /* LaunchScreen */,
 				3F91E8AA1DFEB9900053DFC7 /* AppDelegate */,
 				3F91E8AC1DFEB9900053DFC7 /* Base */,
-				3F91E8AD1DFEB9900053DFC7 /* LaunchScreen */,
+				043B70DE1E01095E00D955F9 /* List */,
+				043B70DF1E01096400D955F9 /* Search */,
+				043B70E01E01096E00D955F9 /* History */,
+				043B70E11E01097500D955F9 /* Profile */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -239,6 +254,7 @@
 		3F91E8B01DFEB9900053DFC7 /* Define */ = {
 			isa = PBXGroup;
 			children = (
+				04D476F31E012BF600DBAEFE /* Strings.swift */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -298,6 +314,7 @@
 		3F91E8BA1DFEB9900053DFC7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				04A166591E014E3F00ACE484 /* ListCollectionViewCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -338,7 +355,6 @@
 				3F91E8761DFEB86D0053DFC7 /* Resources */,
 				40ECB9A285B3175DA3C957F8 /* [CP] Embed Pods Frameworks */,
 				1474809629F32AF29DF838A3 /* [CP] Copy Pods Resources */,
-				3FA32A2B1DFFA2A7005042B2 /* Swiftlink */,
 			);
 			buildRules = (
 			);
@@ -449,6 +465,7 @@
 				043B70ED1E0109CF00D955F9 /* SearchViewController.xib in Resources */,
 				043B70E51E01098E00D955F9 /* ProfileViewController.xib in Resources */,
 				043B70E91E0109AE00D955F9 /* HistoryViewController.xib in Resources */,
+				04A1665D1E01508000ACE484 /* ListDefaultCollectionViewCell.xib in Resources */,
 				3F91E8BC1DFEB9900053DFC7 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,20 +516,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FourSquareUITests/Pods-FourSquareUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		3FA32A2B1DFFA2A7005042B2 /* Swiftlink */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = Swiftlink;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		40ECB9A285B3175DA3C957F8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -630,7 +633,9 @@
 				043B70E41E01098E00D955F9 /* ProfileViewController.swift in Sources */,
 				043B70F01E0109E400D955F9 /* ListViewController.swift in Sources */,
 				046A54561E0105BB003F96A5 /* TabBarViewController.swift in Sources */,
+				04D476F41E012BF600DBAEFE /* Strings.swift in Sources */,
 				3F91E8BB1DFEB9900053DFC7 /* AppDelegate.swift in Sources */,
+				04A1665C1E01508000ACE484 /* ListDefaultCollectionViewCell.swift in Sources */,
 				043B70E81E0109AE00D955F9 /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
