@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0416D9A41E02724C0026B3E4 /* ListDefaultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416D9A21E02724C0026B3E4 /* ListDefaultCollectionViewCell.swift */; };
 		0416D9A51E02724C0026B3E4 /* ListDefaultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0416D9A31E02724C0026B3E4 /* ListDefaultCollectionViewCell.xib */; };
+		0416D9AA1E0279760026B3E4 /* ListMapCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416D9A81E0279760026B3E4 /* ListMapCollectionViewCell.swift */; };
+		0416D9AB1E0279760026B3E4 /* ListMapCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0416D9A91E0279760026B3E4 /* ListMapCollectionViewCell.xib */; };
 		043B70E41E01098E00D955F9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B70E21E01098E00D955F9 /* ProfileViewController.swift */; };
 		043B70E51E01098E00D955F9 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B70E31E01098E00D955F9 /* ProfileViewController.xib */; };
 		043B70E81E0109AE00D955F9 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B70E61E0109AE00D955F9 /* HistoryViewController.swift */; };
@@ -52,6 +54,8 @@
 /* Begin PBXFileReference section */
 		0416D9A21E02724C0026B3E4 /* ListDefaultCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDefaultCollectionViewCell.swift; sourceTree = "<group>"; };
 		0416D9A31E02724C0026B3E4 /* ListDefaultCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListDefaultCollectionViewCell.xib; sourceTree = "<group>"; };
+		0416D9A81E0279760026B3E4 /* ListMapCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListMapCollectionViewCell.swift; sourceTree = "<group>"; };
+		0416D9A91E0279760026B3E4 /* ListMapCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListMapCollectionViewCell.xib; sourceTree = "<group>"; };
 		043B70E21E01098E00D955F9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Profile/ProfileViewController.swift; sourceTree = "<group>"; };
 		043B70E31E01098E00D955F9 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileViewController.xib; path = Profile/ProfileViewController.xib; sourceTree = "<group>"; };
 		043B70E61E0109AE00D955F9 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = History/HistoryViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +126,15 @@
 				0416D9A31E02724C0026B3E4 /* ListDefaultCollectionViewCell.xib */,
 			);
 			path = ListDefaultViewCell;
+			sourceTree = "<group>";
+		};
+		0416D9A71E0279760026B3E4 /* ListMapViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0416D9A81E0279760026B3E4 /* ListMapCollectionViewCell.swift */,
+				0416D9A91E0279760026B3E4 /* ListMapCollectionViewCell.xib */,
+			);
+			path = ListMapViewCell;
 			sourceTree = "<group>";
 		};
 		043B70DE1E01095E00D955F9 /* List */ = {
@@ -337,6 +350,7 @@
 			children = (
 				0416D9A11E02724C0026B3E4 /* ListDefaultViewCell */,
 				04D5A01F1E0236AA00B3FD74 /* ListCollectionViewCell */,
+				0416D9A71E0279760026B3E4 /* ListMapViewCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -490,6 +504,7 @@
 				043B70E51E01098E00D955F9 /* ProfileViewController.xib in Resources */,
 				043B70E91E0109AE00D955F9 /* HistoryViewController.xib in Resources */,
 				3F91E8BC1DFEB9900053DFC7 /* LaunchScreen.storyboard in Resources */,
+				0416D9AB1E0279760026B3E4 /* ListMapCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +668,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				043B70EC1E0109CF00D955F9 /* SearchViewController.swift in Sources */,
+				0416D9AA1E0279760026B3E4 /* ListMapCollectionViewCell.swift in Sources */,
 				043B70E41E01098E00D955F9 /* ProfileViewController.swift in Sources */,
 				043B70F01E0109E400D955F9 /* ListViewController.swift in Sources */,
 				046A54561E0105BB003F96A5 /* TabBarViewController.swift in Sources */,

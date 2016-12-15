@@ -20,14 +20,14 @@ class ListViewController: UIViewController {
         didSet {
             switch changeStyle {
             case 1:
-                addRightBarButtonItemDefaultStyle()
+                addRightBarButtonItem()
                 collectionView.reloadData()
             case 2:
-                addRightBarButtonItemCollectionStyle()
+                addRightBarButtonItem()
                 collectionView.reloadData()
             case 3:
-                addRightBarButtonItemMapStyle()
-                topView.constant = 500
+                addRightBarButtonItem()
+                self.topView.constant = 500
             default:
                 break
             }
@@ -52,7 +52,7 @@ class ListViewController: UIViewController {
             [NSForegroundColorAttributeName : UIColor.white]
         navigationController?.navigationBar.barTintColor =
             UIColor(red: 0, green: 153/255, blue: 255/255, alpha: 1)
-        addRightBarButtonItemDefaultStyle()
+        addRightBarButtonItem()
     }
 
     private func configureUI() {
@@ -63,16 +63,19 @@ class ListViewController: UIViewController {
         collectionView.register(UINib(nibName: "ListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CellCollection")
     }
     
-    private func addRightBarButtonItemDefaultStyle() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "Collection"), style: .done, target: self, action: #selector(changeViewAction))
-    }
-    
-    private func addRightBarButtonItemCollectionStyle() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "Collection"), style: .done, target: self, action: #selector(changeViewAction))
-    }
-
-    private func addRightBarButtonItemMapStyle() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "Collection"), style: .done, target: self, action: #selector(changeViewAction))
+    private func addRightBarButtonItem() {
+        var image = UIImage()
+        switch self.changeStyle {
+        case 1:
+            image = #imageLiteral(resourceName: "Style")
+        case 2:
+            image = #imageLiteral(resourceName: "Style")
+        case 3:
+            image = #imageLiteral(resourceName: "Style")
+        default:
+            break
+        }
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: #selector(changeViewAction))
     }
 
     @objc private func changeViewAction() {
@@ -129,7 +132,12 @@ extension ListViewController: UICollectionViewDelegateFlowLayout {
             let heightPerItem = widthPerItem * 3 / 4 + 44 + 60
             return CGSize(width: widthPerItem, height: heightPerItem)
         } else {
-            return CGSize(width: 0, height: 0)
+            let itemsPerRow: CGFloat = 2
+            let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+            let availableWidth = view.frame.width - paddingSpace
+            let widthPerItem = availableWidth / itemsPerRow
+            let heightPerItem = widthPerItem * 3 / 4 + 44 + 60
+            return CGSize(width: widthPerItem, height: heightPerItem)
         }
     }
     
