@@ -2,19 +2,22 @@
 # platform :ios, '9.0'
 
 target 'FourSquare' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for FourSquare
+  # Networking
+
+  # Database
+
+  # GoogleMaps
+
+  # Utils
 
   target 'FourSquareTests' do
-    inherit! :search_paths
-    # Pods for testing
+
   end
 
   target 'FourSquareUITests' do
-    inherit! :search_paths
-    # Pods for testing
+
   end
 
 end

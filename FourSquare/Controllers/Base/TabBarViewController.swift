@@ -22,7 +22,7 @@ class TabBarViewController: UITabBarController {
 
     // MARK: - Private Functions
     private func configItemViewController() {
-        let listVC = ListViewController(nibName: "ListViewController", bundle: nil)
+        let listVC = ListDefaultViewController(nibName: "ListDefaultViewController", bundle: nil)
         let naviListVC = UINavigationController(rootViewController: listVC)
         naviListVC.navigationBar.isTranslucent = false
         let searchVC = SearchViewController(nibName: "SearchViewController", bundle: nil)

@@ -13,13 +13,15 @@
 		043B70E91E0109AE00D955F9 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B70E71E0109AE00D955F9 /* HistoryViewController.xib */; };
 		043B70EC1E0109CF00D955F9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B70EA1E0109CF00D955F9 /* SearchViewController.swift */; };
 		043B70ED1E0109CF00D955F9 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B70EB1E0109CF00D955F9 /* SearchViewController.xib */; };
-		043B70F01E0109E400D955F9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B70EE1E0109E400D955F9 /* ListViewController.swift */; };
-		043B70F11E0109E400D955F9 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B70EF1E0109E400D955F9 /* ListViewController.xib */; };
+		043B70F01E0109E400D955F9 /* ListDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B70EE1E0109E400D955F9 /* ListDefaultViewController.swift */; };
+		043B70F11E0109E400D955F9 /* ListDefaultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B70EF1E0109E400D955F9 /* ListDefaultViewController.xib */; };
 		046A54561E0105BB003F96A5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A54541E0105BB003F96A5 /* TabBarViewController.swift */; };
 		046A54571E0105BB003F96A5 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046A54551E0105BB003F96A5 /* TabBarViewController.xib */; };
 		04A1665C1E01508000ACE484 /* ListDefaultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1665A1E01508000ACE484 /* ListDefaultCollectionViewCell.swift */; };
 		04A1665D1E01508000ACE484 /* ListDefaultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A1665B1E01508000ACE484 /* ListDefaultCollectionViewCell.xib */; };
 		04D476F41E012BF600DBAEFE /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D476F31E012BF600DBAEFE /* Strings.swift */; };
+		04D5A0221E0236CB00B3FD74 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5A0201E0236CB00B3FD74 /* ListCollectionViewCell.swift */; };
+		04D5A0231E0236CB00B3FD74 /* ListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D5A0211E0236CB00B3FD74 /* ListCollectionViewCell.xib */; };
 		3F91E8911DFEB86D0053DFC7 /* FourSquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E8901DFEB86D0053DFC7 /* FourSquareTests.swift */; };
 		3F91E89C1DFEB86D0053DFC7 /* FourSquareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E89B1DFEB86D0053DFC7 /* FourSquareUITests.swift */; };
 		3F91E8BB1DFEB9900053DFC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E8AB1DFEB9900053DFC7 /* AppDelegate.swift */; };
@@ -54,13 +56,15 @@
 		043B70E71E0109AE00D955F9 /* HistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HistoryViewController.xib; path = History/HistoryViewController.xib; sourceTree = "<group>"; };
 		043B70EA1E0109CF00D955F9 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Search/SearchViewController.swift; sourceTree = "<group>"; };
 		043B70EB1E0109CF00D955F9 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchViewController.xib; path = Search/SearchViewController.xib; sourceTree = "<group>"; };
-		043B70EE1E0109E400D955F9 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = List/ListViewController.swift; sourceTree = "<group>"; };
-		043B70EF1E0109E400D955F9 /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListViewController.xib; path = List/ListViewController.xib; sourceTree = "<group>"; };
+		043B70EE1E0109E400D955F9 /* ListDefaultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListDefaultViewController.swift; path = List/ListDefaultViewController.swift; sourceTree = "<group>"; };
+		043B70EF1E0109E400D955F9 /* ListDefaultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListDefaultViewController.xib; path = List/ListDefaultViewController.xib; sourceTree = "<group>"; };
 		046A54541E0105BB003F96A5 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		046A54551E0105BB003F96A5 /* TabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		04A1665A1E01508000ACE484 /* ListDefaultCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDefaultCollectionViewCell.swift; sourceTree = "<group>"; };
 		04A1665B1E01508000ACE484 /* ListDefaultCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListDefaultCollectionViewCell.xib; sourceTree = "<group>"; };
 		04D476F31E012BF600DBAEFE /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		04D5A0201E0236CB00B3FD74 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListCollectionViewCell.swift; path = ListCollectionViewCell/ListCollectionViewCell.swift; sourceTree = "<group>"; };
+		04D5A0211E0236CB00B3FD74 /* ListCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListCollectionViewCell.xib; path = ListCollectionViewCell/ListCollectionViewCell.xib; sourceTree = "<group>"; };
 		0D917DDDD19EDD78A4F81F00 /* Pods-FourSquareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquareUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquareUITests/Pods-FourSquareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		29150974DC848B7554E48ED6 /* Pods_FourSquareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourSquareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F91E8781DFEB86D0053DFC7 /* FourSquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourSquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,8 +118,7 @@
 		043B70DE1E01095E00D955F9 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				043B70EE1E0109E400D955F9 /* ListViewController.swift */,
-				043B70EF1E0109E400D955F9 /* ListViewController.xib */,
+				04D5A0111E0233E500B3FD74 /* ListDefaultView */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -147,11 +150,29 @@
 			name = Profile;
 			sourceTree = "<group>";
 		};
-		04A166591E014E3F00ACE484 /* ListCollectionViewCell */ = {
+		04A166591E014E3F00ACE484 /* ListDefaultViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				04A1665A1E01508000ACE484 /* ListDefaultCollectionViewCell.swift */,
 				04A1665B1E01508000ACE484 /* ListDefaultCollectionViewCell.xib */,
+			);
+			name = ListDefaultViewCell;
+			sourceTree = "<group>";
+		};
+		04D5A0111E0233E500B3FD74 /* ListDefaultView */ = {
+			isa = PBXGroup;
+			children = (
+				043B70EE1E0109E400D955F9 /* ListDefaultViewController.swift */,
+				043B70EF1E0109E400D955F9 /* ListDefaultViewController.xib */,
+			);
+			name = ListDefaultView;
+			sourceTree = "<group>";
+		};
+		04D5A01F1E0236AA00B3FD74 /* ListCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				04D5A0201E0236CB00B3FD74 /* ListCollectionViewCell.swift */,
+				04D5A0211E0236CB00B3FD74 /* ListCollectionViewCell.xib */,
 			);
 			name = ListCollectionViewCell;
 			sourceTree = "<group>";
@@ -314,7 +335,8 @@
 		3F91E8BA1DFEB9900053DFC7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				04A166591E014E3F00ACE484 /* ListCollectionViewCell */,
+				04A166591E014E3F00ACE484 /* ListDefaultViewCell */,
+				04D5A01F1E0236AA00B3FD74 /* ListCollectionViewCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -459,9 +481,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D5A0231E0236CB00B3FD74 /* ListCollectionViewCell.xib in Resources */,
 				3F91E8BE1DFEB9900053DFC7 /* Assets.xcassets in Resources */,
 				046A54571E0105BB003F96A5 /* TabBarViewController.xib in Resources */,
-				043B70F11E0109E400D955F9 /* ListViewController.xib in Resources */,
+				043B70F11E0109E400D955F9 /* ListDefaultViewController.xib in Resources */,
 				043B70ED1E0109CF00D955F9 /* SearchViewController.xib in Resources */,
 				043B70E51E01098E00D955F9 /* ProfileViewController.xib in Resources */,
 				043B70E91E0109AE00D955F9 /* HistoryViewController.xib in Resources */,
@@ -631,9 +654,10 @@
 			files = (
 				043B70EC1E0109CF00D955F9 /* SearchViewController.swift in Sources */,
 				043B70E41E01098E00D955F9 /* ProfileViewController.swift in Sources */,
-				043B70F01E0109E400D955F9 /* ListViewController.swift in Sources */,
+				043B70F01E0109E400D955F9 /* ListDefaultViewController.swift in Sources */,
 				046A54561E0105BB003F96A5 /* TabBarViewController.swift in Sources */,
 				04D476F41E012BF600DBAEFE /* Strings.swift in Sources */,
+				04D5A0221E0236CB00B3FD74 /* ListCollectionViewCell.swift in Sources */,
 				3F91E8BB1DFEB9900053DFC7 /* AppDelegate.swift in Sources */,
 				04A1665C1E01508000ACE484 /* ListDefaultCollectionViewCell.swift in Sources */,
 				043B70E81E0109AE00D955F9 /* HistoryViewController.swift in Sources */,
