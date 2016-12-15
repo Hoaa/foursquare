@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewController" customModule="FourSquare" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="bmL-6C-m9J" id="tNx-Dv-O9P"/>
+                <outlet property="mapContainerView" destination="01W-3Q-s48" id="jrm-AF-gFh"/>
                 <outlet property="topView" destination="Ro2-FT-Ixg" id="NVx-yG-r49"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

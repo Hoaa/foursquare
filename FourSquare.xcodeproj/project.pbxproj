@@ -31,7 +31,9 @@
 		3F91E8BE1DFEB9900053DFC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F91E8B81DFEB9900053DFC7 /* Assets.xcassets */; };
 		8D9B028509B0C8C317BF964D /* Pods_FourSquareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29150974DC848B7554E48ED6 /* Pods_FourSquareUITests.framework */; };
 		C274D9DB965FD6BCE9C95625 /* Pods_FourSquareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9100CA4EE635A032CCE56AF /* Pods_FourSquareTests.framework */; };
+		D4E64468A451290154FB14DF /* Pods_FourSquare_FourSquareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD3759E94FB48A56B5F388F /* Pods_FourSquare_FourSquareUITests.framework */; };
 		F3CA64A549E93BC50331F03A /* Pods_FourSquare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A373623929F7FBB2BC54D4C /* Pods_FourSquare.framework */; };
+		FA0110D1D235BA899FAB7EBA /* Pods_FourSquare_FourSquareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F7565CC244AD8CB821FBC3 /* Pods_FourSquare_FourSquareTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +71,9 @@
 		04D476F31E012BF600DBAEFE /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		04D5A0201E0236CB00B3FD74 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListCollectionViewCell.swift; path = ListCollectionViewCell/ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		04D5A0211E0236CB00B3FD74 /* ListCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListCollectionViewCell.xib; path = ListCollectionViewCell/ListCollectionViewCell.xib; sourceTree = "<group>"; };
+		0CE5188E0325E3C8E2C28B46 /* Pods-FourSquare-FourSquareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare-FourSquareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquare-FourSquareTests/Pods-FourSquare-FourSquareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0D917DDDD19EDD78A4F81F00 /* Pods-FourSquareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquareUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquareUITests/Pods-FourSquareUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1445D1CFC26AE55BE8AFEF40 /* Pods-FourSquare-FourSquareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare-FourSquareTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquare-FourSquareTests/Pods-FourSquare-FourSquareTests.release.xcconfig"; sourceTree = "<group>"; };
 		29150974DC848B7554E48ED6 /* Pods_FourSquareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourSquareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F91E8781DFEB86D0053DFC7 /* FourSquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourSquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F91E88C1DFEB86D0053DFC7 /* FourSquareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FourSquareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,8 +86,12 @@
 		3F91E8AF1DFEB9900053DFC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F91E8B41DFEB9900053DFC7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F91E8B81DFEB9900053DFC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		61F7565CC244AD8CB821FBC3 /* Pods_FourSquare_FourSquareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourSquare_FourSquareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A373623929F7FBB2BC54D4C /* Pods_FourSquare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourSquare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		952A99CDB84E9D2046C71497 /* Pods-FourSquareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquareTests/Pods-FourSquareTests.debug.xcconfig"; sourceTree = "<group>"; };
+		976D628244BD8FE6F482F6E8 /* Pods-FourSquare-FourSquareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare-FourSquareUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquare-FourSquareUITests/Pods-FourSquare-FourSquareUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9FD3759E94FB48A56B5F388F /* Pods_FourSquare_FourSquareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourSquare_FourSquareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3856FE0B24A35CDDDF4C40F /* Pods-FourSquare-FourSquareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare-FourSquareUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquare-FourSquareUITests/Pods-FourSquare-FourSquareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A9100CA4EE635A032CCE56AF /* Pods_FourSquareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourSquareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB680EEF5993B544A639451C /* Pods-FourSquare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquare/Pods-FourSquare.debug.xcconfig"; sourceTree = "<group>"; };
 		BD59209DB5272329583BA872 /* Pods-FourSquare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare.release.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquare/Pods-FourSquare.release.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +113,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C274D9DB965FD6BCE9C95625 /* Pods_FourSquareTests.framework in Frameworks */,
+				FA0110D1D235BA899FAB7EBA /* Pods_FourSquare_FourSquareTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +122,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D9B028509B0C8C317BF964D /* Pods_FourSquareUITests.framework in Frameworks */,
+				D4E64468A451290154FB14DF /* Pods_FourSquare_FourSquareUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +374,10 @@
 				E6EFA5FA4E0081F58E058F3A /* Pods-FourSquareTests.release.xcconfig */,
 				F2CF76CE3BDCBA5A78D7A31B /* Pods-FourSquareUITests.debug.xcconfig */,
 				0D917DDDD19EDD78A4F81F00 /* Pods-FourSquareUITests.release.xcconfig */,
+				0CE5188E0325E3C8E2C28B46 /* Pods-FourSquare-FourSquareTests.debug.xcconfig */,
+				1445D1CFC26AE55BE8AFEF40 /* Pods-FourSquare-FourSquareTests.release.xcconfig */,
+				976D628244BD8FE6F482F6E8 /* Pods-FourSquare-FourSquareUITests.debug.xcconfig */,
+				A3856FE0B24A35CDDDF4C40F /* Pods-FourSquare-FourSquareUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -374,6 +388,8 @@
 				7A373623929F7FBB2BC54D4C /* Pods_FourSquare.framework */,
 				A9100CA4EE635A032CCE56AF /* Pods_FourSquareTests.framework */,
 				29150974DC848B7554E48ED6 /* Pods_FourSquareUITests.framework */,
+				61F7565CC244AD8CB821FBC3 /* Pods_FourSquare_FourSquareTests.framework */,
+				9FD3759E94FB48A56B5F388F /* Pods_FourSquare_FourSquareUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -552,7 +568,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FourSquareUITests/Pods-FourSquareUITests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FourSquare-FourSquareUITests/Pods-FourSquare-FourSquareUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		40ECB9A285B3175DA3C957F8 /* [CP] Embed Pods Frameworks */ = {
@@ -582,7 +598,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FourSquareTests/Pods-FourSquareTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FourSquare-FourSquareTests/Pods-FourSquare-FourSquareTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		92CFCEA0FA74981583606042 /* [CP] Check Pods Manifest.lock */ = {
@@ -642,7 +658,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FourSquareUITests/Pods-FourSquareUITests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FourSquare-FourSquareUITests/Pods-FourSquare-FourSquareUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F6695E8E08FEDCB31BD5168A /* [CP] Embed Pods Frameworks */ = {
@@ -657,7 +673,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FourSquareTests/Pods-FourSquareTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FourSquare-FourSquareTests/Pods-FourSquare-FourSquareTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -846,7 +862,7 @@
 		};
 		3F91E8A41DFEB86D0053DFC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 952A99CDB84E9D2046C71497 /* Pods-FourSquareTests.debug.xcconfig */;
+			baseConfigurationReference = 0CE5188E0325E3C8E2C28B46 /* Pods-FourSquare-FourSquareTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -861,7 +877,7 @@
 		};
 		3F91E8A51DFEB86D0053DFC7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6EFA5FA4E0081F58E058F3A /* Pods-FourSquareTests.release.xcconfig */;
+			baseConfigurationReference = 1445D1CFC26AE55BE8AFEF40 /* Pods-FourSquare-FourSquareTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -876,7 +892,7 @@
 		};
 		3F91E8A71DFEB86D0053DFC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2CF76CE3BDCBA5A78D7A31B /* Pods-FourSquareUITests.debug.xcconfig */;
+			baseConfigurationReference = 976D628244BD8FE6F482F6E8 /* Pods-FourSquare-FourSquareUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = FourSquareUITests/Info.plist;
@@ -890,7 +906,7 @@
 		};
 		3F91E8A81DFEB86D0053DFC7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D917DDDD19EDD78A4F81F00 /* Pods-FourSquareUITests.release.xcconfig */;
+			baseConfigurationReference = A3856FE0B24A35CDDDF4C40F /* Pods-FourSquare-FourSquareUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = FourSquareUITests/Info.plist;
