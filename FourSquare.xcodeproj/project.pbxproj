@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0416D9A41E02724C0026B3E4 /* ListDefaultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416D9A21E02724C0026B3E4 /* ListDefaultCollectionViewCell.swift */; };
+		0416D9A51E02724C0026B3E4 /* ListDefaultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0416D9A31E02724C0026B3E4 /* ListDefaultCollectionViewCell.xib */; };
+		0416D9AA1E0279760026B3E4 /* ListMapCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416D9A81E0279760026B3E4 /* ListMapCollectionViewCell.swift */; };
+		0416D9AB1E0279760026B3E4 /* ListMapCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0416D9A91E0279760026B3E4 /* ListMapCollectionViewCell.xib */; };
+		043B70E41E01098E00D955F9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B70E21E01098E00D955F9 /* ProfileViewController.swift */; };
+		043B70E51E01098E00D955F9 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B70E31E01098E00D955F9 /* ProfileViewController.xib */; };
+		043B70E81E0109AE00D955F9 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B70E61E0109AE00D955F9 /* HistoryViewController.swift */; };
+		043B70E91E0109AE00D955F9 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B70E71E0109AE00D955F9 /* HistoryViewController.xib */; };
+		043B70EC1E0109CF00D955F9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B70EA1E0109CF00D955F9 /* SearchViewController.swift */; };
+		043B70ED1E0109CF00D955F9 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B70EB1E0109CF00D955F9 /* SearchViewController.xib */; };
+		043B70F01E0109E400D955F9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B70EE1E0109E400D955F9 /* ListViewController.swift */; };
+		043B70F11E0109E400D955F9 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B70EF1E0109E400D955F9 /* ListViewController.xib */; };
+		046A54561E0105BB003F96A5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A54541E0105BB003F96A5 /* TabBarViewController.swift */; };
+		046A54571E0105BB003F96A5 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046A54551E0105BB003F96A5 /* TabBarViewController.xib */; };
+		04D476F41E012BF600DBAEFE /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D476F31E012BF600DBAEFE /* Strings.swift */; };
+		04D5A0221E0236CB00B3FD74 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5A0201E0236CB00B3FD74 /* ListCollectionViewCell.swift */; };
+		04D5A0231E0236CB00B3FD74 /* ListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D5A0211E0236CB00B3FD74 /* ListCollectionViewCell.xib */; };
 		3F91E8911DFEB86D0053DFC7 /* FourSquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E8901DFEB86D0053DFC7 /* FourSquareTests.swift */; };
 		3F91E89C1DFEB86D0053DFC7 /* FourSquareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E89B1DFEB86D0053DFC7 /* FourSquareUITests.swift */; };
 		3F91E8BB1DFEB9900053DFC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E8AB1DFEB9900053DFC7 /* AppDelegate.swift */; };
@@ -14,7 +31,9 @@
 		3F91E8BE1DFEB9900053DFC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F91E8B81DFEB9900053DFC7 /* Assets.xcassets */; };
 		8D9B028509B0C8C317BF964D /* Pods_FourSquareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29150974DC848B7554E48ED6 /* Pods_FourSquareUITests.framework */; };
 		C274D9DB965FD6BCE9C95625 /* Pods_FourSquareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9100CA4EE635A032CCE56AF /* Pods_FourSquareTests.framework */; };
+		D4E64468A451290154FB14DF /* Pods_FourSquare_FourSquareUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD3759E94FB48A56B5F388F /* Pods_FourSquare_FourSquareUITests.framework */; };
 		F3CA64A549E93BC50331F03A /* Pods_FourSquare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A373623929F7FBB2BC54D4C /* Pods_FourSquare.framework */; };
+		FA0110D1D235BA899FAB7EBA /* Pods_FourSquare_FourSquareTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F7565CC244AD8CB821FBC3 /* Pods_FourSquare_FourSquareTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +54,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0416D9A21E02724C0026B3E4 /* ListDefaultCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDefaultCollectionViewCell.swift; sourceTree = "<group>"; };
+		0416D9A31E02724C0026B3E4 /* ListDefaultCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListDefaultCollectionViewCell.xib; sourceTree = "<group>"; };
+		0416D9A81E0279760026B3E4 /* ListMapCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListMapCollectionViewCell.swift; sourceTree = "<group>"; };
+		0416D9A91E0279760026B3E4 /* ListMapCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListMapCollectionViewCell.xib; sourceTree = "<group>"; };
+		043B70E21E01098E00D955F9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Profile/ProfileViewController.swift; sourceTree = "<group>"; };
+		043B70E31E01098E00D955F9 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileViewController.xib; path = Profile/ProfileViewController.xib; sourceTree = "<group>"; };
+		043B70E61E0109AE00D955F9 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = History/HistoryViewController.swift; sourceTree = "<group>"; };
+		043B70E71E0109AE00D955F9 /* HistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HistoryViewController.xib; path = History/HistoryViewController.xib; sourceTree = "<group>"; };
+		043B70EA1E0109CF00D955F9 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Search/SearchViewController.swift; sourceTree = "<group>"; };
+		043B70EB1E0109CF00D955F9 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchViewController.xib; path = Search/SearchViewController.xib; sourceTree = "<group>"; };
+		043B70EE1E0109E400D955F9 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = List/ListViewController.swift; sourceTree = "<group>"; };
+		043B70EF1E0109E400D955F9 /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListViewController.xib; path = List/ListViewController.xib; sourceTree = "<group>"; };
+		046A54541E0105BB003F96A5 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		046A54551E0105BB003F96A5 /* TabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
+		04D476F31E012BF600DBAEFE /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		04D5A0201E0236CB00B3FD74 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListCollectionViewCell.swift; path = ListCollectionViewCell/ListCollectionViewCell.swift; sourceTree = "<group>"; };
+		04D5A0211E0236CB00B3FD74 /* ListCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListCollectionViewCell.xib; path = ListCollectionViewCell/ListCollectionViewCell.xib; sourceTree = "<group>"; };
+		0CE5188E0325E3C8E2C28B46 /* Pods-FourSquare-FourSquareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare-FourSquareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquare-FourSquareTests/Pods-FourSquare-FourSquareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0D917DDDD19EDD78A4F81F00 /* Pods-FourSquareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquareUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquareUITests/Pods-FourSquareUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1445D1CFC26AE55BE8AFEF40 /* Pods-FourSquare-FourSquareTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare-FourSquareTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquare-FourSquareTests/Pods-FourSquare-FourSquareTests.release.xcconfig"; sourceTree = "<group>"; };
 		29150974DC848B7554E48ED6 /* Pods_FourSquareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourSquareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F91E8781DFEB86D0053DFC7 /* FourSquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourSquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F91E88C1DFEB86D0053DFC7 /* FourSquareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FourSquareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,8 +86,12 @@
 		3F91E8AF1DFEB9900053DFC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F91E8B41DFEB9900053DFC7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F91E8B81DFEB9900053DFC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		61F7565CC244AD8CB821FBC3 /* Pods_FourSquare_FourSquareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourSquare_FourSquareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A373623929F7FBB2BC54D4C /* Pods_FourSquare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourSquare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		952A99CDB84E9D2046C71497 /* Pods-FourSquareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquareTests/Pods-FourSquareTests.debug.xcconfig"; sourceTree = "<group>"; };
+		976D628244BD8FE6F482F6E8 /* Pods-FourSquare-FourSquareUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare-FourSquareUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquare-FourSquareUITests/Pods-FourSquare-FourSquareUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9FD3759E94FB48A56B5F388F /* Pods_FourSquare_FourSquareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourSquare_FourSquareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3856FE0B24A35CDDDF4C40F /* Pods-FourSquare-FourSquareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare-FourSquareUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquare-FourSquareUITests/Pods-FourSquare-FourSquareUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A9100CA4EE635A032CCE56AF /* Pods_FourSquareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourSquareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB680EEF5993B544A639451C /* Pods-FourSquare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquare/Pods-FourSquare.debug.xcconfig"; sourceTree = "<group>"; };
 		BD59209DB5272329583BA872 /* Pods-FourSquare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare.release.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquare/Pods-FourSquare.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +113,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C274D9DB965FD6BCE9C95625 /* Pods_FourSquareTests.framework in Frameworks */,
+				FA0110D1D235BA899FAB7EBA /* Pods_FourSquare_FourSquareTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,12 +122,84 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D9B028509B0C8C317BF964D /* Pods_FourSquareUITests.framework in Frameworks */,
+				D4E64468A451290154FB14DF /* Pods_FourSquare_FourSquareUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0416D9A11E02724C0026B3E4 /* ListDefaultViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0416D9A21E02724C0026B3E4 /* ListDefaultCollectionViewCell.swift */,
+				0416D9A31E02724C0026B3E4 /* ListDefaultCollectionViewCell.xib */,
+			);
+			path = ListDefaultViewCell;
+			sourceTree = "<group>";
+		};
+		0416D9A71E0279760026B3E4 /* ListMapViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0416D9A81E0279760026B3E4 /* ListMapCollectionViewCell.swift */,
+				0416D9A91E0279760026B3E4 /* ListMapCollectionViewCell.xib */,
+			);
+			path = ListMapViewCell;
+			sourceTree = "<group>";
+		};
+		043B70DE1E01095E00D955F9 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				04D5A0111E0233E500B3FD74 /* ListDefaultView */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		043B70DF1E01096400D955F9 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				043B70EA1E0109CF00D955F9 /* SearchViewController.swift */,
+				043B70EB1E0109CF00D955F9 /* SearchViewController.xib */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		043B70E01E01096E00D955F9 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				043B70E61E0109AE00D955F9 /* HistoryViewController.swift */,
+				043B70E71E0109AE00D955F9 /* HistoryViewController.xib */,
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
+		043B70E11E01097500D955F9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				043B70E21E01098E00D955F9 /* ProfileViewController.swift */,
+				043B70E31E01098E00D955F9 /* ProfileViewController.xib */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		04D5A0111E0233E500B3FD74 /* ListDefaultView */ = {
+			isa = PBXGroup;
+			children = (
+				043B70EE1E0109E400D955F9 /* ListViewController.swift */,
+				043B70EF1E0109E400D955F9 /* ListViewController.xib */,
+			);
+			name = ListDefaultView;
+			sourceTree = "<group>";
+		};
+		04D5A01F1E0236AA00B3FD74 /* ListCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				04D5A0201E0236CB00B3FD74 /* ListCollectionViewCell.swift */,
+				04D5A0211E0236CB00B3FD74 /* ListCollectionViewCell.xib */,
+			);
+			name = ListCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		3F91E86F1DFEB86D0053DFC7 = {
 			isa = PBXGroup;
 			children = (
@@ -144,9 +259,13 @@
 		3F91E8A91DFEB9900053DFC7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3F91E8AD1DFEB9900053DFC7 /* LaunchScreen */,
 				3F91E8AA1DFEB9900053DFC7 /* AppDelegate */,
 				3F91E8AC1DFEB9900053DFC7 /* Base */,
-				3F91E8AD1DFEB9900053DFC7 /* LaunchScreen */,
+				043B70DE1E01095E00D955F9 /* List */,
+				043B70DF1E01096400D955F9 /* Search */,
+				043B70E01E01096E00D955F9 /* History */,
+				043B70E11E01097500D955F9 /* Profile */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -162,6 +281,8 @@
 		3F91E8AC1DFEB9900053DFC7 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				046A54541E0105BB003F96A5 /* TabBarViewController.swift */,
+				046A54551E0105BB003F96A5 /* TabBarViewController.xib */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -177,6 +298,7 @@
 		3F91E8B01DFEB9900053DFC7 /* Define */ = {
 			isa = PBXGroup;
 			children = (
+				04D476F31E012BF600DBAEFE /* Strings.swift */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -236,6 +358,9 @@
 		3F91E8BA1DFEB9900053DFC7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0416D9A11E02724C0026B3E4 /* ListDefaultViewCell */,
+				04D5A01F1E0236AA00B3FD74 /* ListCollectionViewCell */,
+				0416D9A71E0279760026B3E4 /* ListMapViewCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -249,6 +374,10 @@
 				E6EFA5FA4E0081F58E058F3A /* Pods-FourSquareTests.release.xcconfig */,
 				F2CF76CE3BDCBA5A78D7A31B /* Pods-FourSquareUITests.debug.xcconfig */,
 				0D917DDDD19EDD78A4F81F00 /* Pods-FourSquareUITests.release.xcconfig */,
+				0CE5188E0325E3C8E2C28B46 /* Pods-FourSquare-FourSquareTests.debug.xcconfig */,
+				1445D1CFC26AE55BE8AFEF40 /* Pods-FourSquare-FourSquareTests.release.xcconfig */,
+				976D628244BD8FE6F482F6E8 /* Pods-FourSquare-FourSquareUITests.debug.xcconfig */,
+				A3856FE0B24A35CDDDF4C40F /* Pods-FourSquare-FourSquareUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -259,6 +388,8 @@
 				7A373623929F7FBB2BC54D4C /* Pods_FourSquare.framework */,
 				A9100CA4EE635A032CCE56AF /* Pods_FourSquareTests.framework */,
 				29150974DC848B7554E48ED6 /* Pods_FourSquareUITests.framework */,
+				61F7565CC244AD8CB821FBC3 /* Pods_FourSquare_FourSquareTests.framework */,
+				9FD3759E94FB48A56B5F388F /* Pods_FourSquare_FourSquareUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -276,7 +407,6 @@
 				3F91E8761DFEB86D0053DFC7 /* Resources */,
 				40ECB9A285B3175DA3C957F8 /* [CP] Embed Pods Frameworks */,
 				1474809629F32AF29DF838A3 /* [CP] Copy Pods Resources */,
-				3FA32A2B1DFFA2A7005042B2 /* Swiftlink */,
 			);
 			buildRules = (
 			);
@@ -381,8 +511,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D5A0231E0236CB00B3FD74 /* ListCollectionViewCell.xib in Resources */,
 				3F91E8BE1DFEB9900053DFC7 /* Assets.xcassets in Resources */,
+				046A54571E0105BB003F96A5 /* TabBarViewController.xib in Resources */,
+				043B70F11E0109E400D955F9 /* ListViewController.xib in Resources */,
+				0416D9A51E02724C0026B3E4 /* ListDefaultCollectionViewCell.xib in Resources */,
+				043B70ED1E0109CF00D955F9 /* SearchViewController.xib in Resources */,
+				043B70E51E01098E00D955F9 /* ProfileViewController.xib in Resources */,
+				043B70E91E0109AE00D955F9 /* HistoryViewController.xib in Resources */,
 				3F91E8BC1DFEB9900053DFC7 /* LaunchScreen.storyboard in Resources */,
+				0416D9AB1E0279760026B3E4 /* ListMapCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,22 +568,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FourSquareUITests/Pods-FourSquareUITests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FourSquare-FourSquareUITests/Pods-FourSquare-FourSquareUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		3FA32A2B1DFFA2A7005042B2 /* Swiftlink */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = Swiftlink;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		40ECB9A285B3175DA3C957F8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -474,7 +598,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FourSquareTests/Pods-FourSquareTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FourSquare-FourSquareTests/Pods-FourSquare-FourSquareTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		92CFCEA0FA74981583606042 /* [CP] Check Pods Manifest.lock */ = {
@@ -534,7 +658,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FourSquareUITests/Pods-FourSquareUITests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FourSquare-FourSquareUITests/Pods-FourSquare-FourSquareUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F6695E8E08FEDCB31BD5168A /* [CP] Embed Pods Frameworks */ = {
@@ -549,7 +673,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FourSquareTests/Pods-FourSquareTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FourSquare-FourSquareTests/Pods-FourSquare-FourSquareTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -559,7 +683,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043B70EC1E0109CF00D955F9 /* SearchViewController.swift in Sources */,
+				0416D9AA1E0279760026B3E4 /* ListMapCollectionViewCell.swift in Sources */,
+				043B70E41E01098E00D955F9 /* ProfileViewController.swift in Sources */,
+				043B70F01E0109E400D955F9 /* ListViewController.swift in Sources */,
+				046A54561E0105BB003F96A5 /* TabBarViewController.swift in Sources */,
+				0416D9A41E02724C0026B3E4 /* ListDefaultCollectionViewCell.swift in Sources */,
+				04D476F41E012BF600DBAEFE /* Strings.swift in Sources */,
+				04D5A0221E0236CB00B3FD74 /* ListCollectionViewCell.swift in Sources */,
 				3F91E8BB1DFEB9900053DFC7 /* AppDelegate.swift in Sources */,
+				043B70E81E0109AE00D955F9 /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,7 +862,7 @@
 		};
 		3F91E8A41DFEB86D0053DFC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 952A99CDB84E9D2046C71497 /* Pods-FourSquareTests.debug.xcconfig */;
+			baseConfigurationReference = 0CE5188E0325E3C8E2C28B46 /* Pods-FourSquare-FourSquareTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -744,7 +877,7 @@
 		};
 		3F91E8A51DFEB86D0053DFC7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6EFA5FA4E0081F58E058F3A /* Pods-FourSquareTests.release.xcconfig */;
+			baseConfigurationReference = 1445D1CFC26AE55BE8AFEF40 /* Pods-FourSquare-FourSquareTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -759,7 +892,7 @@
 		};
 		3F91E8A71DFEB86D0053DFC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2CF76CE3BDCBA5A78D7A31B /* Pods-FourSquareUITests.debug.xcconfig */;
+			baseConfigurationReference = 976D628244BD8FE6F482F6E8 /* Pods-FourSquare-FourSquareUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = FourSquareUITests/Info.plist;
@@ -773,7 +906,7 @@
 		};
 		3F91E8A81DFEB86D0053DFC7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D917DDDD19EDD78A4F81F00 /* Pods-FourSquareUITests.release.xcconfig */;
+			baseConfigurationReference = A3856FE0B24A35CDDDF4C40F /* Pods-FourSquare-FourSquareUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = FourSquareUITests/Info.plist;
