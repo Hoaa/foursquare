@@ -10,6 +10,7 @@ import GoogleMaps
 import GooglePlaces
 import GooglePlacePicker
 
+let menuButtonFrame = CGRect(x: 0, y: 0, width: 20, height: 20)
 class ListViewController: ViewController {
     
     // MARK: - Property
@@ -100,7 +101,13 @@ class ListViewController: ViewController {
         default:
             break
         }
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: #selector(changeViewAction))
+        let menuButton = UIButton(type: UIButtonType.custom)
+        menuButton.imageView?.contentMode = .scaleAspectFit
+        menuButton.setImage(image, for: UIControlState.normal)
+        menuButton.frame = menuButtonFrame
+        menuButton.addTarget(self, action: #selector(ListViewController.changeViewAction), for: UIControlEvents.touchUpInside)
+        let menuBarButton = UIBarButtonItem(customView: menuButton)
+        navigationItem.rightBarButtonItems = [menuBarButton]
     }
     
     @objc private func changeViewAction() {

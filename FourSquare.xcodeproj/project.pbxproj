@@ -23,6 +23,8 @@
 		043B70ED1E0109CF00D955F9 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B70EB1E0109CF00D955F9 /* SearchViewController.xib */; };
 		043B70F01E0109E400D955F9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B70EE1E0109E400D955F9 /* ListViewController.swift */; };
 		043B70F11E0109E400D955F9 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B70EF1E0109E400D955F9 /* ListViewController.xib */; };
+		0447A6581E0399C200BB1A28 /* DetailSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0447A6561E0399C200BB1A28 /* DetailSearchViewController.swift */; };
+		0447A6591E0399C200BB1A28 /* DetailSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0447A6571E0399C200BB1A28 /* DetailSearchViewController.xib */; };
 		04515A2E1E030D4B00319D93 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04515A2D1E030D4B00319D93 /* UIColor.swift */; };
 		04515A301E030E1100319D93 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04515A2F1E030E1100319D93 /* Color.swift */; };
 		04515A321E030F0300319D93 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04515A311E030F0300319D93 /* Keys.swift */; };
@@ -81,6 +83,8 @@
 		043B70EB1E0109CF00D955F9 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchViewController.xib; path = Search/SearchViewController.xib; sourceTree = "<group>"; };
 		043B70EE1E0109E400D955F9 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = List/ListViewController.swift; sourceTree = "<group>"; };
 		043B70EF1E0109E400D955F9 /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListViewController.xib; path = List/ListViewController.xib; sourceTree = "<group>"; };
+		0447A6561E0399C200BB1A28 /* DetailSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailSearchViewController.swift; path = DetailSearch/DetailSearchViewController.swift; sourceTree = "<group>"; };
+		0447A6571E0399C200BB1A28 /* DetailSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailSearchViewController.xib; path = DetailSearch/DetailSearchViewController.xib; sourceTree = "<group>"; };
 		04515A2D1E030D4B00319D93 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		04515A2F1E030E1100319D93 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		04515A311E030F0300319D93 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
@@ -215,6 +219,15 @@
 			name = Profile;
 			sourceTree = "<group>";
 		};
+		0447A65A1E0399C600BB1A28 /* DetailSearch */ = {
+			isa = PBXGroup;
+			children = (
+				0447A6561E0399C200BB1A28 /* DetailSearchViewController.swift */,
+				0447A6571E0399C200BB1A28 /* DetailSearchViewController.xib */,
+			);
+			name = DetailSearch;
+			sourceTree = "<group>";
+		};
 		04D5A01F1E0236AA00B3FD74 /* ListCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,10 +299,11 @@
 				3F91E8AA1DFEB9900053DFC7 /* AppDelegate */,
 				3F91E8AD1DFEB9900053DFC7 /* LaunchScreen */,
 				3F91E8AC1DFEB9900053DFC7 /* Base */,
-				043B70DF1E01096400D955F9 /* Search */,
 				043B70DE1E01095E00D955F9 /* List */,
 				043B70E01E01096E00D955F9 /* History */,
 				043B70E11E01097500D955F9 /* Profile */,
+				043B70DF1E01096400D955F9 /* Search */,
+				0447A65A1E0399C600BB1A28 /* DetailSearch */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -552,6 +566,7 @@
 				043B70F11E0109E400D955F9 /* ListViewController.xib in Resources */,
 				0416D9A51E02724C0026B3E4 /* ListDefaultCollectionViewCell.xib in Resources */,
 				043B70ED1E0109CF00D955F9 /* SearchViewController.xib in Resources */,
+				0447A6591E0399C200BB1A28 /* DetailSearchViewController.xib in Resources */,
 				043B70E51E01098E00D955F9 /* ProfileViewController.xib in Resources */,
 				043B70E91E0109AE00D955F9 /* HistoryViewController.xib in Resources */,
 				3F91E8BC1DFEB9900053DFC7 /* LaunchScreen.storyboard in Resources */,
@@ -729,6 +744,7 @@
 				046A54561E0105BB003F96A5 /* TabBarViewController.swift in Sources */,
 				0416D9A41E02724C0026B3E4 /* ListDefaultCollectionViewCell.swift in Sources */,
 				04D476F41E012BF600DBAEFE /* Strings.swift in Sources */,
+				0447A6581E0399C200BB1A28 /* DetailSearchViewController.swift in Sources */,
 				04D5A0221E0236CB00B3FD74 /* ListCollectionViewCell.swift in Sources */,
 				04515A301E030E1100319D93 /* Color.swift in Sources */,
 				04515A341E030F3800319D93 /* NotificationCenter.swift in Sources */,

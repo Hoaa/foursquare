@@ -10,6 +10,7 @@ import UIKit
 
 class SearchViewController: ViewController {
     
+    // MARK: - Property
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
     fileprivate let sectionInsets = UIEdgeInsets(top: 0, left: 1, bottom: 0, right: 1)
     
@@ -18,10 +19,14 @@ class SearchViewController: ViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
     // MARK: - Private Function
     override func configureUI() {
         super.configureUI()
-        navigationController?.navigationBar.isHidden = true
         collectionView.registerNib(aClass: SearchCollectionViewCell.self)
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -63,5 +68,13 @@ extension SearchViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return sectionInsets.left
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+extension SearchViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailSearchViewController = DetailSearchViewController.vc()
+        navigationController?.pushViewController(detailSearchViewController, animated: true)
     }
 }
