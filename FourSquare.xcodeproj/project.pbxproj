@@ -17,6 +17,8 @@
 		0438F6481E03E06600230893 /* ListMapCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0438F63E1E03E06600230893 /* ListMapCollectionViewCell.xib */; };
 		0438F6491E03E06600230893 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0438F6401E03E06600230893 /* SearchCollectionViewCell.swift */; };
 		0438F64A1E03E06600230893 /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0438F6411E03E06600230893 /* SearchCollectionViewCell.xib */; };
+		0438F64D1E03E18700230893 /* DefaultVenueCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0438F64B1E03E18700230893 /* DefaultVenueCollectionViewCell.swift */; };
+		0438F64E1E03E18700230893 /* DefaultVenueCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0438F64C1E03E18700230893 /* DefaultVenueCollectionViewCell.xib */; };
 		043B70E41E01098E00D955F9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B70E21E01098E00D955F9 /* ProfileViewController.swift */; };
 		043B70E51E01098E00D955F9 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B70E31E01098E00D955F9 /* ProfileViewController.xib */; };
 		043B70E81E0109AE00D955F9 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B70E61E0109AE00D955F9 /* HistoryViewController.swift */; };
@@ -77,6 +79,8 @@
 		0438F63E1E03E06600230893 /* ListMapCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListMapCollectionViewCell.xib; sourceTree = "<group>"; };
 		0438F6401E03E06600230893 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		0438F6411E03E06600230893 /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
+		0438F64B1E03E18700230893 /* DefaultVenueCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultVenueCollectionViewCell.swift; sourceTree = "<group>"; };
+		0438F64C1E03E18700230893 /* DefaultVenueCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultVenueCollectionViewCell.xib; sourceTree = "<group>"; };
 		043B70E21E01098E00D955F9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Profile/ProfileViewController.swift; sourceTree = "<group>"; };
 		043B70E31E01098E00D955F9 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileViewController.xib; path = Profile/ProfileViewController.xib; sourceTree = "<group>"; };
 		043B70E61E0109AE00D955F9 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = History/HistoryViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +198,8 @@
 		0438F6421E03E06600230893 /* VenueCell */ = {
 			isa = PBXGroup;
 			children = (
+				0438F64B1E03E18700230893 /* DefaultVenueCollectionViewCell.swift */,
+				0438F64C1E03E18700230893 /* DefaultVenueCollectionViewCell.xib */,
 			);
 			path = VenueCell;
 			sourceTree = "<group>";
@@ -574,6 +580,7 @@
 				0447A6591E0399C200BB1A28 /* DetailSearchViewController.xib in Resources */,
 				0438F64A1E03E06600230893 /* SearchCollectionViewCell.xib in Resources */,
 				0438F6441E03E06600230893 /* ListCollectionViewCell.xib in Resources */,
+				0438F64E1E03E18700230893 /* DefaultVenueCollectionViewCell.xib in Resources */,
 				043B70E51E01098E00D955F9 /* ProfileViewController.xib in Resources */,
 				043B70E91E0109AE00D955F9 /* HistoryViewController.xib in Resources */,
 				3F91E8BC1DFEB9900053DFC7 /* LaunchScreen.storyboard in Resources */,
@@ -742,6 +749,7 @@
 			files = (
 				0438F6431E03E06600230893 /* ListCollectionViewCell.swift in Sources */,
 				043B70EC1E0109CF00D955F9 /* SearchViewController.swift in Sources */,
+				0438F64D1E03E18700230893 /* DefaultVenueCollectionViewCell.swift in Sources */,
 				0432CCFC1E03827D0058112E /* UIViewController.swift in Sources */,
 				043B70E41E01098E00D955F9 /* ProfileViewController.swift in Sources */,
 				043B70F01E0109E400D955F9 /* ListViewController.swift in Sources */,
