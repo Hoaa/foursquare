@@ -8,6 +8,7 @@
 
 import Foundation
 struct Strings {
+    static let MainMenuSearchTitle = "Search"
     static let MainMenuListTitle = "Lists"
     static let MainMenuHistoryTitle = "History"
     static let MenuItemsProfileTitle = "Your Profile"

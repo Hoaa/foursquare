@@ -14,17 +14,16 @@ class HistoryViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    override func configureUI() {
+        super.configureUI()
+        configureNavigationBar()
+    }
+    
     // MARK: - Private Function
     func configureNavigationBar() {
         navigationItem.title = Strings.MainMenuHistoryTitle
         navigationController?.navigationBar.titleTextAttributes =
             [NSForegroundColorAttributeName : UIColor.white]
-        navigationController?.navigationBar.barTintColor =
-            UIColor(red: 0, green: 153/255, blue: 255/255, alpha: 1)
-    }
-
-    override func configureUI() {
-        super.configureUI()
-        configureNavigationBar()
     }
 }

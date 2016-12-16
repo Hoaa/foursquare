@@ -16,18 +16,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions
                      launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
-        // nmint8m: Add API key to project
-        GMSServices.provideAPIKey("AIzaSyBNxeLGmIOaBci-ApSiZUltAOea9FmW7x8")
-        GMSPlacesClient.provideAPIKey("AIzaSyBNxeLGmIOaBci-ApSiZUltAOea9FmW7x8")
-        
+        self.setup()
         window = UIWindow(frame: UIScreen.main.bounds)
-        changeRootToTabBar()
+        self.changeRootToTabBar()
         window?.makeKeyAndVisible()
         return true
     }
-    func changeRootToTabBar() {
-        
+    private func changeRootToTabBar() {
         let tabBarVC = TabBarViewController(nibName: "TabBarViewController", bundle: nil)
         window?.rootViewController = tabBarVC
+    }
+    
+    func rootViewController() -> UIViewController {
+        let searchViewController = SearchViewController.vc()
+        let navigationController = UINavigationController(rootViewController: searchViewController)
+        navigationController.navigationBar.isHidden = true
+        return navigationController
+    }
+    
+    private func setup() {
+        setupGoogleMapAPIKey()
+    }
+    
+    private func setupGoogleMapAPIKey() {
+        GMSServices.provideAPIKey(GoogleMapsKeys.GMSServicesApiKey)
+        GMSPlacesClient.provideAPIKey(GoogleMapsKeys.GMSPlacesClientApiKey)
     }
 }

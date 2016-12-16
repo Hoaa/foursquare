@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: ViewController {
 
     // MARK: - Cycle Life
     override func viewDidLoad() {
@@ -26,10 +26,9 @@ class ProfileViewController: UIViewController {
         navigationItem.title = Strings.MenuItemsProfileTitle
         navigationController?.navigationBar.titleTextAttributes =
             [NSForegroundColorAttributeName : UIColor.white]
-        navigationController?.navigationBar.barTintColor =
-            UIColor(red: 0, green: 153/255, blue: 255/255, alpha: 1)
     }
 
-    private func configureUI() {
+    override func configureUI() {
+        super.configureUI()
     }
 }

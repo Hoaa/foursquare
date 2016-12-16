@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     }
 
     func configureUI() {
+        navigationController?.navigationBar.barTintColor = Color.Blue153
     }
     
     func showLoad() {

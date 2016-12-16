@@ -11,6 +11,10 @@
 		0416D9A51E02724C0026B3E4 /* ListDefaultCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0416D9A31E02724C0026B3E4 /* ListDefaultCollectionViewCell.xib */; };
 		0416D9AA1E0279760026B3E4 /* ListMapCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416D9A81E0279760026B3E4 /* ListMapCollectionViewCell.swift */; };
 		0416D9AB1E0279760026B3E4 /* ListMapCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0416D9A91E0279760026B3E4 /* ListMapCollectionViewCell.xib */; };
+		0432CCFC1E03827D0058112E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432CCFB1E03827D0058112E /* UIViewController.swift */; };
+		0432CCFE1E0387640058112E /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432CCFD1E0387640058112E /* UICollectionView.swift */; };
+		0432CD021E03885D0058112E /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432CD001E03885D0058112E /* SearchCollectionViewCell.swift */; };
+		0432CD031E03885D0058112E /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0432CD011E03885D0058112E /* SearchCollectionViewCell.xib */; };
 		043B70E41E01098E00D955F9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B70E21E01098E00D955F9 /* ProfileViewController.swift */; };
 		043B70E51E01098E00D955F9 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B70E31E01098E00D955F9 /* ProfileViewController.xib */; };
 		043B70E81E0109AE00D955F9 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B70E61E0109AE00D955F9 /* HistoryViewController.swift */; };
@@ -20,6 +24,10 @@
 		043B70F01E0109E400D955F9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B70EE1E0109E400D955F9 /* ListViewController.swift */; };
 		043B70F11E0109E400D955F9 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B70EF1E0109E400D955F9 /* ListViewController.xib */; };
 		04515A2E1E030D4B00319D93 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04515A2D1E030D4B00319D93 /* UIColor.swift */; };
+		04515A301E030E1100319D93 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04515A2F1E030E1100319D93 /* Color.swift */; };
+		04515A321E030F0300319D93 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04515A311E030F0300319D93 /* Keys.swift */; };
+		04515A341E030F3800319D93 /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04515A331E030F3800319D93 /* NotificationCenter.swift */; };
+		04515A361E030F7C00319D93 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04515A351E030F7C00319D93 /* UIImage.swift */; };
 		045D9FD41E02AA4D00E7C3E3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D9FD31E02AA4D00E7C3E3 /* TabBarController.swift */; };
 		046A54561E0105BB003F96A5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A54541E0105BB003F96A5 /* TabBarViewController.swift */; };
 		046A54571E0105BB003F96A5 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046A54551E0105BB003F96A5 /* TabBarViewController.xib */; };
@@ -61,6 +69,10 @@
 		0416D9A31E02724C0026B3E4 /* ListDefaultCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListDefaultCollectionViewCell.xib; sourceTree = "<group>"; };
 		0416D9A81E0279760026B3E4 /* ListMapCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListMapCollectionViewCell.swift; sourceTree = "<group>"; };
 		0416D9A91E0279760026B3E4 /* ListMapCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListMapCollectionViewCell.xib; sourceTree = "<group>"; };
+		0432CCFB1E03827D0058112E /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		0432CCFD1E0387640058112E /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		0432CD001E03885D0058112E /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchCollectionViewCell.swift; path = Views/SearchViewCell/SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		0432CD011E03885D0058112E /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchCollectionViewCell.xib; path = Views/SearchViewCell/SearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		043B70E21E01098E00D955F9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Profile/ProfileViewController.swift; sourceTree = "<group>"; };
 		043B70E31E01098E00D955F9 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileViewController.xib; path = Profile/ProfileViewController.xib; sourceTree = "<group>"; };
 		043B70E61E0109AE00D955F9 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = History/HistoryViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +82,10 @@
 		043B70EE1E0109E400D955F9 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = List/ListViewController.swift; sourceTree = "<group>"; };
 		043B70EF1E0109E400D955F9 /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListViewController.xib; path = List/ListViewController.xib; sourceTree = "<group>"; };
 		04515A2D1E030D4B00319D93 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		04515A2F1E030E1100319D93 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		04515A311E030F0300319D93 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		04515A331E030F3800319D93 /* NotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
+		04515A351E030F7C00319D93 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		045D9FD31E02AA4D00E7C3E3 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		046A54541E0105BB003F96A5 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		046A54551E0105BB003F96A5 /* TabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
@@ -151,6 +167,16 @@
 				0416D9A91E0279760026B3E4 /* ListMapCollectionViewCell.xib */,
 			);
 			path = ListMapViewCell;
+			sourceTree = "<group>";
+		};
+		0432CCFF1E03881F0058112E /* CellForSearch */ = {
+			isa = PBXGroup;
+			children = (
+				0432CD001E03885D0058112E /* SearchCollectionViewCell.swift */,
+				0432CD011E03885D0058112E /* SearchCollectionViewCell.xib */,
+			);
+			name = CellForSearch;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		043B70DE1E01095E00D955F9 /* List */ = {
@@ -257,8 +283,8 @@
 		3F91E8A91DFEB9900053DFC7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3F91E8AD1DFEB9900053DFC7 /* LaunchScreen */,
 				3F91E8AA1DFEB9900053DFC7 /* AppDelegate */,
+				3F91E8AD1DFEB9900053DFC7 /* LaunchScreen */,
 				3F91E8AC1DFEB9900053DFC7 /* Base */,
 				043B70DF1E01096400D955F9 /* Search */,
 				043B70DE1E01095E00D955F9 /* List */,
@@ -299,6 +325,9 @@
 			isa = PBXGroup;
 			children = (
 				04D476F31E012BF600DBAEFE /* Strings.swift */,
+				04515A2F1E030E1100319D93 /* Color.swift */,
+				04515A311E030F0300319D93 /* Keys.swift */,
+				04515A331E030F3800319D93 /* NotificationCenter.swift */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -315,6 +344,9 @@
 			isa = PBXGroup;
 			children = (
 				04515A2D1E030D4B00319D93 /* UIColor.swift */,
+				04515A351E030F7C00319D93 /* UIImage.swift */,
+				0432CCFB1E03827D0058112E /* UIViewController.swift */,
+				0432CCFD1E0387640058112E /* UICollectionView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -359,6 +391,7 @@
 		3F91E8BA1DFEB9900053DFC7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0432CCFF1E03881F0058112E /* CellForSearch */,
 				0416D9A11E02724C0026B3E4 /* ListDefaultViewCell */,
 				04D5A01F1E0236AA00B3FD74 /* ListCollectionViewCell */,
 				0416D9A71E0279760026B3E4 /* ListMapViewCell */,
@@ -515,6 +548,7 @@
 				04D5A0231E0236CB00B3FD74 /* ListCollectionViewCell.xib in Resources */,
 				3F91E8BE1DFEB9900053DFC7 /* Assets.xcassets in Resources */,
 				046A54571E0105BB003F96A5 /* TabBarViewController.xib in Resources */,
+				0432CD031E03885D0058112E /* SearchCollectionViewCell.xib in Resources */,
 				043B70F11E0109E400D955F9 /* ListViewController.xib in Resources */,
 				0416D9A51E02724C0026B3E4 /* ListDefaultCollectionViewCell.xib in Resources */,
 				043B70ED1E0109CF00D955F9 /* SearchViewController.xib in Resources */,
@@ -686,17 +720,24 @@
 			files = (
 				043B70EC1E0109CF00D955F9 /* SearchViewController.swift in Sources */,
 				0416D9AA1E0279760026B3E4 /* ListMapCollectionViewCell.swift in Sources */,
+				0432CCFC1E03827D0058112E /* UIViewController.swift in Sources */,
 				043B70E41E01098E00D955F9 /* ProfileViewController.swift in Sources */,
 				043B70F01E0109E400D955F9 /* ListViewController.swift in Sources */,
+				04515A321E030F0300319D93 /* Keys.swift in Sources */,
 				04FFAB351E02A1AD004F3347 /* ViewController.swift in Sources */,
+				04515A361E030F7C00319D93 /* UIImage.swift in Sources */,
 				046A54561E0105BB003F96A5 /* TabBarViewController.swift in Sources */,
 				0416D9A41E02724C0026B3E4 /* ListDefaultCollectionViewCell.swift in Sources */,
 				04D476F41E012BF600DBAEFE /* Strings.swift in Sources */,
 				04D5A0221E0236CB00B3FD74 /* ListCollectionViewCell.swift in Sources */,
+				04515A301E030E1100319D93 /* Color.swift in Sources */,
+				04515A341E030F3800319D93 /* NotificationCenter.swift in Sources */,
+				0432CD021E03885D0058112E /* SearchCollectionViewCell.swift in Sources */,
 				04515A2E1E030D4B00319D93 /* UIColor.swift in Sources */,
 				045D9FD41E02AA4D00E7C3E3 /* TabBarController.swift in Sources */,
 				3F91E8BB1DFEB9900053DFC7 /* AppDelegate.swift in Sources */,
 				043B70E81E0109AE00D955F9 /* HistoryViewController.swift in Sources */,
+				0432CCFE1E0387640058112E /* UICollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
