@@ -13,6 +13,7 @@ class SearchViewController: ViewController {
     // MARK: - Property
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
     fileprivate let sectionInsets = UIEdgeInsets(top: 0, left: 1, bottom: 0, right: 1)
+    fileprivate let imagesSearch = ["Breakfast", "Lunch", "Dinner", "Coffee & Tea", "Nightlife", "Things To Do"]
     
     // MARK: - Cycle Life
     override func viewDidLoad() {
@@ -45,7 +46,8 @@ extension SearchViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeue(aClass: SearchCollectionViewCell.self, forIndexPath: indexPath) else {return UICollectionViewCell()}
-        cell.imageSearch.image = UIImage(named: "Search\(indexPath.row)")
+        cell.imageSearch.image = UIImage(named: imagesSearch[indexPath.row])
+        cell.searchKey.text = imagesSearch[indexPath.row]
         return cell
     }
 }

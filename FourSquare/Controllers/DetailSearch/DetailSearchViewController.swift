@@ -13,7 +13,7 @@ class DetailSearchViewController: ViewController {
     // MARK: - Property
     private lazy var searchBar = UISearchBar()
     private let menuStyleButtonFrame = CGRect(x: 0, y: 0, width: 25, height: 25)
-    
+
     // MARK: - Cycle Life
     override func viewDidLoad() {
         super.viewDidLoad()
