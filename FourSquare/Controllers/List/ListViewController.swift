@@ -86,13 +86,13 @@ class ListViewController: ViewController {
         var image = UIImage()
         switch self.changeStyle {
         case 1:
-            image = #imageLiteral(resourceName: "Style")
+            image = #imageLiteral(resourceName: "StyleCollection")
             configVenueCollectionView()
         case 2:
-            image = #imageLiteral(resourceName: "Style")
+            image = #imageLiteral(resourceName: "StyleCollection")
             configVenueCollectionView()
         case 3:
-            image = #imageLiteral(resourceName: "Style")
+            image = #imageLiteral(resourceName: "StyleCollection")
             if locationManager == nil {
                 configGoogleMapView()
                 addVenueToGoogleMapView()
