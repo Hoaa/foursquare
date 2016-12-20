@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,37 +19,34 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AIs-S7-Ewu">
-                        <rect key="frame" x="5" y="5" width="355" height="103"/>
+                        <rect key="frame" x="0.0" y="0.0" width="365" height="180"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feature name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GpY-X3-bIP">
-                        <rect key="frame" x="10" y="113" width="345" height="21"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feature description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BT2-Xn-8Vj">
-                        <rect key="frame" x="10" y="139" width="345" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <nil key="textColor"/>
+                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9PN-nb-SmV">
+                        <rect key="frame" x="0.0" y="0.0" width="365" height="180"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feature name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GpY-X3-bIP">
+                        <rect key="frame" x="101" y="75" width="163.5" height="30"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="AIs-S7-Ewu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="0qC-sW-Uca"/>
-                <constraint firstItem="GpY-X3-bIP" firstAttribute="top" secondItem="AIs-S7-Ewu" secondAttribute="bottom" constant="5" id="54J-aN-10X"/>
-                <constraint firstItem="BT2-Xn-8Vj" firstAttribute="top" secondItem="GpY-X3-bIP" secondAttribute="bottom" constant="5" id="CN8-tL-oaK"/>
-                <constraint firstItem="BT2-Xn-8Vj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="K1T-Ts-es3"/>
-                <constraint firstAttribute="trailing" secondItem="BT2-Xn-8Vj" secondAttribute="trailing" constant="10" id="KGg-BC-qCl"/>
-                <constraint firstItem="AIs-S7-Ewu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="Ln5-ue-bma"/>
-                <constraint firstItem="GpY-X3-bIP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="O6k-bm-u7D"/>
-                <constraint firstAttribute="trailing" secondItem="AIs-S7-Ewu" secondAttribute="trailing" constant="5" id="hSD-6f-PFb"/>
-                <constraint firstItem="AIs-S7-Ewu" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.6" constant="-5" id="nJQ-gQ-Kyz"/>
-                <constraint firstAttribute="trailing" secondItem="GpY-X3-bIP" secondAttribute="trailing" constant="10" id="tul-az-00b"/>
+                <constraint firstItem="9PN-nb-SmV" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="7Md-4a-Mwg"/>
+                <constraint firstItem="AIs-S7-Ewu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Iat-vX-uJt"/>
+                <constraint firstItem="GpY-X3-bIP" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="JLU-Gk-FPn"/>
+                <constraint firstAttribute="trailing" secondItem="9PN-nb-SmV" secondAttribute="trailing" id="KZv-4O-MzZ"/>
+                <constraint firstItem="9PN-nb-SmV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Nsn-Bd-Jho"/>
+                <constraint firstAttribute="trailing" secondItem="AIs-S7-Ewu" secondAttribute="trailing" id="Pqs-Kg-8Rn"/>
+                <constraint firstAttribute="bottom" secondItem="AIs-S7-Ewu" secondAttribute="bottom" id="TJw-vp-g64"/>
+                <constraint firstItem="AIs-S7-Ewu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Wsa-zg-b8X"/>
+                <constraint firstItem="GpY-X3-bIP" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="XkE-kv-D3W"/>
+                <constraint firstAttribute="bottom" secondItem="9PN-nb-SmV" secondAttribute="bottom" id="oZw-x2-CIp"/>
             </constraints>
             <size key="customSize" width="365" height="182"/>
             <connections>
-                <outlet property="featureDescriptionLabel" destination="BT2-Xn-8Vj" id="err-pf-RT5"/>
                 <outlet property="featureImageView" destination="AIs-S7-Ewu" id="lTM-Dv-PMi"/>
                 <outlet property="featureNameLabel" destination="GpY-X3-bIP" id="xoz-f5-tKK"/>
             </connections>

@@ -10,16 +10,25 @@ import UIKit
 
 class ListsViewController: ViewController {
     
-    fileprivate let numberOfSectionsOfTableView = 3
-    fileprivate let heightForHeaderInSection: CGFloat = 44
-    fileprivate let heightForRow: CGFloat = 180
-    fileprivate var myData: [(name: String, items: Any)] = []
+    // MARK: - Properties
+    fileprivate var features: [(featureName: String, image: UIImage)] = []
+    fileprivate var yourLikedPlaces: (quantity: Int, images: [UIImage])!
+    fileprivate var yourSavedPlace: (quantity: Int, images: [UIImage])!
+    fileprivate var yourCreatedList: [(listName: String, quantity: Int, images: [UIImage])] = []
     
-    fileprivate var featureView: FeatureView!
-    fileprivate var yourPlacesView: YourPlacesView!
-    fileprivate var youCreatedView: YouCreatedView!
+    fileprivate let numberItemsInLine = 2
+    fileprivate var featureSize: CGSize!
+    fileprivate var listsItemSize: CGSize!
+    fileprivate let itemInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    fileprivate let featureReuseIdentifier = "FeatureCollectionViewCell"
+    fileprivate let yourCreatedReuseIdentifier = "ListsItemCollectionViewCell"
     
-    @IBOutlet private weak var containerTableView: UITableView!
+    // MARK: - Outlet
+    @IBOutlet weak var featureCollectionView: UICollectionView!
+    @IBOutlet weak var likedPlacesLabel: UILabel!
+    @IBOutlet weak var savedPlacesLabel: UILabel!
+    @IBOutlet weak var yourCreatedCollectionViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var yourCreatedListsCollectionView: UICollectionView!
     
     // MARK: - Override func
     override func viewDidLoad() {
@@ -27,220 +36,125 @@ class ListsViewController: ViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        configureFeatureView()
-        configureYourPlacesView()
-        configureYouCreatedView()
+        configureItemSize()
+        configureFeatureCollectionView()
     }
     
     override func loadData() {
         // Feature data
-        var itemsOfFeature: [(title: String, description: String)] = []
-        for _ in 0...4 {
-            let item = (title: "Feature place name", description: "Description about this feature")
-            itemsOfFeature.append(item)
-        }
-        let feature = (name: "Feature", items: itemsOfFeature as Any)
-        myData.append(feature)
+        features = [(featureName: "Most popular", image: #imageLiteral(resourceName: "Feature_Like")),
+                    (featureName: "Save money", image: #imageLiteral(resourceName: "Feature_Rate")),
+                    (featureName: "Rate most", image: #imageLiteral(resourceName: "Feature_Price"))]
         
         // Your places data
-        var itemsOfYourPlaces: [(name: String, places: [Int])] = []
-        let itemMySavedPlaces = (name: "My saved places", places: [1, 2, 3, 4, 5])
-        itemsOfYourPlaces.append(itemMySavedPlaces)
-        let itemMyLikedPlaces = (name: "My liked places", places: [1, 2])
-        itemsOfYourPlaces.append(itemMyLikedPlaces)
-        let yourPlaces = (name: "Your places", items: itemsOfYourPlaces as Any)
-        myData.append(yourPlaces)
+        yourLikedPlaces = (quantity: 1, images: [#imageLiteral(resourceName: "Feature_Like")])
+        yourSavedPlace = (quantity: 1, images: [#imageLiteral(resourceName: "Feature_Like"), #imageLiteral(resourceName: "Feature_Price")])
         
         // Lists you created data
-        var itemsOfListsYouCreated: [(name: String, places: [Int])] = []
-        let itemDaNangPlaces = (name: "DaNang places", places: [1, 2, 3])
-        itemsOfListsYouCreated.append(itemDaNangPlaces)
-        let listsYouCreated = (name: "Lists you created", items: itemsOfListsYouCreated as Any)
-        myData.append(listsYouCreated)
+        yourCreatedList = [(listName: "Da Nang", quantity: 2, images: [#imageLiteral(resourceName: "Feature_Like"), #imageLiteral(resourceName: "Feature_Rate")]),
+                            (listName: "Da Nang", quantity: 4, images: [#imageLiteral(resourceName: "Feature_Like"), #imageLiteral(resourceName: "Feature_Price"), #imageLiteral(resourceName: "Feature_Price")]),
+                            (listName: "Da Nang", quantity: 3, images: [#imageLiteral(resourceName: "Feature_Like"), #imageLiteral(resourceName: "Feature_Rate"), #imageLiteral(resourceName: "Feature_Price")]),
+                            (listName: "Da Nang", quantity: 3, images: [#imageLiteral(resourceName: "Feature_Like"), #imageLiteral(resourceName: "Feature_Rate")]),]
     }
     
     override func configureUI() {
-        configureContainerTableView()
     }
     
     // MARK: Private func
-    private func configureContainerTableView() {
+    private func configureItemSize() {
+        let viewSize = self.view.bounds.size
+        let width = viewSize.width / CGFloat(numberItemsInLine) - itemInset.left * (1 + 1 / CGFloat(numberItemsInLine))
+        featureSize = CGSize(width: viewSize.width, height: 180)
+        listsItemSize = CGSize(width: width , height: 180)
+    }
+    
+    private func configureFeatureCollectionView() {
         // Register
-        let nibForSectionHeader = UINib(nibName: "ListsSectionHeaderTableViewCell", bundle: nil)
-        containerTableView.register(nibForSectionHeader, forCellReuseIdentifier: "ListsSectionHeaderTableViewCell")
+        let nibForFeatureCollectionView = UINib(nibName: featureReuseIdentifier, bundle: nil)
+        featureCollectionView.register(nibForFeatureCollectionView, forCellWithReuseIdentifier: featureReuseIdentifier)
         
         // DataSource and delegate
-        containerTableView.dataSource = self
-        containerTableView.delegate = self
+        featureCollectionView.dataSource = self
+        featureCollectionView.delegate = self
     }
-    
-    // MARK: - Fileprivate func
-    private func configureFeatureView() {
-        featureView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: heightForRow)
-        featureView.configureView()
-        featureView.datasource = self
-        featureView.delegate = self
-    }
-    
-    private func configureYourPlacesView() {
-        yourPlacesView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: heightForRow)
-        yourPlacesView.configureView()
-        yourPlacesView.datasource = self
-        yourPlacesView.delegate = self
-    }
-    
-    private func configureYouCreatedView() {
-        youCreatedView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: heightForRow)
-        youCreatedView.configureView()
-        youCreatedView.datasource = self
-        youCreatedView.delegate = self
-    }
-}
 
-extension ListsViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return numberOfSectionsOfTableView
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return 1
-        case 1:
-            return 1
-        case 2:
-            return 1
-        default:
-            return 0
+    private func configureYouCreatedCollectionView() {
+        // Height
+        let numberItems = yourCreatedList.count + 1
+        var lines = numberItems / numberItemsInLine
+        if numberItems % yourCreatedList.count != 0 {
+            lines = lines + 1
         }
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.section {
-        case 0:
-            let featureViewCell = UITableViewCell()
-            if featureView == nil {
-                featureView = Bundle.main.loadNibNamed("FeatureView", owner: self, options: nil)?[0] as? FeatureView
-            }
-            featureViewCell.addSubview(featureView)
-            return featureViewCell
-        case 1:
-            let yourPlacesViewCell = UITableViewCell()
-            if yourPlacesView == nil {
-                yourPlacesView = Bundle.main.loadNibNamed("YourPlacesView", owner: self, options: nil)?[0] as? YourPlacesView
-            }
-            yourPlacesViewCell.addSubview(yourPlacesView)
-            return yourPlacesViewCell
-        case 2:
-            let youCreatedViewCell = UITableViewCell()
-            if youCreatedView == nil {
-                youCreatedView = Bundle.main.loadNibNamed("YouCreatedView", owner: self, options: nil)?[0] as? YouCreatedView
-            }
-            youCreatedViewCell.addSubview(youCreatedView)
-            return UITableViewCell()
-        default:
-            return UITableViewCell()
-        }
+        let height = CGFloat(lines) * listsItemSize.height + CGFloat(lines + 1) * itemInset.top
+        yourCreatedCollectionViewHeightConstraint.constant = height
+        
+        // Register
+        let nibForYourCreatedCollectionView = UINib(nibName: yourCreatedReuseIdentifier, bundle: nil)
+        yourCreatedListsCollectionView.register(nibForYourCreatedCollectionView, forCellWithReuseIdentifier: yourCreatedReuseIdentifier)
+        
+        // DataSource and delegate
+        yourCreatedListsCollectionView.dataSource = self
+        yourCreatedListsCollectionView.delegate = self
     }
 }
 
-extension ListsViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return heightForRow
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let listsSectionHeaderTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ListsSectionHeaderTableViewCell") as? ListsSectionHeaderTableViewCell else { return UITableViewCell() }
-        listsSectionHeaderTableViewCell.headerNameLabel.text = myData[section].name
-        return listsSectionHeaderTableViewCell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return heightForHeaderInSection
-    }
-}
-
-extension ListsViewController: FeatureViewDataSource, YourPlacesViewDataSource, YouCreatedViewDataSource {
-    func numberOfSections(_ view: UIView, collectionView: UICollectionView) -> Int {
+extension ListsViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func collectionView(_ view: UIView, collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if view.isMember(of: FeatureView.self) {
-            if let itemsOfFeature = myData[0].items as? [(title: String, description: String)] {
-                return itemsOfFeature.count
-            }
-        } else if view.isMember(of: YourPlacesView.self) {
-            if let itemsOfYourPlaces = myData[1].items as? [(name: String, places: [Int])] {
-                return itemsOfYourPlaces.count
-            }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == featureCollectionView {
+            return features.count
         } else {
-            if let itemsOfYourPlaces = myData[2].items as? [(name: String, places: [Int])] {
-                return itemsOfYourPlaces.count + 1
-            } else {
-                return 1
-            }
+            return yourCreatedList.count
         }
-        return 0
     }
     
-    func collectionView(_ view: UIView, collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if view.isMember(of: FeatureView.self) {
-            guard let featureCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureCollectionViewCell", for: indexPath) as? FeatureCollectionViewCell else { return UICollectionViewCell() }
-            if let itemsOfFeature = myData[0].items as? [(title: String, description: String)] {
-                featureCollectionViewCell.featureImageView.image = #imageLiteral(resourceName: "Picture_Landscape_100")
-                featureCollectionViewCell.featureNameLabel.text = itemsOfFeature[indexPath.row].title
-                featureCollectionViewCell.featureDescriptionLabel.text = itemsOfFeature[indexPath.row].description
-            }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView == featureCollectionView {
+            guard let featureCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: featureReuseIdentifier, for: indexPath) as? FeatureCollectionViewCell else { return UICollectionViewCell() }
+            featureCollectionViewCell.featureImageView.image = features[indexPath.row].image
+            featureCollectionViewCell.featureNameLabel.text = features[indexPath.row].featureName
             return featureCollectionViewCell
-        } else if view.isMember(of: YourPlacesView.self) {
-            guard let yourPlacesCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ListsItemCollectionViewCell", for: indexPath) as? ListsItemCollectionViewCell else { return UICollectionViewCell() }
-            if let itemsOfYourPlaces = myData[1].items as? [(name: String, places: [Int])] {
-                yourPlacesCollectionViewCell.typeLabel.text = itemsOfYourPlaces[indexPath.row].name
-                if itemsOfYourPlaces[indexPath.row].places.count == 0 {
-                    yourPlacesCollectionViewCell.numberPlacesLabel.text = "Nothing was saved"
-                } else if itemsOfYourPlaces[indexPath.row].places.count == 1 {
-                    yourPlacesCollectionViewCell.numberPlacesLabel.text = "There is 1 place"
-                } else {
-                    yourPlacesCollectionViewCell.numberPlacesLabel.text = "There are \(itemsOfYourPlaces[indexPath.row].places.count) places"
-                }
-            }
-            return yourPlacesCollectionViewCell
         } else {
-//            if indexPath.row == 0 {
-//                guard let createANewListCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CreateAListCollectionViewCell", for: indexPath) as? CreateAListCollectionViewCell else { return UICollectionViewCell() }
-//                return createANewListCollectionViewCell
-//            } else {
-                guard let youCreatedCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ListsItemCollectionViewCell", for: indexPath) as? ListsItemCollectionViewCell else { return UICollectionViewCell() }
-                if let itemsOfYourPlaces = myData[1].items as? [(name: String, places: [Int])] {
-                    youCreatedCollectionViewCell.typeLabel.text = itemsOfYourPlaces[indexPath.row].name
-                    if itemsOfYourPlaces[indexPath.row].places.count == 0 {
-                        youCreatedCollectionViewCell.numberPlacesLabel.text = "Nothing was saved"
-                    } else if itemsOfYourPlaces[indexPath.row].places.count == 1 {
-                        youCreatedCollectionViewCell.numberPlacesLabel.text = "There is 1 place"
-                    } else {
-                        youCreatedCollectionViewCell.numberPlacesLabel.text = "There are \(itemsOfYourPlaces[indexPath.row].places.count) places"
-                    }
-                }
-                return youCreatedCollectionViewCell
-//            }
+            guard let yourCreatedListsCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: yourCreatedReuseIdentifier, for: indexPath) as? ListsItemCollectionViewCell else { return UICollectionViewCell() }
+            yourCreatedListsCollectionViewCell.typeLabel.text = yourCreatedList[indexPath.row].listName
+            yourCreatedListsCollectionViewCell.numberPlacesLabel.text = "\(yourCreatedList[indexPath.row].quantity)"
+            return UICollectionViewCell()
         }
     }
 }
 
-extension ListsViewController: FeatureViewDelegate, YourPlacesViewDelegate, YouCreatedViewDelegate {
-    func collectionView(_ view: UIView, collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if view.isMember(of: FeatureView.self) {
-            print("Selecting...")
-        } else if view.isMember(of: YourPlacesView.self) {
-            print("Selecting,,,")
+extension ListsViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //
+    }
+}
+
+extension ListsViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if collectionView == featureCollectionView {
+            return featureSize
         } else {
-            if indexPath.row == 0 {
-                print("Create a new list")
-            } else {
-                print("Selecting~~~")
-            }
+            return listsItemSize
         }
-        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if collectionView == featureCollectionView {
+            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        } else {
+            return itemInset
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        if collectionView == featureCollectionView {
+            return 0
+        } else {
+            return itemInset.bottom
+        }
     }
 }

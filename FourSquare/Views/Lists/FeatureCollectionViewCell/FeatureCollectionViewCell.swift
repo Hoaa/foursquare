@@ -12,7 +12,6 @@ class FeatureCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var featureImageView: UIImageView!
     @IBOutlet weak var featureNameLabel: UILabel!
-    @IBOutlet weak var featureDescriptionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
