@@ -61,12 +61,13 @@ class DetailSearchViewController: ViewController {
     // MARK: - Private Function
     private func configureNavigationItem() {
         //let manuStyleButton = UIButton(type: .custom)
-        manuStyleButton.imageView?.contentMode = .scaleAspectFit
+        manuStyleButton.imageView?.contentMode = .scaleAspectFill
         manuStyleButton.setImage(#imageLiteral(resourceName: "StyleCollection"), for: UIControlState.normal)
         manuStyleButton.frame = menuButtonFrame
         manuStyleButton.addTarget(self, action: #selector(self.changeStyle), for: UIControlEvents.touchUpInside)
         let menuStyleBarButton = UIBarButtonItem(customView: manuStyleButton)
         navigationItem.rightBarButtonItem = menuStyleBarButton
+        manuStyleButton.isSelected = layoutState == .list
         searchBar = UISearchBar()
         searchBar.placeholder = "Coffe & Tea"
         searchBar.sizeToFit()
@@ -92,8 +93,9 @@ class DetailSearchViewController: ViewController {
             transitionManager = TransitionManager(duration: animationDuration, collectionView: collectionView!, destinationLayout: listLayout, layoutState: layoutState)
         }
         transitionManager.startInteractiveTransition()
-        //rotationButton.selected = layoutState == .list
-        //rotationButton.animationDuration = animationDuration
+        manuStyleButton.animationDuration = animationDuration
+        manuStyleButton.isSelected = layoutState == .list
+        
     }
 }
 
