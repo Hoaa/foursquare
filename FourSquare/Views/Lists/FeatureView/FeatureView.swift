@@ -9,13 +9,13 @@
 import UIKit
 
 protocol FeatureViewDataSource {
-    func numberOfSections(in collectionView: UICollectionView) -> Int
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    func numberOfSections(_ view: UIView, collectionView: UICollectionView) -> Int
+    func collectionView(_ view: UIView, collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    func collectionView(_ view: UIView, collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
 }
 
 protocol FeatureViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    func collectionView(_ view: UIView, collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
 }
 
 class FeatureView: UIView {
@@ -46,21 +46,21 @@ class FeatureView: UIView {
 
 extension FeatureView: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        if let numberOfSections = datasource?.numberOfSections(in: collectionView) {
+        if let numberOfSections = datasource?.numberOfSections(self, collectionView: collectionView) {
             return numberOfSections
         }
         return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let numberItemsInSection = datasource?.collectionView(collectionView, numberOfItemsInSection: section) {
+        if let numberItemsInSection = datasource?.collectionView(self, collectionView: collectionView, numberOfItemsInSection: section) {
             return numberItemsInSection
         }
         return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cellForItem = datasource?.collectionView(collectionView, cellForItemAt: indexPath) {
+        if let cellForItem = datasource?.collectionView(self, collectionView: collectionView, cellForItemAt: indexPath) {
             return cellForItem
         }
         return UICollectionViewCell()
@@ -69,6 +69,6 @@ extension FeatureView: UICollectionViewDataSource {
 
 extension FeatureView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.collectionView(collectionView, didSelectItemAt: indexPath)
+        delegate?.collectionView(self, collectionView: collectionView, didSelectItemAt: indexPath)
     }
 }

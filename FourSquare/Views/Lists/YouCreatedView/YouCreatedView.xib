@@ -11,14 +11,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FeatureView" customModule="FourSquare" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YouCreatedView" customModule="FourSquare" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ua4-7Y-M0w">
-                    <rect key="frame" x="10" y="10" width="355" height="160"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="DdH-gW-Inm">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qsH-dc-3A3">
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="k3h-Ck-Djq">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -26,19 +26,18 @@
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="ua4-7Y-M0w" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="1Wt-1K-zso"/>
-                <constraint firstItem="ua4-7Y-M0w" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="CTL-L5-i2L"/>
-                <constraint firstAttribute="trailing" secondItem="ua4-7Y-M0w" secondAttribute="trailing" constant="10" id="Swi-Qk-L1b"/>
-                <constraint firstAttribute="bottom" secondItem="ua4-7Y-M0w" secondAttribute="bottom" constant="10" id="ZqS-ML-lkn"/>
+                <constraint firstItem="DdH-gW-Inm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0tE-ff-mCj"/>
+                <constraint firstAttribute="trailing" secondItem="DdH-gW-Inm" secondAttribute="trailing" id="Yp3-Ct-Zjn"/>
+                <constraint firstItem="DdH-gW-Inm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fX6-zl-zF9"/>
+                <constraint firstAttribute="bottom" secondItem="DdH-gW-Inm" secondAttribute="bottom" id="jpj-4c-Z6J"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="featureCollectionView" destination="ua4-7Y-M0w" id="f47-zB-LOo"/>
+                <outlet property="youCreatedCollectionView" destination="DdH-gW-Inm" id="eOu-af-cHY"/>
             </connections>
-            <point key="canvasLocation" x="25.5" y="52"/>
         </view>
     </objects>
 </document>
