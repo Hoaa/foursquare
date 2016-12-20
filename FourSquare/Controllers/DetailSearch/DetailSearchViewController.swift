@@ -8,9 +8,9 @@
 
 import UIKit
 
-private let animationDuration: TimeInterval = 1
-private let listLayoutStaticCellHeight: CGFloat = 96
-private let gridLayoutStaticCellHeight: CGFloat = 235
+private let animationDuration: TimeInterval = 2
+private let listLayoutStaticCellHeight: CGFloat = 80
+private let gridLayoutStaticCellHeight: CGFloat = 254
 
 class DetailSearchViewController: ViewController {
     
@@ -18,21 +18,17 @@ class DetailSearchViewController: ViewController {
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
     private lazy var searchBar = UISearchBar()
     private let menuStyleButtonFrame = CGRect(x: 0, y: 0, width: 25, height: 25)
-    fileprivate let sectionInsetsDefault = UIEdgeInsets(top: 0, left: 1, bottom: 0, right: 1)
-    fileprivate let sectionInsetsCollection = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     fileprivate var valueChangeStyle: Int = 1 {
         willSet {
-            //navigationItem.rightBarButtonItem = nil
         }
         didSet {
-            collectionView.reloadData()
         }
     }
     
-    private lazy var listLayout = DisplaySwitchLayout(staticCellHeight: listLayoutStaticCellHeight, nextLayoutStaticCellHeight: gridLayoutStaticCellHeight, layoutState: .list)
-    private lazy var gridLayout = DisplaySwitchLayout(staticCellHeight: gridLayoutStaticCellHeight, nextLayoutStaticCellHeight: listLayoutStaticCellHeight, layoutState: .grid)
-    private var layoutState: LayoutState = .list
-    var manuStyleButton = SwitchLayoutButton()
+    fileprivate lazy var listLayout = DisplaySwitchLayout(staticCellHeight: listLayoutStaticCellHeight, nextLayoutStaticCellHeight: gridLayoutStaticCellHeight, layoutState: .list)
+    fileprivate lazy var gridLayout = DisplaySwitchLayout(staticCellHeight: gridLayoutStaticCellHeight, nextLayoutStaticCellHeight: listLayoutStaticCellHeight, layoutState: .grid)
+    fileprivate var layoutState: LayoutState = .list
+    fileprivate var manuStyleButton = SwitchLayoutButton()
 
     // MARK: - Cycle Life
     override func viewDidLoad() {
@@ -75,15 +71,6 @@ class DetailSearchViewController: ViewController {
     }
     
     @objc private func changeStyle() {
-        switch self.valueChangeStyle {
-        case 1:
-            self.valueChangeStyle = 2
-        case 2:
-            self.valueChangeStyle = 1
-        default:
-            break
-        }
-        
         let transitionManager: TransitionManager
         if layoutState == .list {
             layoutState = .grid
@@ -110,47 +97,48 @@ extension DetailSearchViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if self.valueChangeStyle == 1 {
-            guard let cell = collectionView.dequeue(aClass: DefaultVenueCollectionViewCell.self, forIndexPath: indexPath) else {return UICollectionViewCell()}
-            return cell
-        } else {
-            guard let cell = collectionView.dequeue(aClass: VenueCollectionViewCell.self, forIndexPath: indexPath) else {return UICollectionViewCell()}
-            return cell
+        guard let cell = collectionView.dequeue(aClass: DefaultVenueCollectionViewCell.self, forIndexPath: indexPath) else {return UICollectionViewCell()}
+        if self.layoutState == .grid {
+            cell.setupGridLayoutConstraints(1, cellWidth: cell.frame.width)
+        } else if self.layoutState == .list {
+            cell.setupListLayoutConstraints(1, cellWidth: cell.frame.width)
         }
+        print(cell.frame.height)
+        return cell
     }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
 extension DetailSearchViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if self.valueChangeStyle == 1 {
-            return CGSize(width: self.view.frame.width, height: 96)
-        } else {
-            let itemsPerRow: CGFloat = 2
-            let paddingSpace = sectionInsetsCollection.left * (itemsPerRow + 1)
-            let availableWidth = view.frame.width - paddingSpace
-            let widthPerItem = availableWidth / itemsPerRow
-            let heightViewInfo: CGFloat = 60
-            let heightPerItem = widthPerItem * 3 / 4 + heightViewInfo
-            return CGSize(width: widthPerItem, height: heightPerItem)
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        if self.valueChangeStyle == 1 {
-            return sectionInsetsDefault
-        } else {
-            return sectionInsetsCollection
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        if self.valueChangeStyle == 1 {
-            return sectionInsetsDefault.left
-        } else {
-            return sectionInsetsCollection.left
-        }
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        if self.valueChangeStyle == 1 {
+//            return CGSize(width: self.view.frame.width, height: 80)
+//        } else {
+//            let itemsPerRow: CGFloat = 2
+//            let paddingSpace = sectionInsetsCollection.left * (itemsPerRow + 1)
+//            let availableWidth = view.frame.width - paddingSpace
+//            let widthPerItem = availableWidth / itemsPerRow
+//            let heightViewInfo: CGFloat = 60
+//            let heightPerItem = widthPerItem * 3 / 4 + heightViewInfo
+//            return CGSize(width: widthPerItem, height: heightPerItem)
+//        }
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        if self.valueChangeStyle == 1 {
+//            return sectionInsetsDefault
+//        } else {
+//            return sectionInsetsCollection
+//        }
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        if self.valueChangeStyle == 1 {
+//            return sectionInsetsDefault.left
+//        } else {
+//            return sectionInsetsCollection.left
+//        }
+//    }
 }
 
 // MARK: - UICollectionViewDelegate

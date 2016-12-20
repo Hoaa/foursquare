@@ -206,12 +206,14 @@
 				0438F6401E03E06600230893 /* SearchCollectionViewCell.swift */,
 				0438F6411E03E06600230893 /* SearchCollectionViewCell.xib */,
 			);
-			path = SearchCell;
+			name = SearchCell;
+			path = ../SearchCell;
 			sourceTree = "<group>";
 		};
 		0438F6421E03E06600230893 /* VenueCell */ = {
 			isa = PBXGroup;
 			children = (
+				0438F63F1E03E06600230893 /* SearchCell */,
 				0499CB961E078B9C00D4A607 /* CellDefault */,
 				0499CB9B1E078C1600D4A607 /* CellColletion */,
 				045D51CD1E08CBC0008AEDD1 /* CellMap */,
@@ -502,11 +504,10 @@
 		3F91E8BA1DFEB9900053DFC7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0438F6421E03E06600230893 /* VenueCell */,
 				0438F6361E03E06600230893 /* ListCollectionCell */,
 				0438F6391E03E06600230893 /* ListDefaultCell */,
 				0438F63C1E03E06600230893 /* ListMapCell */,
-				0438F63F1E03E06600230893 /* SearchCell */,
-				0438F6421E03E06600230893 /* VenueCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
