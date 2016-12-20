@@ -7,11 +7,11 @@
 //
 
 import UIKit
+import DisplaySwitcher
 
 class VenueCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
 }

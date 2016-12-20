@@ -32,6 +32,8 @@
 		04515A321E030F0300319D93 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04515A311E030F0300319D93 /* Keys.swift */; };
 		04515A341E030F3800319D93 /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04515A331E030F3800319D93 /* NotificationCenter.swift */; };
 		04515A361E030F7C00319D93 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04515A351E030F7C00319D93 /* UIImage.swift */; };
+		045D51C11E08C322008AEDD1 /* DisplaySwitchLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D51C01E08C322008AEDD1 /* DisplaySwitchLayout.swift */; };
+		045D51C31E08C394008AEDD1 /* DisplaySwitchLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D51C21E08C394008AEDD1 /* DisplaySwitchLayoutAttributes.swift */; };
 		045D9FD41E02AA4D00E7C3E3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D9FD31E02AA4D00E7C3E3 /* TabBarController.swift */; };
 		046A54561E0105BB003F96A5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A54541E0105BB003F96A5 /* TabBarViewController.swift */; };
 		046A54571E0105BB003F96A5 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046A54551E0105BB003F96A5 /* TabBarViewController.xib */; };
@@ -96,6 +98,8 @@
 		04515A311E030F0300319D93 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		04515A331E030F3800319D93 /* NotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
 		04515A351E030F7C00319D93 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		045D51C01E08C322008AEDD1 /* DisplaySwitchLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisplaySwitchLayout.swift; path = FourSquare/Library/DisplaySwitcher/Layouts/DisplaySwitchLayout.swift; sourceTree = SOURCE_ROOT; };
+		045D51C21E08C394008AEDD1 /* DisplaySwitchLayoutAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisplaySwitchLayoutAttributes.swift; path = FourSquare/Library/DisplaySwitcher/Layouts/DisplaySwitchLayoutAttributes.swift; sourceTree = SOURCE_ROOT; };
 		045D9FD31E02AA4D00E7C3E3 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		046A54541E0105BB003F96A5 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		046A54551E0105BB003F96A5 /* TabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
@@ -251,6 +255,23 @@
 				0447A6571E0399C200BB1A28 /* DetailSearchViewController.xib */,
 			);
 			name = DetailSearch;
+			sourceTree = "<group>";
+		};
+		045D51BE1E08C283008AEDD1 /* DisplaySwitcher */ = {
+			isa = PBXGroup;
+			children = (
+				045D51BF1E08C2EF008AEDD1 /* Layouts */,
+			);
+			name = DisplaySwitcher;
+			sourceTree = "<group>";
+		};
+		045D51BF1E08C2EF008AEDD1 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				045D51C01E08C322008AEDD1 /* DisplaySwitchLayout.swift */,
+				045D51C21E08C394008AEDD1 /* DisplaySwitchLayoutAttributes.swift */,
+			);
+			name = Layouts;
 			sourceTree = "<group>";
 		};
 		0499CB961E078B9C00D4A607 /* CellDefault */ = {
@@ -410,6 +431,7 @@
 		3F91E8B51DFEB9900053DFC7 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				045D51BE1E08C283008AEDD1 /* DisplaySwitcher */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -772,6 +794,7 @@
 			files = (
 				0438F6431E03E06600230893 /* ListCollectionViewCell.swift in Sources */,
 				043B70EC1E0109CF00D955F9 /* SearchViewController.swift in Sources */,
+				045D51C11E08C322008AEDD1 /* DisplaySwitchLayout.swift in Sources */,
 				0499CB991E078B9C00D4A607 /* DefaultVenueCollectionViewCell.swift in Sources */,
 				0432CCFC1E03827D0058112E /* UIViewController.swift in Sources */,
 				043B70E41E01098E00D955F9 /* ProfileViewController.swift in Sources */,
@@ -781,6 +804,7 @@
 				04FFAB351E02A1AD004F3347 /* ViewController.swift in Sources */,
 				04515A361E030F7C00319D93 /* UIImage.swift in Sources */,
 				046A54561E0105BB003F96A5 /* TabBarViewController.swift in Sources */,
+				045D51C31E08C394008AEDD1 /* DisplaySwitchLayoutAttributes.swift in Sources */,
 				04D476F41E012BF600DBAEFE /* Strings.swift in Sources */,
 				0447A6581E0399C200BB1A28 /* DetailSearchViewController.swift in Sources */,
 				0438F6471E03E06600230893 /* ListMapCollectionViewCell.swift in Sources */,

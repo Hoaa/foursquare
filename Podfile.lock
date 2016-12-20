@@ -1,5 +1,4 @@
 PODS:
-  - DisplaySwitcher (1.0.1)
   - GoogleMaps (2.1.1):
     - GoogleMaps/Maps (= 2.1.1)
   - GoogleMaps/Base (2.1.1)
@@ -12,17 +11,15 @@ PODS:
     - GoogleMaps/Base (= 2.1.1)
 
 DEPENDENCIES:
-  - DisplaySwitcher (~> 1.0)
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
 
 SPEC CHECKSUMS:
-  DisplaySwitcher: 5f725284c28cdf22ea7ba2eee8e8f7e7cb9cdf87
   GoogleMaps: a5b5bbe47734e2443bde781a6aa64e69fdb6d785
   GooglePlacePicker: 665f39f931f2df32f9dd3fcc45f7e8abf71e535c
   GooglePlaces: 35636d86e5020cba3856eb988c09a5491de0a65a
 
-PODFILE CHECKSUM: 23452684184ee4c9ca69c60bf7345632b5298f56
+PODFILE CHECKSUM: 71f1e143234c1ead9fe4166656c49aeeae087ee8
 
 COCOAPODS: 1.1.1

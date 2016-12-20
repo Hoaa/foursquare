@@ -7,7 +7,9 @@
 //
 
 import UIKit
-import DisplaySwitcher
+
+private let listLayoutStaticCellHeight: CGFloat = 96
+private let gridLayoutStaticCellHeight: CGFloat = 235
 
 class DetailSearchViewController: ViewController {
     
@@ -22,19 +24,13 @@ class DetailSearchViewController: ViewController {
             //navigationItem.rightBarButtonItem = nil
         }
         didSet {
-            switch valueChangeStyle {
-            case 1:
-                collectionView.reloadData()
-            case 2:
-                collectionView.reloadData()
-            case 3:
-                collectionView.reloadData()
-            default:
-                break
-            }
+            collectionView.reloadData()
         }
     }
-
+    
+    private lazy var listLayout = DisplaySwitchLayout(staticCellHeight: listLayoutStaticCellHeight, nextLayoutStaticCellHeight: gridLayoutStaticCellHeight, layoutState: .list)
+    private lazy var gridLayout = DisplaySwitchLayout(staticCellHeight: gridLayoutStaticCellHeight, nextLayoutStaticCellHeight: listLayoutStaticCellHeight, layoutState: .grid)
+    
     // MARK: - Cycle Life
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,7 +112,7 @@ extension DetailSearchViewController: UICollectionViewDelegateFlowLayout {
             let paddingSpace = sectionInsetsCollection.left * (itemsPerRow + 1)
             let availableWidth = view.frame.width - paddingSpace
             let widthPerItem = availableWidth / itemsPerRow
-            let heightViewInfo: CGFloat = 100
+            let heightViewInfo: CGFloat = 60
             let heightPerItem = widthPerItem * 3 / 4 + heightViewInfo
             return CGSize(width: widthPerItem, height: heightPerItem)
         }

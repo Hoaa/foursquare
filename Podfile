@@ -16,7 +16,6 @@ target 'FourSquare' do
   pod 'GooglePlacePicker'
 
   # Utils
-  pod ‘DisplaySwitcher’, '~> 1.0’
 
   target 'FourSquareTests' do
 
