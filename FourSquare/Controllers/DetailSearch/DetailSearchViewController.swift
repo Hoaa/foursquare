@@ -8,6 +8,7 @@
 
 import UIKit
 
+private let animationDuration: TimeInterval = 1
 private let listLayoutStaticCellHeight: CGFloat = 96
 private let gridLayoutStaticCellHeight: CGFloat = 235
 
@@ -30,7 +31,9 @@ class DetailSearchViewController: ViewController {
     
     private lazy var listLayout = DisplaySwitchLayout(staticCellHeight: listLayoutStaticCellHeight, nextLayoutStaticCellHeight: gridLayoutStaticCellHeight, layoutState: .list)
     private lazy var gridLayout = DisplaySwitchLayout(staticCellHeight: gridLayoutStaticCellHeight, nextLayoutStaticCellHeight: listLayoutStaticCellHeight, layoutState: .grid)
-    
+    private var layoutState: LayoutState = .list
+    var manuStyleButton = SwitchLayoutButton()
+
     // MARK: - Cycle Life
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,13 +53,14 @@ class DetailSearchViewController: ViewController {
         self.configureNavigationItem()
         collectionView.registerNib(aClass: DefaultVenueCollectionViewCell.self)
         collectionView.registerNib(aClass: VenueCollectionViewCell.self)
+        collectionView.collectionViewLayout = listLayout
         collectionView.dataSource = self
         collectionView.delegate = self
     }
     
     // MARK: - Private Function
     private func configureNavigationItem() {
-        let manuStyleButton = UIButton(type: .custom)
+        //let manuStyleButton = UIButton(type: .custom)
         manuStyleButton.imageView?.contentMode = .scaleAspectFit
         manuStyleButton.setImage(#imageLiteral(resourceName: "StyleCollection"), for: UIControlState.normal)
         manuStyleButton.frame = menuButtonFrame
@@ -78,6 +82,18 @@ class DetailSearchViewController: ViewController {
         default:
             break
         }
+        
+        let transitionManager: TransitionManager
+        if layoutState == .list {
+            layoutState = .grid
+            transitionManager = TransitionManager(duration: animationDuration, collectionView: collectionView!, destinationLayout: gridLayout, layoutState: layoutState)
+        } else {
+            layoutState = .list
+            transitionManager = TransitionManager(duration: animationDuration, collectionView: collectionView!, destinationLayout: listLayout, layoutState: layoutState)
+        }
+        transitionManager.startInteractiveTransition()
+        //rotationButton.selected = layoutState == .list
+        //rotationButton.animationDuration = animationDuration
     }
 }
 
@@ -137,4 +153,8 @@ extension DetailSearchViewController: UICollectionViewDelegateFlowLayout {
 
 // MARK: - UICollectionViewDelegate
 extension DetailSearchViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, transitionLayoutForOldLayout fromLayout: UICollectionViewLayout, newLayout toLayout: UICollectionViewLayout) -> UICollectionViewTransitionLayout {
+        let customTransitionLayout = TransitionLayout(currentLayout: fromLayout, nextLayout: toLayout)
+        return customTransitionLayout
+    }
 }
