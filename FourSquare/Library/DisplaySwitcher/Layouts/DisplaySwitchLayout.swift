@@ -8,7 +8,7 @@
 
 import UIKit
 private let ListLayoutCountOfColumns = 1
-private let GridLayoutCountOfColumns = 2
+private let GridLayoutCountOfColumns = 3
 @objc public enum LayoutState: Int {
     case list, grid
 }
