@@ -9,7 +9,7 @@
 import UIKit
 private let imageListLayoutSize: CGFloat = 80.0
 class DefaultVenueCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var imageVenue: UIImageView!
     @IBOutlet weak var nameListVenue: UILabel!
     @IBOutlet weak var nameGridVenue: UILabel!
@@ -73,16 +73,15 @@ class DefaultVenueCollectionViewCell: UICollectionViewCell {
     
     override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
         super.apply(layoutAttributes)
-        if let attributes = layoutAttributes as? DisplaySwitchLayoutAttributes {
-            if attributes.transitionProgress > 0 {
-                if attributes.layoutState == .grid {
-                    setupGridLayoutConstraints(attributes.transitionProgress, cellWidth: attributes.nextLayoutCellFrame.width)
-                    imageGridLayoutSize = attributes.nextLayoutCellFrame.width
-                } else {
-                    setupListLayoutConstraints(attributes.transitionProgress, cellWidth: attributes.nextLayoutCellFrame.width)
-                }
+        guard let attributes = layoutAttributes as? DisplaySwitchLayoutAttributes else { return }
+        if attributes.transitionProgress > 0 {
+            if attributes.layoutState == .grid {
+                setupGridLayoutConstraints(attributes.transitionProgress, cellWidth: attributes.nextLayoutCellFrame.width)
+                imageGridLayoutSize = attributes.nextLayoutCellFrame.width
+            } else {
+                setupListLayoutConstraints(attributes.transitionProgress, cellWidth: attributes.nextLayoutCellFrame.width)
             }
         }
     }
-
+    
 }

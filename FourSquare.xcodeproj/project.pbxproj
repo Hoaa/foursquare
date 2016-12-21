@@ -42,8 +42,6 @@
 		046A54571E0105BB003F96A5 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046A54551E0105BB003F96A5 /* TabBarViewController.xib */; };
 		0499CB991E078B9C00D4A607 /* DefaultVenueCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499CB971E078B9C00D4A607 /* DefaultVenueCollectionViewCell.swift */; };
 		0499CB9A1E078B9C00D4A607 /* DefaultVenueCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0499CB981E078B9C00D4A607 /* DefaultVenueCollectionViewCell.xib */; };
-		0499CB9E1E078C4A00D4A607 /* VenueCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499CB9C1E078C4A00D4A607 /* VenueCollectionViewCell.swift */; };
-		0499CB9F1E078C4A00D4A607 /* VenueCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0499CB9D1E078C4A00D4A607 /* VenueCollectionViewCell.xib */; };
 		04D476F41E012BF600DBAEFE /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D476F31E012BF600DBAEFE /* Strings.swift */; };
 		04FFAB351E02A1AD004F3347 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFAB341E02A1AD004F3347 /* ViewController.swift */; };
 		3F91E8911DFEB86D0053DFC7 /* FourSquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E8901DFEB86D0053DFC7 /* FourSquareTests.swift */; };
@@ -111,8 +109,6 @@
 		046A54551E0105BB003F96A5 /* TabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		0499CB971E078B9C00D4A607 /* DefaultVenueCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultVenueCollectionViewCell.swift; sourceTree = "<group>"; };
 		0499CB981E078B9C00D4A607 /* DefaultVenueCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultVenueCollectionViewCell.xib; sourceTree = "<group>"; };
-		0499CB9C1E078C4A00D4A607 /* VenueCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VenueCollectionViewCell.swift; path = CellCollection/VenueCollectionViewCell.swift; sourceTree = "<group>"; };
-		0499CB9D1E078C4A00D4A607 /* VenueCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VenueCollectionViewCell.xib; path = CellCollection/VenueCollectionViewCell.xib; sourceTree = "<group>"; };
 		04D476F31E012BF600DBAEFE /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		04FFAB341E02A1AD004F3347 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0CE5188E0325E3C8E2C28B46 /* Pods-FourSquare-FourSquareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare-FourSquareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquare-FourSquareTests/Pods-FourSquare-FourSquareTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -215,7 +211,6 @@
 			children = (
 				0438F63F1E03E06600230893 /* SearchCell */,
 				0499CB961E078B9C00D4A607 /* CellDefault */,
-				0499CB9B1E078C1600D4A607 /* CellColletion */,
 				045D51CD1E08CBC0008AEDD1 /* CellMap */,
 			);
 			path = VenueCell;
@@ -324,15 +319,6 @@
 				0499CB981E078B9C00D4A607 /* DefaultVenueCollectionViewCell.xib */,
 			);
 			path = CellDefault;
-			sourceTree = "<group>";
-		};
-		0499CB9B1E078C1600D4A607 /* CellColletion */ = {
-			isa = PBXGroup;
-			children = (
-				0499CB9C1E078C4A00D4A607 /* VenueCollectionViewCell.swift */,
-				0499CB9D1E078C4A00D4A607 /* VenueCollectionViewCell.xib */,
-			);
-			name = CellColletion;
 			sourceTree = "<group>";
 		};
 		3F91E86F1DFEB86D0053DFC7 = {
@@ -662,7 +648,6 @@
 				046A54571E0105BB003F96A5 /* TabBarViewController.xib in Resources */,
 				043B70F11E0109E400D955F9 /* ListViewController.xib in Resources */,
 				043B70ED1E0109CF00D955F9 /* SearchViewController.xib in Resources */,
-				0499CB9F1E078C4A00D4A607 /* VenueCollectionViewCell.xib in Resources */,
 				0438F6461E03E06600230893 /* ListDefaultCollectionViewCell.xib in Resources */,
 				0447A6591E0399C200BB1A28 /* DetailSearchViewController.xib in Resources */,
 				0438F64A1E03E06600230893 /* SearchCollectionViewCell.xib in Resources */,
@@ -856,7 +841,6 @@
 				045D9FD41E02AA4D00E7C3E3 /* TabBarController.swift in Sources */,
 				3F91E8BB1DFEB9900053DFC7 /* AppDelegate.swift in Sources */,
 				043B70E81E0109AE00D955F9 /* HistoryViewController.swift in Sources */,
-				0499CB9E1E078C4A00D4A607 /* VenueCollectionViewCell.swift in Sources */,
 				0438F6451E03E06600230893 /* ListDefaultCollectionViewCell.swift in Sources */,
 				045D51CA1E08C659008AEDD1 /* TransitionManager.swift in Sources */,
 				045D51C81E08C62E008AEDD1 /* TransitionLayout.swift in Sources */,

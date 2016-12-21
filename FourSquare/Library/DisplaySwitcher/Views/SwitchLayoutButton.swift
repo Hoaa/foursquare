@@ -20,7 +20,7 @@ private let itemsCount: Int = 6
 open class SwitchLayoutButton: UIButton {
     
     open var animationDuration: TimeInterval = 0.25
-    @IBInspectable open var lineColor: UIColor = .green
+    @IBInspectable open var lineColor: UIColor = .white
     
     fileprivate let lineLayer1 = CAShapeLayer()
     fileprivate let lineLayer2 = CAShapeLayer()

@@ -19,7 +19,9 @@ extension UICollectionView {
         register(aClass, forCellWithReuseIdentifier: name)
     }
     
-    public func dequeue<T: UICollectionViewCell>(aClass: T.Type, forIndexPath indexPath: IndexPath) -> T! {
-        return dequeueReusableCell(withReuseIdentifier: String(describing: aClass), for: indexPath) as? T
+    public func dequeue<T: UICollectionViewCell>(aClass: T.Type, forIndexPath indexPath: IndexPath) -> T {
+        guard let cell = dequeueReusableCell(withReuseIdentifier: String(describing: aClass), for: indexPath) as? T
+        else { fatalError("\(String(describing: aClass)) unregisted") }
+        return cell
     }
 }

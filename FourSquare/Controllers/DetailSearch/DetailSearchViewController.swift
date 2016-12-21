@@ -10,7 +10,7 @@ import UIKit
 
 private let animationDuration: TimeInterval = 2
 private let listLayoutStaticCellHeight: CGFloat = 80
-private let gridLayoutStaticCellHeight: CGFloat = 254
+private let gridLayoutStaticCellHeight: CGFloat = 250
 
 class DetailSearchViewController: ViewController {
     
@@ -18,18 +18,11 @@ class DetailSearchViewController: ViewController {
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
     private lazy var searchBar = UISearchBar()
     private let menuStyleButtonFrame = CGRect(x: 0, y: 0, width: 25, height: 25)
-    fileprivate var valueChangeStyle: Int = 1 {
-        willSet {
-        }
-        didSet {
-        }
-    }
-    
-    fileprivate lazy var listLayout = DisplaySwitchLayout(staticCellHeight: listLayoutStaticCellHeight, nextLayoutStaticCellHeight: gridLayoutStaticCellHeight, layoutState: .list)
-    fileprivate lazy var gridLayout = DisplaySwitchLayout(staticCellHeight: gridLayoutStaticCellHeight, nextLayoutStaticCellHeight: listLayoutStaticCellHeight, layoutState: .grid)
     fileprivate var layoutState: LayoutState = .list
     fileprivate var manuStyleButton = SwitchLayoutButton()
-
+    fileprivate lazy var listLayout = DisplaySwitchLayout(staticCellHeight: listLayoutStaticCellHeight, nextLayoutStaticCellHeight: gridLayoutStaticCellHeight, layoutState: .list)
+    fileprivate lazy var gridLayout = DisplaySwitchLayout(staticCellHeight: gridLayoutStaticCellHeight, nextLayoutStaticCellHeight: listLayoutStaticCellHeight, layoutState: .grid)
+    
     // MARK: - Cycle Life
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +41,6 @@ class DetailSearchViewController: ViewController {
         super.configureUI()
         self.configureNavigationItem()
         collectionView.registerNib(aClass: DefaultVenueCollectionViewCell.self)
-        collectionView.registerNib(aClass: VenueCollectionViewCell.self)
         collectionView.collectionViewLayout = listLayout
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -56,10 +48,9 @@ class DetailSearchViewController: ViewController {
     
     // MARK: - Private Function
     private func configureNavigationItem() {
-        //let manuStyleButton = UIButton(type: .custom)
-        manuStyleButton.imageView?.contentMode = .scaleAspectFill
-        manuStyleButton.setImage(#imageLiteral(resourceName: "StyleCollection"), for: UIControlState.normal)
-        manuStyleButton.frame = menuButtonFrame
+        manuStyleButton.isSelected = true
+        manuStyleButton.frame = menuStyleButtonFrame
+        manuStyleButton.awakeFromNib()
         manuStyleButton.addTarget(self, action: #selector(self.changeStyle), for: UIControlEvents.touchUpInside)
         let menuStyleBarButton = UIBarButtonItem(customView: manuStyleButton)
         navigationItem.rightBarButtonItem = menuStyleBarButton
@@ -82,7 +73,6 @@ class DetailSearchViewController: ViewController {
         transitionManager.startInteractiveTransition()
         manuStyleButton.animationDuration = animationDuration
         manuStyleButton.isSelected = layoutState == .list
-        
     }
 }
 
@@ -97,13 +87,14 @@ extension DetailSearchViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeue(aClass: DefaultVenueCollectionViewCell.self, forIndexPath: indexPath) else {return UICollectionViewCell()}
+        let cell = collectionView.dequeue(aClass: DefaultVenueCollectionViewCell.self, forIndexPath: indexPath)
         if self.layoutState == .grid {
             cell.setupGridLayoutConstraints(1, cellWidth: cell.frame.width)
         } else if self.layoutState == .list {
             cell.setupListLayoutConstraints(1, cellWidth: cell.frame.width)
         }
-        print(cell.frame.height)
+        print(cell.frame.width)
+        print("width: \(cell.imageVenue.frame.width) + height: \(cell.imageVenue.frame.height)")
         return cell
     }
 }
