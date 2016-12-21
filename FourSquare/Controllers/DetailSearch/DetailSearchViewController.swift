@@ -10,7 +10,9 @@ import UIKit
 
 private let animationDuration: TimeInterval = 0.5
 private let listLayoutStaticCellHeight: CGFloat = 80
-private let gridLayoutStaticCellHeight: CGFloat = (UIScreen.main.bounds.width - 26) / 3 + 64
+private let cellPadding: CGFloat = 26.0
+private let CellInfo: CGFloat = 66.0
+private let gridLayoutStaticCellHeight: CGFloat = (UIScreen.main.bounds.width - cellPadding) / 3 + CellInfo
 
 class DetailSearchViewController: ViewController {
     
