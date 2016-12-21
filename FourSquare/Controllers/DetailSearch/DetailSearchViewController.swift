@@ -57,11 +57,24 @@ class DetailSearchViewController: ViewController {
         manuStyleButton.addTarget(self, action: #selector(self.changeStyle), for: UIControlEvents.touchUpInside)
         let menuStyleBarButton = UIBarButtonItem(customView: manuStyleButton)
         navigationItem.rightBarButtonItem = menuStyleBarButton
+        //
+        let menuButton = UIButton(type: UIButtonType.custom)
+        menuButton.imageView?.contentMode = .scaleAspectFit
+        menuButton.setImage(#imageLiteral(resourceName: "StyleMap"), for: UIControlState.normal)
+        menuButton.frame = menuButtonFrame
+        menuButton.addTarget(self, action: #selector(changeStyleToMap), for: UIControlEvents.touchUpInside)
+        let menuBarButton = UIBarButtonItem(customView: menuButton)
+        navigationItem.rightBarButtonItems = [menuStyleBarButton, menuBarButton]
+        //
         manuStyleButton.isSelected = layoutState == .list
         searchBar = UISearchBar()
         searchBar.placeholder = "Coffe & Tea"
         searchBar.sizeToFit()
         navigationItem.titleView = searchBar
+    }
+    
+    @objc private func changeStyleToMap() {
+        
     }
     
     @objc private func changeStyle() {
