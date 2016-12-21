@@ -45,7 +45,7 @@ extension SearchViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeue(aClass: SearchCollectionViewCell.self, forIndexPath: indexPath) else {return UICollectionViewCell()}
+        let cell = collectionView.dequeue(aClass: SearchCollectionViewCell.self, forIndexPath: indexPath)
         cell.imageSearch.image = UIImage(named: imagesSearch[indexPath.row])
         cell.searchKey.text = imagesSearch[indexPath.row]
         return cell

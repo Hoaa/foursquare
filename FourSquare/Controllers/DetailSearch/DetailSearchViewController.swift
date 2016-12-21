@@ -8,9 +8,9 @@
 
 import UIKit
 
-private let animationDuration: TimeInterval = 2
+private let animationDuration: TimeInterval = 0.5
 private let listLayoutStaticCellHeight: CGFloat = 80
-private let gridLayoutStaticCellHeight: CGFloat = 250
+private let gridLayoutStaticCellHeight: CGFloat = 300
 
 class DetailSearchViewController: ViewController {
     
@@ -19,6 +19,7 @@ class DetailSearchViewController: ViewController {
     private lazy var searchBar = UISearchBar()
     private let menuStyleButtonFrame = CGRect(x: 0, y: 0, width: 25, height: 25)
     fileprivate var layoutState: LayoutState = .list
+    fileprivate var isTransitionAvailable = true
     fileprivate var manuStyleButton = SwitchLayoutButton()
     fileprivate lazy var listLayout = DisplaySwitchLayout(staticCellHeight: listLayoutStaticCellHeight, nextLayoutStaticCellHeight: gridLayoutStaticCellHeight, layoutState: .list)
     fileprivate lazy var gridLayout = DisplaySwitchLayout(staticCellHeight: gridLayoutStaticCellHeight, nextLayoutStaticCellHeight: listLayoutStaticCellHeight, layoutState: .grid)
@@ -62,6 +63,9 @@ class DetailSearchViewController: ViewController {
     }
     
     @objc private func changeStyle() {
+        if !isTransitionAvailable {
+            return
+        }
         let transitionManager: TransitionManager
         if layoutState == .list {
             layoutState = .grid
@@ -137,5 +141,17 @@ extension DetailSearchViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, transitionLayoutForOldLayout fromLayout: UICollectionViewLayout, newLayout toLayout: UICollectionViewLayout) -> UICollectionViewTransitionLayout {
         let customTransitionLayout = TransitionLayout(currentLayout: fromLayout, nextLayout: toLayout)
         return customTransitionLayout
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        isTransitionAvailable = false
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        isTransitionAvailable = true
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(true)
     }
 }
