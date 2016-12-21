@@ -43,6 +43,8 @@
 		0499CB991E078B9C00D4A607 /* DefaultVenueCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499CB971E078B9C00D4A607 /* DefaultVenueCollectionViewCell.swift */; };
 		0499CB9A1E078B9C00D4A607 /* DefaultVenueCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0499CB981E078B9C00D4A607 /* DefaultVenueCollectionViewCell.xib */; };
 		04D476F41E012BF600DBAEFE /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D476F31E012BF600DBAEFE /* Strings.swift */; };
+		04F1693D1E0A83F70032BD64 /* MapVenueCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1693B1E0A83F70032BD64 /* MapVenueCollectionViewCell.swift */; };
+		04F1693E1E0A83F70032BD64 /* MapVenueCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F1693C1E0A83F70032BD64 /* MapVenueCollectionViewCell.xib */; };
 		04FFAB351E02A1AD004F3347 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFAB341E02A1AD004F3347 /* ViewController.swift */; };
 		3F91E8911DFEB86D0053DFC7 /* FourSquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E8901DFEB86D0053DFC7 /* FourSquareTests.swift */; };
 		3F91E89C1DFEB86D0053DFC7 /* FourSquareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E89B1DFEB86D0053DFC7 /* FourSquareUITests.swift */; };
@@ -110,6 +112,8 @@
 		0499CB971E078B9C00D4A607 /* DefaultVenueCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultVenueCollectionViewCell.swift; sourceTree = "<group>"; };
 		0499CB981E078B9C00D4A607 /* DefaultVenueCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultVenueCollectionViewCell.xib; sourceTree = "<group>"; };
 		04D476F31E012BF600DBAEFE /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		04F1693B1E0A83F70032BD64 /* MapVenueCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapVenueCollectionViewCell.swift; path = CellMap/MapVenueCollectionViewCell.swift; sourceTree = "<group>"; };
+		04F1693C1E0A83F70032BD64 /* MapVenueCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapVenueCollectionViewCell.xib; path = CellMap/MapVenueCollectionViewCell.xib; sourceTree = "<group>"; };
 		04FFAB341E02A1AD004F3347 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0CE5188E0325E3C8E2C28B46 /* Pods-FourSquare-FourSquareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare-FourSquareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquare-FourSquareTests/Pods-FourSquare-FourSquareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0D917DDDD19EDD78A4F81F00 /* Pods-FourSquareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquareUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquareUITests/Pods-FourSquareUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -306,6 +310,8 @@
 		045D51CD1E08CBC0008AEDD1 /* CellMap */ = {
 			isa = PBXGroup;
 			children = (
+				04F1693B1E0A83F70032BD64 /* MapVenueCollectionViewCell.swift */,
+				04F1693C1E0A83F70032BD64 /* MapVenueCollectionViewCell.xib */,
 			);
 			name = CellMap;
 			sourceTree = "<group>";
@@ -644,6 +650,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F91E8BE1DFEB9900053DFC7 /* Assets.xcassets in Resources */,
+				04F1693E1E0A83F70032BD64 /* MapVenueCollectionViewCell.xib in Resources */,
 				046A54571E0105BB003F96A5 /* TabBarViewController.xib in Resources */,
 				043B70F11E0109E400D955F9 /* ListViewController.xib in Resources */,
 				043B70ED1E0109CF00D955F9 /* SearchViewController.xib in Resources */,
@@ -820,6 +827,7 @@
 			files = (
 				0438F6431E03E06600230893 /* ListCollectionViewCell.swift in Sources */,
 				043B70EC1E0109CF00D955F9 /* SearchViewController.swift in Sources */,
+				04F1693D1E0A83F70032BD64 /* MapVenueCollectionViewCell.swift in Sources */,
 				045D51C11E08C322008AEDD1 /* DisplaySwitchLayout.swift in Sources */,
 				0499CB991E078B9C00D4A607 /* DefaultVenueCollectionViewCell.swift in Sources */,
 				0432CCFC1E03827D0058112E /* UIViewController.swift in Sources */,
