@@ -178,6 +178,7 @@ extension ListDetailViewController: UITableViewDataSource {
 
 extension ListDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //
+        let venueDetailVC = VenueDetailViewController(nibName: "VenueDetailViewController", bundle: nil)
+        self.navigationController?.pushViewController(venueDetailVC, animated: true)
     }
 }
