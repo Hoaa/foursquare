@@ -49,10 +49,6 @@ class ListsViewController: ViewController {
         configureYouCreatedCollectionView()
     }
     
-//    override func viewDidLayoutSubviews() {
-//        
-//    }
-    
     override func loadData() {
         super.loadData()
         // Feature data
@@ -139,7 +135,6 @@ extension ListsViewController: UICollectionViewDataSource {
         } else if collectionView == youCreatedListsCollectionView {
             // The last cell of youCreatedCollectionView is CreateAListCollectionViewCell, another cells is YouCreatedListsCollectionViewCell
             if indexPath.row == yourCreatedList.count {
-//                let cell = CreateAListCollectionViewCell()
                 guard let createdNewListsCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: createNewListReuseIdentifier, for: indexPath) as? CreateNewListCollectionViewCell
                     else { return UICollectionViewCell() }
                 return createdNewListsCollectionViewCell
