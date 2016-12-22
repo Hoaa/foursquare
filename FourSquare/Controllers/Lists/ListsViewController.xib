@@ -151,7 +151,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="180" id="W5n-7x-kcp"/>
                                     </constraints>
-                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="irb-9y-MyD">
+                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="irb-9y-MyD">
                                         <size key="itemSize" width="50" height="50"/>
                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -201,6 +201,7 @@
                             </collectionViewFlowLayout>
                         </collectionView>
                     </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="N8V-8T-UiQ" secondAttribute="trailing" id="6Yf-Mv-rPn"/>
                         <constraint firstItem="N8V-8T-UiQ" firstAttribute="leading" secondItem="Am8-79-gJZ" secondAttribute="leading" id="GDO-sf-pfo"/>
@@ -212,6 +213,7 @@
                     </constraints>
                 </scrollView>
             </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="hx4-kD-r3J" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="GGt-aQ-jR4"/>
                 <constraint firstAttribute="bottom" secondItem="Am8-79-gJZ" secondAttribute="bottom" id="Gx0-b5-eZX"/>

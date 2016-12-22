@@ -24,12 +24,14 @@ class ListsViewController: ViewController {
     fileprivate let yourCreatedReuseIdentifier = "YouCreatedListsCollectionViewCell"
     fileprivate let createNewListReuseIdentifier = "CreateNewListCollectionViewCell"
     
+    private var isLoadDone = false
+    
     // MARK: - Outlet
-    @IBOutlet weak var featureCollectionView: UICollectionView!
-    @IBOutlet weak var likedPlacesLabel: UILabel!
-    @IBOutlet weak var savedPlacesLabel: UILabel!
-    @IBOutlet weak var yourCreatedCollectionViewHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var youCreatedListsCollectionView: UICollectionView!
+    @IBOutlet fileprivate weak var featureCollectionView: UICollectionView!
+    @IBOutlet private weak var likedPlacesLabel: UILabel!
+    @IBOutlet private weak var savedPlacesLabel: UILabel!
+    @IBOutlet private weak var yourCreatedCollectionViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet fileprivate weak var youCreatedListsCollectionView: UICollectionView!
     
     // MARK: - Override func
     override func viewDidLoad() {
@@ -37,12 +39,22 @@ class ListsViewController: ViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if isLoadDone {
+            return
+        }
+        isLoadDone = !isLoadDone
         configureItemSize()
         configureFeatureCollectionView()
         configureYouCreatedCollectionView()
     }
     
+//    override func viewDidLayoutSubviews() {
+//        
+//    }
+    
     override func loadData() {
+        super.loadData()
         // Feature data
         features = [(featureName: "Most popular", image: #imageLiteral(resourceName: "Feature_Like")),
                     (featureName: "Save money", image: #imageLiteral(resourceName: "Feature_Rate")),
@@ -60,6 +72,8 @@ class ListsViewController: ViewController {
     }
     
     override func configureUI() {
+        super.configureUI()
+        self.title = "Lists"
     }
     
     // MARK: Private func
@@ -143,7 +157,8 @@ extension ListsViewController: UICollectionViewDataSource {
 
 extension ListsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //
+        let listDetailVC = ListDetailViewController(nibName: "ListDetailViewController", bundle: nil)
+        self.navigationController?.pushViewController(listDetailVC, animated: true)
     }
 }
 
@@ -161,14 +176,6 @@ extension ListsViewController: UICollectionViewDelegateFlowLayout {
             return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         } else {
             return itemInset
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        if collectionView == featureCollectionView {
-            return 0
-        } else {
-            return itemInset.bottom
         }
     }
 }

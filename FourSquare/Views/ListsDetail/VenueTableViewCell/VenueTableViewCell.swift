@@ -1,15 +1,21 @@
 //
-//  ListsDetailContentTableViewCell.swift
+//  VenueTableViewCell.swift
 //  FourSquare
 //
-//  Created by nmint8m on 20.12.16.
+//  Created by nmint8m on 21.12.16.
 //  Copyright © 2016 Duy Linh. All rights reserved.
 //
 
 import UIKit
 
-class ListsDetailContentTableViewCell: UITableViewCell {
+class VenueTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var venueImageView: UIImageView!
+    @IBOutlet weak var venueNameLabel: UILabel!
+    @IBOutlet weak var venueAdressLabel: UILabel!
+    @IBOutlet weak var rateColorImageView: UIImageView!
+    @IBOutlet weak var rateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

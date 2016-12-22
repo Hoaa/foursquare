@@ -31,12 +31,10 @@
 		226719141E0A251F004EB91C /* CreateNewListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226719121E0A251F004EB91C /* CreateNewListCollectionViewCell.xib */; };
 		2267191B1E0A27AE004EB91C /* ListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226719161E0A27AE004EB91C /* ListsViewController.swift */; };
 		2267191C1E0A27AE004EB91C /* ListsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226719171E0A27AE004EB91C /* ListsViewController.xib */; };
-		2267191D1E0A27AE004EB91C /* ListsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226719191E0A27AE004EB91C /* ListsDetailViewController.swift */; };
-		2267191E1E0A27AE004EB91C /* ListsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2267191A1E0A27AE004EB91C /* ListsDetailViewController.xib */; };
-		228241181E08D3E900DD5A0E /* ListsDetailContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228241161E08D3E900DD5A0E /* ListsDetailContentTableViewCell.swift */; };
-		228241191E08D3E900DD5A0E /* ListsDetailContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228241171E08D3E900DD5A0E /* ListsDetailContentTableViewCell.xib */; };
-		2282411C1E08D41000DD5A0E /* ListsDetailHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2282411A1E08D41000DD5A0E /* ListsDetailHeaderTableViewCell.swift */; };
-		2282411D1E08D41000DD5A0E /* ListsDetailHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2282411B1E08D41000DD5A0E /* ListsDetailHeaderTableViewCell.xib */; };
+		226719251E0A375A004EB91C /* ListDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226719231E0A375A004EB91C /* ListDetailViewController.xib */; };
+		226719271E0A3799004EB91C /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226719261E0A3799004EB91C /* ListDetailViewController.swift */; };
+		226719321E0A731F004EB91C /* VenueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226719301E0A731F004EB91C /* VenueTableViewCell.swift */; };
+		226719331E0A731F004EB91C /* VenueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226719311E0A731F004EB91C /* VenueTableViewCell.xib */; };
 		22BC82E71E03A8A500F5B91E /* FeatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BC82E51E03A8A500F5B91E /* FeatureCollectionViewCell.swift */; };
 		22BC82E81E03A8A500F5B91E /* FeatureCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22BC82E61E03A8A500F5B91E /* FeatureCollectionViewCell.xib */; };
 		3F91E8911DFEB86D0053DFC7 /* FourSquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E8901DFEB86D0053DFC7 /* FourSquareTests.swift */; };
@@ -96,12 +94,10 @@
 		226719121E0A251F004EB91C /* CreateNewListCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CreateNewListCollectionViewCell.xib; path = Lists/CreateNewListCollectionViewCell/CreateNewListCollectionViewCell.xib; sourceTree = "<group>"; };
 		226719161E0A27AE004EB91C /* ListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsViewController.swift; sourceTree = "<group>"; };
 		226719171E0A27AE004EB91C /* ListsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListsViewController.xib; sourceTree = "<group>"; };
-		226719191E0A27AE004EB91C /* ListsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsDetailViewController.swift; sourceTree = "<group>"; };
-		2267191A1E0A27AE004EB91C /* ListsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListsDetailViewController.xib; sourceTree = "<group>"; };
-		228241161E08D3E900DD5A0E /* ListsDetailContentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsDetailContentTableViewCell.swift; sourceTree = "<group>"; };
-		228241171E08D3E900DD5A0E /* ListsDetailContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListsDetailContentTableViewCell.xib; sourceTree = "<group>"; };
-		2282411A1E08D41000DD5A0E /* ListsDetailHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListsDetailHeaderTableViewCell.swift; sourceTree = "<group>"; };
-		2282411B1E08D41000DD5A0E /* ListsDetailHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListsDetailHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		226719231E0A375A004EB91C /* ListDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListDetailViewController.xib; sourceTree = "<group>"; };
+		226719261E0A3799004EB91C /* ListDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
+		226719301E0A731F004EB91C /* VenueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VenueTableViewCell.swift; path = ListsDetail/VenueTableViewCell/VenueTableViewCell.swift; sourceTree = "<group>"; };
+		226719311E0A731F004EB91C /* VenueTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VenueTableViewCell.xib; path = ListsDetail/VenueTableViewCell/VenueTableViewCell.xib; sourceTree = "<group>"; };
 		22BC82E51E03A8A500F5B91E /* FeatureCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeatureCollectionViewCell.swift; path = Lists/FeatureCollectionViewCell/FeatureCollectionViewCell.swift; sourceTree = "<group>"; };
 		22BC82E61E03A8A500F5B91E /* FeatureCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FeatureCollectionViewCell.xib; path = Lists/FeatureCollectionViewCell/FeatureCollectionViewCell.xib; sourceTree = "<group>"; };
 		29150974DC848B7554E48ED6 /* Pods_FourSquareUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourSquareUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,42 +256,30 @@
 			path = Lists;
 			sourceTree = "<group>";
 		};
-		226719181E0A27AE004EB91C /* ListsDetail */ = {
+		226719211E0A375A004EB91C /* ListDetail */ = {
 			isa = PBXGroup;
 			children = (
-				226719191E0A27AE004EB91C /* ListsDetailViewController.swift */,
-				2267191A1E0A27AE004EB91C /* ListsDetailViewController.xib */,
+				226719261E0A3799004EB91C /* ListDetailViewController.swift */,
+				226719231E0A375A004EB91C /* ListDetailViewController.xib */,
 			);
-			path = ListsDetail;
+			path = ListDetail;
+			sourceTree = "<group>";
+		};
+		2267192D1E0A72DE004EB91C /* VenueTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				226719301E0A731F004EB91C /* VenueTableViewCell.swift */,
+				226719311E0A731F004EB91C /* VenueTableViewCell.xib */,
+			);
+			name = VenueTableViewCell;
 			sourceTree = "<group>";
 		};
 		228240F51E07F18D00DD5A0E /* ListsDetail */ = {
 			isa = PBXGroup;
 			children = (
-				2282410D1E08D3B100DD5A0E /* ListsDetailContentTableViewCell */,
-				228241111E08D3B100DD5A0E /* ListsDetailHeaderTableViewCell */,
+				2267192D1E0A72DE004EB91C /* VenueTableViewCell */,
 			);
 			name = ListsDetail;
-			sourceTree = "<group>";
-		};
-		2282410D1E08D3B100DD5A0E /* ListsDetailContentTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				228241161E08D3E900DD5A0E /* ListsDetailContentTableViewCell.swift */,
-				228241171E08D3E900DD5A0E /* ListsDetailContentTableViewCell.xib */,
-			);
-			name = ListsDetailContentTableViewCell;
-			path = ListsDetail/ListsDetailContentTableViewCell;
-			sourceTree = "<group>";
-		};
-		228241111E08D3B100DD5A0E /* ListsDetailHeaderTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				2282411A1E08D41000DD5A0E /* ListsDetailHeaderTableViewCell.swift */,
-				2282411B1E08D41000DD5A0E /* ListsDetailHeaderTableViewCell.xib */,
-			);
-			name = ListsDetailHeaderTableViewCell;
-			path = ListsDetail/ListsDetailHeaderTableViewCell;
 			sourceTree = "<group>";
 		};
 		22BC82E41E03A86100F5B91E /* FeatureCollectionViewCell */ = {
@@ -365,8 +349,8 @@
 		3F91E8A91DFEB9900053DFC7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				226719211E0A375A004EB91C /* ListDetail */,
 				226719151E0A27AE004EB91C /* Lists */,
-				226719181E0A27AE004EB91C /* ListsDetail */,
 				3F91E8AD1DFEB9900053DFC7 /* LaunchScreen */,
 				3F91E8AA1DFEB9900053DFC7 /* AppDelegate */,
 				3F91E8AC1DFEB9900053DFC7 /* Base */,
@@ -584,7 +568,7 @@
 				TargetAttributes = {
 					3F91E8771DFEB86D0053DFC7 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = B3D8J6662Y;
+						DevelopmentTeam = D4Q882ZZC3;
 						ProvisioningStyle = Automatic;
 					};
 					3F91E88B1DFEB86D0053DFC7 = {
@@ -624,17 +608,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				228241191E08D3E900DD5A0E /* ListsDetailContentTableViewCell.xib in Resources */,
 				22BC82E81E03A8A500F5B91E /* FeatureCollectionViewCell.xib in Resources */,
 				226719141E0A251F004EB91C /* CreateNewListCollectionViewCell.xib in Resources */,
 				04D5A0231E0236CB00B3FD74 /* ListCollectionViewCell.xib in Resources */,
 				3F91E8BE1DFEB9900053DFC7 /* Assets.xcassets in Resources */,
 				046A54571E0105BB003F96A5 /* TabBarViewController.xib in Resources */,
 				2267191C1E0A27AE004EB91C /* ListsViewController.xib in Resources */,
-				2267191E1E0A27AE004EB91C /* ListsDetailViewController.xib in Resources */,
 				043B70F11E0109E400D955F9 /* ListViewController.xib in Resources */,
+				226719331E0A731F004EB91C /* VenueTableViewCell.xib in Resources */,
 				0416D9A51E02724C0026B3E4 /* ListDefaultCollectionViewCell.xib in Resources */,
-				2282411D1E08D41000DD5A0E /* ListsDetailHeaderTableViewCell.xib in Resources */,
+				226719251E0A375A004EB91C /* ListDetailViewController.xib in Resources */,
 				2267190F1E0A1725004EB91C /* YouCreatedListsCollectionViewCell.xib in Resources */,
 				043B70ED1E0109CF00D955F9 /* SearchViewController.xib in Resources */,
 				043B70E51E01098E00D955F9 /* ProfileViewController.xib in Resources */,
@@ -806,9 +789,8 @@
 				043B70EC1E0109CF00D955F9 /* SearchViewController.swift in Sources */,
 				2267191B1E0A27AE004EB91C /* ListsViewController.swift in Sources */,
 				0416D9AA1E0279760026B3E4 /* ListMapCollectionViewCell.swift in Sources */,
-				2282411C1E08D41000DD5A0E /* ListsDetailHeaderTableViewCell.swift in Sources */,
+				226719321E0A731F004EB91C /* VenueTableViewCell.swift in Sources */,
 				043B70E41E01098E00D955F9 /* ProfileViewController.swift in Sources */,
-				2267191D1E0A27AE004EB91C /* ListsDetailViewController.swift in Sources */,
 				043B70F01E0109E400D955F9 /* ListViewController.swift in Sources */,
 				046A54561E0105BB003F96A5 /* TabBarViewController.swift in Sources */,
 				221151111E02A84200A4EDA7 /* ViewController.swift in Sources */,
@@ -818,7 +800,7 @@
 				22BC82E71E03A8A500F5B91E /* FeatureCollectionViewCell.swift in Sources */,
 				04D5A0221E0236CB00B3FD74 /* ListCollectionViewCell.swift in Sources */,
 				3F91E8BB1DFEB9900053DFC7 /* AppDelegate.swift in Sources */,
-				228241181E08D3E900DD5A0E /* ListsDetailContentTableViewCell.swift in Sources */,
+				226719271E0A3799004EB91C /* ListDetailViewController.swift in Sources */,
 				043B70E81E0109AE00D955F9 /* HistoryViewController.swift in Sources */,
 				2267190E1E0A1725004EB91C /* YouCreatedListsCollectionViewCell.swift in Sources */,
 			);
@@ -965,7 +947,7 @@
 			baseConfigurationReference = BB680EEF5993B544A639451C /* Pods-FourSquare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B3D8J6662Y;
+				DEVELOPMENT_TEAM = D4Q882ZZC3;
 				INFOPLIST_FILE = "$(SRCROOT)/FourSquare/Info/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.duylinh.FourSquare;
@@ -979,7 +961,7 @@
 			baseConfigurationReference = BD59209DB5272329583BA872 /* Pods-FourSquare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B3D8J6662Y;
+				DEVELOPMENT_TEAM = D4Q882ZZC3;
 				INFOPLIST_FILE = "$(SRCROOT)/FourSquare/Info/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.duylinh.FourSquare;
