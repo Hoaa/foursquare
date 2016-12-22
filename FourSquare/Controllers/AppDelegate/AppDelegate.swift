@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import GoogleMaps
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,12 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions
                      launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
-        window?.backgroundColor = UIColor.white
-        let vc = UIViewController()
-        window?.rootViewController = vc
+        // nmint8m: Add API key to project
+        GMSServices.provideAPIKey("AIzaSyBNxeLGmIOaBci-ApSiZUltAOea9FmW7x8")
+        GMSPlacesClient.provideAPIKey("AIzaSyBNxeLGmIOaBci-ApSiZUltAOea9FmW7x8")
         
+        window = UIWindow(frame: UIScreen.main.bounds)
+        changeRootToTabBar()
+        window?.makeKeyAndVisible()
         return true
+    }
+    func changeRootToTabBar() {
+        let tabBarVC = TabBarViewController(nibName: "TabBarViewController", bundle: nil)
+        window?.rootViewController = tabBarVC
     }
 }
