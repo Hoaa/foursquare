@@ -10,8 +10,8 @@ import UIKit
 
 private let animationDuration: TimeInterval = 0.5
 private let listLayoutStaticCellHeight: CGFloat = 80
-private let cellPadding: CGFloat = 26.0
-private let CellInfo: CGFloat = 66.0
+private let cellPadding: CGFloat = 36.0
+private let CellInfo: CGFloat = 62.0
 private let gridLayoutStaticCellHeight: CGFloat = (UIScreen.main.bounds.width - cellPadding) / 3 + CellInfo
 
 class DetailSearchViewController: ViewController {
@@ -74,7 +74,11 @@ class DetailSearchViewController: ViewController {
     }
     
     @objc private func changeStyleToMap() {
-        
+        /*
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        collectionView.collectionViewLayout = layout
+         */
     }
     
     @objc private func changeStyle() {
