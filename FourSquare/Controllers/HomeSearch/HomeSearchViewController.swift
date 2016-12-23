@@ -32,7 +32,7 @@ enum DefaultMenuItem: Int {
     }
 }
 
-class DetailSearchViewController: BaseViewController {
+class HomeSearchViewController: BaseViewController {
     
     // MARK: - Property
     @IBOutlet private weak var viewOfPageMenu: UIView!

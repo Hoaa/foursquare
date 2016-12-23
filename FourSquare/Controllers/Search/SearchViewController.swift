@@ -76,7 +76,7 @@ extension SearchViewController: UICollectionViewDelegateFlowLayout {
 // MARK: - UICollectionViewDelegate
 extension SearchViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detailSearchViewController = DetailSearchViewController.vc()
+        let detailSearchViewController = HomeSearchViewController.vc()
         navigationController?.pushViewController(detailSearchViewController, animated: true)
     }
 }

@@ -25,8 +25,6 @@
 		043B70ED1E0109CF00D955F9 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B70EB1E0109CF00D955F9 /* SearchViewController.xib */; };
 		043B70F01E0109E400D955F9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B70EE1E0109E400D955F9 /* ListViewController.swift */; };
 		043B70F11E0109E400D955F9 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B70EF1E0109E400D955F9 /* ListViewController.xib */; };
-		0447A6581E0399C200BB1A28 /* DetailSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0447A6561E0399C200BB1A28 /* DetailSearchViewController.swift */; };
-		0447A6591E0399C200BB1A28 /* DetailSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0447A6571E0399C200BB1A28 /* DetailSearchViewController.xib */; };
 		04515A2E1E030D4B00319D93 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04515A2D1E030D4B00319D93 /* UIColor.swift */; };
 		04515A301E030E1100319D93 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04515A2F1E030E1100319D93 /* Color.swift */; };
 		04515A321E030F0300319D93 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04515A311E030F0300319D93 /* Keys.swift */; };
@@ -39,6 +37,8 @@
 		045D51CC1E08C680008AEDD1 /* SwitchLayoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D51CB1E08C680008AEDD1 /* SwitchLayoutButton.swift */; };
 		0479FDC71E0CFAC900E21A7B /* VenueItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479FDC51E0CFAC900E21A7B /* VenueItemCollectionViewCell.swift */; };
 		0479FDC81E0CFAC900E21A7B /* VenueItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0479FDC61E0CFAC900E21A7B /* VenueItemCollectionViewCell.xib */; };
+		0479FDCC1E0CFC2400E21A7B /* HomeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479FDCA1E0CFC2400E21A7B /* HomeSearchViewController.swift */; };
+		0479FDCD1E0CFC2400E21A7B /* HomeSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0479FDCB1E0CFC2400E21A7B /* HomeSearchViewController.xib */; };
 		04CFBB0B1E0CB9D700928736 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFBB0A1E0CB9D700928736 /* BaseViewController.swift */; };
 		04CFBB171E0CE08D00928736 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFBB161E0CE08D00928736 /* ViewController.swift */; };
 		04CFBB1C1E0CE0C000928736 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFBB191E0CE0C000928736 /* TabBarController.swift */; };
@@ -96,8 +96,6 @@
 		043B70EB1E0109CF00D955F9 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchViewController.xib; path = Search/SearchViewController.xib; sourceTree = "<group>"; };
 		043B70EE1E0109E400D955F9 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = List/ListViewController.swift; sourceTree = "<group>"; };
 		043B70EF1E0109E400D955F9 /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListViewController.xib; path = List/ListViewController.xib; sourceTree = "<group>"; };
-		0447A6561E0399C200BB1A28 /* DetailSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailSearchViewController.swift; path = DetailSearch/DetailSearchViewController.swift; sourceTree = "<group>"; };
-		0447A6571E0399C200BB1A28 /* DetailSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailSearchViewController.xib; path = DetailSearch/DetailSearchViewController.xib; sourceTree = "<group>"; };
 		04515A2D1E030D4B00319D93 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		04515A2F1E030E1100319D93 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		04515A311E030F0300319D93 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
@@ -110,6 +108,8 @@
 		045D51CB1E08C680008AEDD1 /* SwitchLayoutButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwitchLayoutButton.swift; path = FourSquare/Library/DisplaySwitcher/Views/SwitchLayoutButton.swift; sourceTree = SOURCE_ROOT; };
 		0479FDC51E0CFAC900E21A7B /* VenueItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		0479FDC61E0CFAC900E21A7B /* VenueItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		0479FDCA1E0CFC2400E21A7B /* HomeSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSearchViewController.swift; sourceTree = "<group>"; };
+		0479FDCB1E0CFC2400E21A7B /* HomeSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeSearchViewController.xib; sourceTree = "<group>"; };
 		04CFBB0A1E0CB9D700928736 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		04CFBB161E0CE08D00928736 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04CFBB191E0CE0C000928736 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -257,15 +257,6 @@
 			name = Profile;
 			sourceTree = "<group>";
 		};
-		0447A65A1E0399C600BB1A28 /* DetailSearch */ = {
-			isa = PBXGroup;
-			children = (
-				0447A6561E0399C200BB1A28 /* DetailSearchViewController.swift */,
-				0447A6571E0399C200BB1A28 /* DetailSearchViewController.xib */,
-			);
-			name = DetailSearch;
-			sourceTree = "<group>";
-		};
 		045D51BE1E08C283008AEDD1 /* DisplaySwitcher */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +318,15 @@
 			);
 			name = VenueItemCollectionViewCell;
 			path = PageBase/VenueItemCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		0479FDC91E0CFC2400E21A7B /* HomeSearch */ = {
+			isa = PBXGroup;
+			children = (
+				0479FDCA1E0CFC2400E21A7B /* HomeSearchViewController.swift */,
+				0479FDCB1E0CFC2400E21A7B /* HomeSearchViewController.xib */,
+			);
+			path = HomeSearch;
 			sourceTree = "<group>";
 		};
 		04CFBB151E0CDFCE00928736 /* PageBase */ = {
@@ -414,7 +414,7 @@
 				043B70E01E01096E00D955F9 /* History */,
 				043B70E11E01097500D955F9 /* Profile */,
 				043B70DF1E01096400D955F9 /* Search */,
-				0447A65A1E0399C600BB1A28 /* DetailSearch */,
+				0479FDC91E0CFC2400E21A7B /* HomeSearch */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -673,11 +673,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F91E8BE1DFEB9900053DFC7 /* Assets.xcassets in Resources */,
+				0479FDCD1E0CFC2400E21A7B /* HomeSearchViewController.xib in Resources */,
 				04F1693E1E0A83F70032BD64 /* MapVenueCollectionViewCell.xib in Resources */,
 				043B70F11E0109E400D955F9 /* ListViewController.xib in Resources */,
 				043B70ED1E0109CF00D955F9 /* SearchViewController.xib in Resources */,
 				0438F6461E03E06600230893 /* ListDefaultCollectionViewCell.xib in Resources */,
-				0447A6591E0399C200BB1A28 /* DetailSearchViewController.xib in Resources */,
 				0438F64A1E03E06600230893 /* SearchCollectionViewCell.xib in Resources */,
 				0438F6441E03E06600230893 /* ListCollectionViewCell.xib in Resources */,
 				0479FDC81E0CFAC900E21A7B /* VenueItemCollectionViewCell.xib in Resources */,
@@ -862,7 +862,6 @@
 				045D51C31E08C394008AEDD1 /* DisplaySwitchLayoutAttributes.swift in Sources */,
 				04D476F41E012BF600DBAEFE /* Strings.swift in Sources */,
 				04CFBB201E0CE0FA00928736 /* MenuItemViewController.swift in Sources */,
-				0447A6581E0399C200BB1A28 /* DetailSearchViewController.swift in Sources */,
 				0479FDC71E0CFAC900E21A7B /* VenueItemCollectionViewCell.swift in Sources */,
 				0438F6471E03E06600230893 /* ListMapCollectionViewCell.swift in Sources */,
 				04515A301E030E1100319D93 /* Color.swift in Sources */,
@@ -872,6 +871,7 @@
 				043B70E81E0109AE00D955F9 /* HistoryViewController.swift in Sources */,
 				0438F6451E03E06600230893 /* ListDefaultCollectionViewCell.swift in Sources */,
 				04CFBB1C1E0CE0C000928736 /* TabBarController.swift in Sources */,
+				0479FDCC1E0CFC2400E21A7B /* HomeSearchViewController.swift in Sources */,
 				045D51CA1E08C659008AEDD1 /* TransitionManager.swift in Sources */,
 				045D51C81E08C62E008AEDD1 /* TransitionLayout.swift in Sources */,
 				0432CCFE1E0387640058112E /* UICollectionView.swift in Sources */,
@@ -965,7 +965,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1009,7 +1009,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
