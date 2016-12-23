@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import GoogleMaps
+import GooglePlaces
+import GooglePlacePicker
 
 class VenueDetailViewController: ViewController {
     
     // MARK: - Properties
     fileprivate var tips: [(userAvatar: UIImage?, username: String, datePost: Date, comment: String, commentImage: UIImage?)] = []
     private var isLoadDone = false
+    private var mapView: GMSMapView!
+    var currentLocation: CLLocation?
+    var placesClient: GMSPlacesClient!
+    // A default location to use when location permission is not granted.
+    let defaultLocation = CLLocation(latitude: 16.0762723, longitude: 108.2221608)
     
     // MARK: - Outlet
     @IBOutlet private weak var imagesContainerView: UIView!
@@ -43,6 +51,9 @@ class VenueDetailViewController: ViewController {
         }
         isLoadDone = !isLoadDone
         configureImagesContainerView()
+        configureVenueInforContainerView()
+        configGoogleMapView()
+        addVenueToGoogleMapView()
         configureTipTableView()
     }
     
@@ -62,6 +73,9 @@ class VenueDetailViewController: ViewController {
     }
     
     // MARK: - Private func
+    private func configureVenueInforContainerView() {
+    }
+    
     private func configureImagesContainerView() {
         var count = 0
         let imageSize = CGSize(width: imagesContainerView.bounds.width / 3, height: imagesContainerView.bounds.height)
@@ -79,6 +93,49 @@ class VenueDetailViewController: ViewController {
                 break
             }
         }
+    }
+    
+    private func configGoogleMapView() {
+        placesClient = GMSPlacesClient.shared()
+        let camera = GMSCameraPosition.camera(withLatitude: defaultLocation.coordinate.latitude,
+                                              longitude: defaultLocation.coordinate.longitude,
+                                              zoom: 15)
+        mapView = GMSMapView.map(withFrame: self.view.bounds, camera: camera)
+        let firstColor = UIColor(red: 254, green: 254, blue: 254, alpha: 1)
+        let secondColor = UIColor(red: 254, green: 254, blue: 254, alpha: 0)
+        mapView.applyGradientLayer(firstColor: firstColor, secondColor: secondColor)
+        mapContainerView.clipsToBounds = true
+        mapContainerView.addSubview(mapView)
+        
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: defaultLocation.coordinate.latitude, longitude: defaultLocation.coordinate.longitude)
+        marker.appearAnimation = kGMSMarkerAnimationPop
+        marker.map = mapView
+    }
+    
+    private func addVenueToGoogleMapView(){
+//        let frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+//        for i in 0...coodinates.count - 1 {
+//            let marker = GMSMarker()
+//            
+//            let markerIconView = UIImageView(frame: frame)
+//            markerIconView.image = #imageLiteral(resourceName: "Marker_50")
+//            let label = UILabel(frame: frame)
+//            label.text = "\(i)"
+//            label.font.withSize(17)
+//            label.textColor = UIColor.black
+//            label.adjustsFontSizeToFitWidth = true
+//            label.adjustsFontForContentSizeCategory = true
+//            label.textAlignment = .center
+//            markerIconView.addSubview(label)
+//            
+//            marker.iconView = markerIconView
+//            marker.title = "Ahihi"
+//            marker.snippet = "Do ngok"
+//            marker.position = coodinates[i]
+//            marker.appearAnimation = kGMSMarkerAnimationPop
+//            marker.map = mapView
+//        }
     }
     
     private func configureTipTableView() {
