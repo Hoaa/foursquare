@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: ViewController {
+class SearchViewController: BaseViewController {
     
     // MARK: - Property
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
@@ -18,6 +18,7 @@ class SearchViewController: ViewController {
     // MARK: - Cycle Life
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,8 +27,7 @@ class SearchViewController: ViewController {
     }
     
     // MARK: - Private Function
-    override func configureUI() {
-        super.configureUI()
+    private func configureUI() {
         collectionView.registerNib(aClass: SearchCollectionViewCell.self)
         collectionView.dataSource = self
         collectionView.delegate = self

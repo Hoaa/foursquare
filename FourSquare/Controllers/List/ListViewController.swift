@@ -54,6 +54,8 @@ class ListViewController: ViewController {
     // MARK: - Cycle Life
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureUI()
+        self.loadData()
         configureNavigationBar()
         configureUI()
     }
@@ -72,7 +74,7 @@ class ListViewController: ViewController {
         addRightBarButtonItem()
     }
     
-    internal override func configureUI() {
+    private func configureUI() {
         loadData()//register tableviewcell, collectionviewcell by generic type
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -124,7 +126,7 @@ class ListViewController: ViewController {
         }
     }
     
-    internal override func loadData() {
+    private func loadData() {
         let venue1 = ("ABC", CLLocationCoordinate2D(latitude: 16.0748304, longitude: 108.2219308))
         let venue2 = ("DEF", CLLocationCoordinate2D(latitude: 16.07431, longitude: 108.22132))
         let venue3 = ("GHI", CLLocationCoordinate2D(latitude: 16.07432, longitude: 108.22933))

@@ -16,6 +16,7 @@ target 'FourSquare' do
   pod 'GooglePlacePicker'
 
   # Utils
+  pod 'PageMenu', :git => 'https://github.com/orazz/PageMenu'
 
   target 'FourSquareTests' do
 

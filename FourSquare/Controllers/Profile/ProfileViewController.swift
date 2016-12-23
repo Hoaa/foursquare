@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ProfileViewController: ViewController {
+class ProfileViewController: BaseViewController {
 
     // MARK: - Cycle Life
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()
-        configureUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,9 +25,5 @@ class ProfileViewController: ViewController {
         navigationItem.title = Strings.MenuItemsProfileTitle
         navigationController?.navigationBar.titleTextAttributes =
             [NSForegroundColorAttributeName : UIColor.white]
-    }
-
-    override func configureUI() {
-        super.configureUI()
     }
 }

@@ -12,4 +12,9 @@ struct Strings {
     static let MainMenuListTitle = "Lists"
     static let MainMenuHistoryTitle = "History"
     static let MenuItemsProfileTitle = "Your Profile"
+    static let MenuItemPrice = "Price"
+    static let MenuItemOpenNow = "Open now"
+    static let MenuItemRating = "Rating"
+    static let MenuItemSaved = "Saved"
+    static let MenuItemLiked = "Liked"
 }

@@ -8,20 +8,16 @@
 
 import UIKit
 
-class HistoryViewController: ViewController {
+class HistoryViewController: BaseViewController {
 
     // MARK: - Cycle Life
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    override func configureUI() {
-        super.configureUI()
-        configureNavigationBar()
+        self.configureNavigationBar()
     }
     
     // MARK: - Private Function
-    func configureNavigationBar() {
+    private func configureNavigationBar() {
         navigationItem.title = Strings.MainMenuHistoryTitle
         navigationController?.navigationBar.titleTextAttributes =
             [NSForegroundColorAttributeName : UIColor.white]

@@ -42,6 +42,7 @@
 		046A54571E0105BB003F96A5 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046A54551E0105BB003F96A5 /* TabBarViewController.xib */; };
 		0499CB991E078B9C00D4A607 /* DefaultVenueCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499CB971E078B9C00D4A607 /* DefaultVenueCollectionViewCell.swift */; };
 		0499CB9A1E078B9C00D4A607 /* DefaultVenueCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0499CB981E078B9C00D4A607 /* DefaultVenueCollectionViewCell.xib */; };
+		04CFBB0B1E0CB9D700928736 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFBB0A1E0CB9D700928736 /* BaseViewController.swift */; };
 		04D476F41E012BF600DBAEFE /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D476F31E012BF600DBAEFE /* Strings.swift */; };
 		04F1693D1E0A83F70032BD64 /* MapVenueCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1693B1E0A83F70032BD64 /* MapVenueCollectionViewCell.swift */; };
 		04F1693E1E0A83F70032BD64 /* MapVenueCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F1693C1E0A83F70032BD64 /* MapVenueCollectionViewCell.xib */; };
@@ -111,6 +112,7 @@
 		046A54551E0105BB003F96A5 /* TabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		0499CB971E078B9C00D4A607 /* DefaultVenueCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultVenueCollectionViewCell.swift; sourceTree = "<group>"; };
 		0499CB981E078B9C00D4A607 /* DefaultVenueCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultVenueCollectionViewCell.xib; sourceTree = "<group>"; };
+		04CFBB0A1E0CB9D700928736 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		04D476F31E012BF600DBAEFE /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		04F1693B1E0A83F70032BD64 /* MapVenueCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapVenueCollectionViewCell.swift; path = CellMap/MapVenueCollectionViewCell.swift; sourceTree = "<group>"; };
 		04F1693C1E0A83F70032BD64 /* MapVenueCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapVenueCollectionViewCell.xib; path = CellMap/MapVenueCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -325,6 +327,16 @@
 			path = CellDefault;
 			sourceTree = "<group>";
 		};
+		04CFBB091E0CB64300928736 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				046A54541E0105BB003F96A5 /* TabBarViewController.swift */,
+				046A54551E0105BB003F96A5 /* TabBarViewController.xib */,
+				045D9FD31E02AA4D00E7C3E3 /* TabBarController.swift */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
 		3F91E86F1DFEB86D0053DFC7 = {
 			isa = PBXGroup;
 			children = (
@@ -407,10 +419,9 @@
 		3F91E8AC1DFEB9900053DFC7 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				046A54541E0105BB003F96A5 /* TabBarViewController.swift */,
-				046A54551E0105BB003F96A5 /* TabBarViewController.xib */,
-				045D9FD31E02AA4D00E7C3E3 /* TabBarController.swift */,
+				04CFBB0A1E0CB9D700928736 /* BaseViewController.swift */,
 				04FFAB341E02A1AD004F3347 /* ViewController.swift */,
+				04CFBB091E0CB64300928736 /* TabBar */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -853,6 +864,7 @@
 				045D51C81E08C62E008AEDD1 /* TransitionLayout.swift in Sources */,
 				0432CCFE1E0387640058112E /* UICollectionView.swift in Sources */,
 				045D51CC1E08C680008AEDD1 /* SwitchLayoutButton.swift in Sources */,
+				04CFBB0B1E0CB9D700928736 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

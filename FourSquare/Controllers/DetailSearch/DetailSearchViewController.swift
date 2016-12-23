@@ -7,28 +7,55 @@
 //
 
 import UIKit
+import PageMenu
 
-private let animationDuration: TimeInterval = 0.5
-private let listLayoutStaticCellHeight: CGFloat = 80
-private let cellPadding: CGFloat = 36.0
-private let CellInfo: CGFloat = 62.0
-private let gridLayoutStaticCellHeight: CGFloat = (UIScreen.main.bounds.width - cellPadding) / 3 + CellInfo
+enum DefaultMenuItem: Int {
+    case Price
+    case OpenNow
+    case Rating
+    case Saved
+    case Liked
 
-class DetailSearchViewController: ViewController {
+    var title: String {
+        switch self {
+        case .Price:
+            return Strings.MenuItemPrice
+        case .OpenNow:
+            return Strings.MenuItemOpenNow
+        case .Rating:
+            return Strings.MenuItemRating
+        case .Saved:
+            return Strings.MenuItemSaved
+        case .Liked:
+            return Strings.MenuItemLiked
+        }
+    }
+}
+
+class DetailSearchViewController: BaseViewController {
     
     // MARK: - Property
-    @IBOutlet fileprivate weak var collectionView: UICollectionView!
-    private lazy var searchBar = UISearchBar()
-    private let menuStyleButtonFrame = CGRect(x: 0, y: 0, width: 25, height: 25)
-    fileprivate var layoutState: LayoutState = .list
-    fileprivate var isTransitionAvailable = true
-    fileprivate var manuStyleButton = SwitchLayoutButton()
-    fileprivate lazy var listLayout = DisplaySwitchLayout(staticCellHeight: listLayoutStaticCellHeight, nextLayoutStaticCellHeight: gridLayoutStaticCellHeight, layoutState: .list)
-    fileprivate lazy var gridLayout = DisplaySwitchLayout(staticCellHeight: gridLayoutStaticCellHeight, nextLayoutStaticCellHeight: listLayoutStaticCellHeight, layoutState: .grid)
+    @IBOutlet private weak var viewOfPageMenu: UIView!
+    var pageMenu : CAPSPageMenu?
+    var controllerArray : [ViewController] = []
+    var listViewController : ListViewController = ListViewController.vc()
+    var historyViewController: HistoryViewController = HistoryViewController.vc()
+    var parameters: [CAPSPageMenuOption] = [
+        .menuItemSeparatorWidth(4.3),
+        .useMenuLikeSegmentedControl(true),
+        .menuItemSeparatorPercentageHeight(0.1)
+    ]
     
     // MARK: - Cycle Life
     override func viewDidLoad() {
         super.viewDidLoad()
+        addVCToPageMenu()
+        pageMenu!.viewBackgroundColor = Color.Blue153
+        pageMenu!.menuShadowColor = Color.Blue153
+        pageMenu!.menuItemSeparatorColor = Color.Blue153
+        pageMenu!.bottomMenuHairlineColor = Color.Blue153
+        pageMenu!.scrollMenuBackgroundColor = Color.Blue153
+        pageMenu!.selectionIndicatorColor = Color.Blue153
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,137 +67,16 @@ class DetailSearchViewController: ViewController {
         super.didReceiveMemoryWarning()
     }
     
-    override func configureUI() {
-        super.configureUI()
-        self.configureNavigationItem()
-        collectionView.registerNib(aClass: DefaultVenueCollectionViewCell.self)
-        collectionView.collectionViewLayout = listLayout
-        collectionView.dataSource = self
-        collectionView.delegate = self
-    }
-    
     // MARK: - Private Function
-    private func configureNavigationItem() {
-        manuStyleButton.isSelected = true
-        manuStyleButton.frame = menuStyleButtonFrame
-        manuStyleButton.awakeFromNib()
-        manuStyleButton.addTarget(self, action: #selector(self.changeStyle), for: UIControlEvents.touchUpInside)
-        let menuStyleBarButton = UIBarButtonItem(customView: manuStyleButton)
-        navigationItem.rightBarButtonItem = menuStyleBarButton
-        //
-        let menuButton = UIButton(type: UIButtonType.custom)
-        menuButton.imageView?.contentMode = .scaleAspectFit
-        menuButton.setImage(#imageLiteral(resourceName: "StyleMap"), for: UIControlState.normal)
-        menuButton.frame = menuButtonFrame
-        menuButton.addTarget(self, action: #selector(changeStyleToMap), for: UIControlEvents.touchUpInside)
-        let menuBarButton = UIBarButtonItem(customView: menuButton)
-        navigationItem.rightBarButtonItems = [menuStyleBarButton, menuBarButton]
-        //
-        manuStyleButton.isSelected = layoutState == .list
-        searchBar = UISearchBar()
-        searchBar.placeholder = "Coffe & Tea"
-        searchBar.sizeToFit()
-        navigationItem.titleView = searchBar
-    }
-    
-    @objc private func changeStyleToMap() {
-        /*
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        collectionView.collectionViewLayout = layout
-         */
-    }
-    
-    @objc private func changeStyle() {
-        if !isTransitionAvailable {
-            return
-        }
-        let transitionManager: TransitionManager
-        if layoutState == .list {
-            layoutState = .grid
-            transitionManager = TransitionManager(duration: animationDuration, collectionView: collectionView!, destinationLayout: gridLayout, layoutState: layoutState)
-        } else {
-            layoutState = .list
-            transitionManager = TransitionManager(duration: animationDuration, collectionView: collectionView!, destinationLayout: listLayout, layoutState: layoutState)
-        }
-        transitionManager.startInteractiveTransition()
-        manuStyleButton.animationDuration = animationDuration
-        manuStyleButton.isSelected = layoutState == .list
-    }
-}
-
-// MARK: - UICollectionViewDataSource
-extension DetailSearchViewController: UICollectionViewDataSource {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeue(aClass: DefaultVenueCollectionViewCell.self, forIndexPath: indexPath)
-        if self.layoutState == .grid {
-            cell.setupGridLayoutConstraints(1, cellWidth: cell.frame.width)
-        } else if self.layoutState == .list {
-            cell.setupListLayoutConstraints(1, cellWidth: cell.frame.width)
-        }
-        print(cell.frame.width)
-        print("width: \(cell.imageVenue.frame.width) + height: \(cell.imageVenue.frame.height)")
-        return cell
-    }
-}
-
-// MARK: - UICollectionViewDelegateFlowLayout
-extension DetailSearchViewController: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        if self.valueChangeStyle == 1 {
-//            return CGSize(width: self.view.frame.width, height: 80)
-//        } else {
-//            let itemsPerRow: CGFloat = 2
-//            let paddingSpace = sectionInsetsCollection.left * (itemsPerRow + 1)
-//            let availableWidth = view.frame.width - paddingSpace
-//            let widthPerItem = availableWidth / itemsPerRow
-//            let heightViewInfo: CGFloat = 60
-//            let heightPerItem = widthPerItem * 3 / 4 + heightViewInfo
-//            return CGSize(width: widthPerItem, height: heightPerItem)
-//        }
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        if self.valueChangeStyle == 1 {
-//            return sectionInsetsDefault
-//        } else {
-//            return sectionInsetsCollection
-//        }
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        if self.valueChangeStyle == 1 {
-//            return sectionInsetsDefault.left
-//        } else {
-//            return sectionInsetsCollection.left
-//        }
-//    }
-}
-
-// MARK: - UICollectionViewDelegate
-extension DetailSearchViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, transitionLayoutForOldLayout fromLayout: UICollectionViewLayout, newLayout toLayout: UICollectionViewLayout) -> UICollectionViewTransitionLayout {
-        let customTransitionLayout = TransitionLayout(currentLayout: fromLayout, nextLayout: toLayout)
-        return customTransitionLayout
-    }
-    
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        isTransitionAvailable = false
-    }
-    
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        isTransitionAvailable = true
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        view.endEditing(true)
+    private func addVCToPageMenu() {
+        listViewController.title = "Lists"
+        controllerArray.append(listViewController)
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height), pageMenuOptions: parameters)
+        self.view.addSubview(pageMenu!.view)
+        
+        historyViewController.title = "History"
+        controllerArray.append(historyViewController)
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height), pageMenuOptions: parameters)
+        self.view.addSubview(pageMenu!.view)
     }
 }

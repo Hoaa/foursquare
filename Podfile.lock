@@ -9,17 +9,29 @@ PODS:
     - GooglePlaces (= 2.1.1)
   - GooglePlaces (2.1.1):
     - GoogleMaps/Base (= 2.1.1)
+  - PageMenu (1.2.9)
 
 DEPENDENCIES:
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
+  - PageMenu (from `https://github.com/orazz/PageMenu`)
+
+EXTERNAL SOURCES:
+  PageMenu:
+    :git: https://github.com/orazz/PageMenu
+
+CHECKOUT OPTIONS:
+  PageMenu:
+    :commit: ace3d8d095c9c165113d3ac797f317fe7faecbae
+    :git: https://github.com/orazz/PageMenu
 
 SPEC CHECKSUMS:
   GoogleMaps: a5b5bbe47734e2443bde781a6aa64e69fdb6d785
   GooglePlacePicker: 665f39f931f2df32f9dd3fcc45f7e8abf71e535c
   GooglePlaces: 35636d86e5020cba3856eb988c09a5491de0a65a
+  PageMenu: ba19ff267f7a19e444e93c20a7847b78954a7011
 
-PODFILE CHECKSUM: 71f1e143234c1ead9fe4166656c49aeeae087ee8
+PODFILE CHECKSUM: 75fd8122db000e5df28cd1ede4c9fcfe0a899828
 
 COCOAPODS: 1.1.1
