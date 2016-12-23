@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let animationDuration: TimeInterval = 0.5
+let animationDuration: TimeInterval = 0.5
 private let listLayoutStaticCellHeight: CGFloat = 80
 private let cellPadding: CGFloat = 36.0
 private let CellInfo: CGFloat = 62.0
@@ -48,21 +48,17 @@ class MenuItemViewController: BaseViewController {
             transitionManager = TransitionManager(duration: animationDuration, collectionView: venueCollectionView!, destinationLayout: listLayout, layoutState: layoutState)
         }
         transitionManager.startInteractiveTransition()
-        //gridButton = animationDuration
-        //gridButton = layoutState == .list
     }
     
     // MARK: - Private function
     private func setupCollectionView() {
         venueCollectionView?.backgroundColor = Color.LightGray246
-        venueCollectionView?.registerNib(aClass: DefaultVenueCollectionViewCell.self)
+        venueCollectionView?.registerNib(aClass: VenueItemCollectionViewCell.self)
         venueCollectionView?.collectionViewLayout = listLayout
         venueCollectionView?.dataSource = self
         venueCollectionView?.delegate = self
     }
-    
-    // MARK: - Public funtion
-    
+
 }
 
 
@@ -77,10 +73,10 @@ extension MenuItemViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeue(aClass: DefaultVenueCollectionViewCell.self, forIndexPath: indexPath)
+        let cell = collectionView.dequeue(aClass: VenueItemCollectionViewCell.self, forIndexPath: indexPath)
         if self.layoutState == .grid {
             cell.setupGridLayoutConstraints(1, cellWidth: cell.frame.width)
-        } else if self.layoutState == .list {
+        } else {
             cell.setupListLayoutConstraints(1, cellWidth: cell.frame.width)
         }
         return cell

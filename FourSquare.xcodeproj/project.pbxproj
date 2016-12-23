@@ -37,8 +37,8 @@
 		045D51C81E08C62E008AEDD1 /* TransitionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D51C71E08C62E008AEDD1 /* TransitionLayout.swift */; };
 		045D51CA1E08C659008AEDD1 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D51C91E08C659008AEDD1 /* TransitionManager.swift */; };
 		045D51CC1E08C680008AEDD1 /* SwitchLayoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D51CB1E08C680008AEDD1 /* SwitchLayoutButton.swift */; };
-		0499CB991E078B9C00D4A607 /* DefaultVenueCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499CB971E078B9C00D4A607 /* DefaultVenueCollectionViewCell.swift */; };
-		0499CB9A1E078B9C00D4A607 /* DefaultVenueCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0499CB981E078B9C00D4A607 /* DefaultVenueCollectionViewCell.xib */; };
+		0479FDC71E0CFAC900E21A7B /* VenueItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479FDC51E0CFAC900E21A7B /* VenueItemCollectionViewCell.swift */; };
+		0479FDC81E0CFAC900E21A7B /* VenueItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0479FDC61E0CFAC900E21A7B /* VenueItemCollectionViewCell.xib */; };
 		04CFBB0B1E0CB9D700928736 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFBB0A1E0CB9D700928736 /* BaseViewController.swift */; };
 		04CFBB171E0CE08D00928736 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFBB161E0CE08D00928736 /* ViewController.swift */; };
 		04CFBB1C1E0CE0C000928736 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFBB191E0CE0C000928736 /* TabBarController.swift */; };
@@ -108,8 +108,8 @@
 		045D51C71E08C62E008AEDD1 /* TransitionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransitionLayout.swift; path = FourSquare/Library/DisplaySwitcher/TransitionLayout/TransitionLayout.swift; sourceTree = SOURCE_ROOT; };
 		045D51C91E08C659008AEDD1 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransitionManager.swift; path = FourSquare/Library/DisplaySwitcher/TransitionManager/TransitionManager.swift; sourceTree = SOURCE_ROOT; };
 		045D51CB1E08C680008AEDD1 /* SwitchLayoutButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwitchLayoutButton.swift; path = FourSquare/Library/DisplaySwitcher/Views/SwitchLayoutButton.swift; sourceTree = SOURCE_ROOT; };
-		0499CB971E078B9C00D4A607 /* DefaultVenueCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultVenueCollectionViewCell.swift; sourceTree = "<group>"; };
-		0499CB981E078B9C00D4A607 /* DefaultVenueCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultVenueCollectionViewCell.xib; sourceTree = "<group>"; };
+		0479FDC51E0CFAC900E21A7B /* VenueItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		0479FDC61E0CFAC900E21A7B /* VenueItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		04CFBB0A1E0CB9D700928736 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		04CFBB161E0CE08D00928736 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04CFBB191E0CE0C000928736 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -216,7 +216,6 @@
 		0438F6421E03E06600230893 /* VenueCell */ = {
 			isa = PBXGroup;
 			children = (
-				0499CB961E078B9C00D4A607 /* CellDefault */,
 				045D51CD1E08CBC0008AEDD1 /* CellMap */,
 			);
 			path = VenueCell;
@@ -320,19 +319,21 @@
 			name = CellMap;
 			sourceTree = "<group>";
 		};
-		0499CB961E078B9C00D4A607 /* CellDefault */ = {
+		0479FDC41E0CFAC900E21A7B /* VenueItemCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				0499CB971E078B9C00D4A607 /* DefaultVenueCollectionViewCell.swift */,
-				0499CB981E078B9C00D4A607 /* DefaultVenueCollectionViewCell.xib */,
+				0479FDC51E0CFAC900E21A7B /* VenueItemCollectionViewCell.swift */,
+				0479FDC61E0CFAC900E21A7B /* VenueItemCollectionViewCell.xib */,
 			);
-			path = CellDefault;
+			name = VenueItemCollectionViewCell;
+			path = PageBase/VenueItemCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		04CFBB151E0CDFCE00928736 /* PageBase */ = {
 			isa = PBXGroup;
 			children = (
 				04CFBB1F1E0CE0FA00928736 /* MenuItemViewController.swift */,
+				0479FDC41E0CFAC900E21A7B /* VenueItemCollectionViewCell */,
 			);
 			name = PageBase;
 			sourceTree = "<group>";
@@ -679,7 +680,7 @@
 				0447A6591E0399C200BB1A28 /* DetailSearchViewController.xib in Resources */,
 				0438F64A1E03E06600230893 /* SearchCollectionViewCell.xib in Resources */,
 				0438F6441E03E06600230893 /* ListCollectionViewCell.xib in Resources */,
-				0499CB9A1E078B9C00D4A607 /* DefaultVenueCollectionViewCell.xib in Resources */,
+				0479FDC81E0CFAC900E21A7B /* VenueItemCollectionViewCell.xib in Resources */,
 				04CFBB1E1E0CE0C000928736 /* TabBarViewController.xib in Resources */,
 				043B70E51E01098E00D955F9 /* ProfileViewController.xib in Resources */,
 				043B70E91E0109AE00D955F9 /* HistoryViewController.xib in Resources */,
@@ -852,7 +853,6 @@
 				043B70EC1E0109CF00D955F9 /* SearchViewController.swift in Sources */,
 				04F1693D1E0A83F70032BD64 /* MapVenueCollectionViewCell.swift in Sources */,
 				045D51C11E08C322008AEDD1 /* DisplaySwitchLayout.swift in Sources */,
-				0499CB991E078B9C00D4A607 /* DefaultVenueCollectionViewCell.swift in Sources */,
 				0432CCFC1E03827D0058112E /* UIViewController.swift in Sources */,
 				043B70E41E01098E00D955F9 /* ProfileViewController.swift in Sources */,
 				043B70F01E0109E400D955F9 /* ListViewController.swift in Sources */,
@@ -863,6 +863,7 @@
 				04D476F41E012BF600DBAEFE /* Strings.swift in Sources */,
 				04CFBB201E0CE0FA00928736 /* MenuItemViewController.swift in Sources */,
 				0447A6581E0399C200BB1A28 /* DetailSearchViewController.swift in Sources */,
+				0479FDC71E0CFAC900E21A7B /* VenueItemCollectionViewCell.swift in Sources */,
 				0438F6471E03E06600230893 /* ListMapCollectionViewCell.swift in Sources */,
 				04515A301E030E1100319D93 /* Color.swift in Sources */,
 				04515A341E030F3800319D93 /* NotificationCenter.swift in Sources */,

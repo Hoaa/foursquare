@@ -41,7 +41,7 @@ class BaseViewController: ViewController {
     }
     
     func changeStyle(sender: AnyObject) {
-        //gridButton.animationDuration =
+        gridButton.animationDuration = animationDuration
         gridButton.isSelected = !gridButton.isSelected
     }
     
