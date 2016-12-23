@@ -37,9 +37,7 @@ class DetailSearchViewController: BaseViewController {
     // MARK: - Property
     @IBOutlet private weak var viewOfPageMenu: UIView!
     var pageMenu : CAPSPageMenu?
-    var controllerArray : [ViewController] = []
-    var listViewController : ListViewController = ListViewController.vc()
-    var historyViewController: HistoryViewController = HistoryViewController.vc()
+    var controllerArray : [MenuItemViewController] = []
     var parameters: [CAPSPageMenuOption] = [
         .menuItemSeparatorWidth(4.3),
         .useMenuLikeSegmentedControl(true),
@@ -50,12 +48,6 @@ class DetailSearchViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addVCToPageMenu()
-        pageMenu!.viewBackgroundColor = Color.Blue153
-        pageMenu!.menuShadowColor = Color.Blue153
-        pageMenu!.menuItemSeparatorColor = Color.Blue153
-        pageMenu!.bottomMenuHairlineColor = Color.Blue153
-        pageMenu!.scrollMenuBackgroundColor = Color.Blue153
-        pageMenu!.selectionIndicatorColor = Color.Blue153
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,14 +61,5 @@ class DetailSearchViewController: BaseViewController {
     
     // MARK: - Private Function
     private func addVCToPageMenu() {
-        listViewController.title = "Lists"
-        controllerArray.append(listViewController)
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height), pageMenuOptions: parameters)
-        self.view.addSubview(pageMenu!.view)
-        
-        historyViewController.title = "History"
-        controllerArray.append(historyViewController)
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height), pageMenuOptions: parameters)
-        self.view.addSubview(pageMenu!.view)
     }
 }

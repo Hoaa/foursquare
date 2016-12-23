@@ -12,7 +12,7 @@ class BaseViewController: ViewController {
     // MARK: - Property
     private lazy var searchBar = UISearchBar()
     private let menuStyleButtonFrame = CGRect(x: 0, y: 0, width: 25, height: 25)
-    private var gridButoon = SwitchLayoutButton()
+    private var gridButton = SwitchLayoutButton()
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -40,6 +40,11 @@ class BaseViewController: ViewController {
         
     }
     
+    func changeStyle(sender: AnyObject) {
+        //gridButton.animationDuration =
+        gridButton.isSelected = !gridButton.isSelected
+    }
+    
     // MARK: - Private function
     private func configUINavigationBar() {
         navigationController?.navigationBar.barTintColor = Color.Blue153
@@ -60,17 +65,13 @@ class BaseViewController: ViewController {
         mapButton.frame = menuButtonFrame
         mapButton.addTarget(self, action: #selector(showAndHideMapViewAction), for: UIControlEvents.touchUpInside)
         let mapBarButton = UIBarButtonItem(customView: mapButton)
-        gridButoon.isSelected = true
-        gridButoon.frame = menuStyleButtonFrame
-        gridButoon.awakeFromNib()
-        gridButoon.isSelected = true
-        gridButoon.addTarget(self, action: #selector(changeStyle), for: UIControlEvents.touchUpInside)
-        let gridBarButton = UIBarButtonItem(customView: gridButoon)
+        //gridButoon
+        gridButton.frame = menuStyleButtonFrame
+        gridButton.awakeFromNib()
+        gridButton.isSelected = true
+        gridButton.addTarget(self, action: #selector(changeStyle), for: UIControlEvents.touchUpInside)
+        let gridBarButton = UIBarButtonItem(customView: gridButton)
         navigationItem.rightBarButtonItems = [gridBarButton, mapBarButton]
-    }
-    
-    @objc private func changeStyle() {
-        gridButoon.isSelected = !gridButoon.isSelected
     }
     
 }
