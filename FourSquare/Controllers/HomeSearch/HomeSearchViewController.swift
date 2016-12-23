@@ -10,24 +10,21 @@ import UIKit
 import PageMenu
 
 enum DefaultMenuItem: Int {
+    case Distance
     case Price
     case OpenNow
     case Rating
-    case Saved
-    case Liked
 
     var title: String {
         switch self {
+        case .Distance:
+            return Strings.MenuItemDistance
         case .Price:
             return Strings.MenuItemPrice
         case .OpenNow:
             return Strings.MenuItemOpenNow
         case .Rating:
             return Strings.MenuItemRating
-        case .Saved:
-            return Strings.MenuItemSaved
-        case .Liked:
-            return Strings.MenuItemLiked
         }
     }
 }
@@ -43,11 +40,12 @@ class HomeSearchViewController: BaseViewController {
         .useMenuLikeSegmentedControl(true),
         .menuItemSeparatorPercentageHeight(0.1)
     ]
+    var distanceViewController: DistanceViewController = DistanceViewController.vc()
     
     // MARK: - Cycle Life
     override func viewDidLoad() {
         super.viewDidLoad()
-        addVCToPageMenu()
+        configureMenuPage()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,11 +53,22 @@ class HomeSearchViewController: BaseViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    override func changeStyle(sender: AnyObject) {
+        super.changeStyle(sender: sender)
+        distanceViewController.isChangeStyle()
+        gridButton.animationDuration = animationDuration
+        gridButton.isSelected = !gridButton.isSelected
     }
     
     // MARK: - Private Function
-    private func addVCToPageMenu() {
+    private func configureMenuPage() {
+        setUpMenuPage()
+    }
+    
+    private func setUpMenuPage() {
+        distanceViewController.title = "Distance"
+        controllerArray.append(distanceViewController)
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: viewOfPageMenu.frame, pageMenuOptions: parameters)
+        self.viewOfPageMenu.addSubview(pageMenu!.view)
     }
 }

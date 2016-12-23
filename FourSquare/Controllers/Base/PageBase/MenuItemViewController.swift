@@ -8,7 +8,6 @@
 
 import UIKit
 
-let animationDuration: TimeInterval = 0.5
 private let listLayoutStaticCellHeight: CGFloat = 80
 private let cellPadding: CGFloat = 36.0
 private let CellInfo: CGFloat = 62.0
@@ -34,8 +33,8 @@ class MenuItemViewController: BaseViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    override func changeStyle(sender: AnyObject) {
-        super.changeStyle(sender: sender)
+    // MARK: - Public funtion
+    func isChangeStyle() {
         if !isTransitionAvailable {
             return
         }
@@ -85,6 +84,10 @@ extension MenuItemViewController: UICollectionViewDataSource {
 
 // MARK: - UICollectionViewDelegate
 extension MenuItemViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("ItemAt: \(indexPath.row)")
+    }
+    
     func collectionView(_ collectionView: UICollectionView, transitionLayoutForOldLayout fromLayout: UICollectionViewLayout, newLayout toLayout: UICollectionViewLayout) -> UICollectionViewTransitionLayout {
         let customTransitionLayout = TransitionLayout(currentLayout: fromLayout, nextLayout: toLayout)
         return customTransitionLayout

@@ -7,12 +7,15 @@
 //
 
 import UIKit
+
+let animationDuration: TimeInterval = 0.5
+
 class BaseViewController: ViewController {
 
     // MARK: - Property
     private lazy var searchBar = UISearchBar()
     private let menuStyleButtonFrame = CGRect(x: 0, y: 0, width: 25, height: 25)
-    private var gridButton = SwitchLayoutButton()
+    var gridButton = SwitchLayoutButton()
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -37,12 +40,9 @@ class BaseViewController: ViewController {
     }
     
     func showAndHideMapViewAction(sender: AnyObject) {
-        
     }
     
     func changeStyle(sender: AnyObject) {
-        gridButton.animationDuration = animationDuration
-        gridButton.isSelected = !gridButton.isSelected
     }
     
     // MARK: - Private function

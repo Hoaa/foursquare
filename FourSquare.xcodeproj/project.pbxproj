@@ -39,6 +39,14 @@
 		0479FDC81E0CFAC900E21A7B /* VenueItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0479FDC61E0CFAC900E21A7B /* VenueItemCollectionViewCell.xib */; };
 		0479FDCC1E0CFC2400E21A7B /* HomeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479FDCA1E0CFC2400E21A7B /* HomeSearchViewController.swift */; };
 		0479FDCD1E0CFC2400E21A7B /* HomeSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0479FDCB1E0CFC2400E21A7B /* HomeSearchViewController.xib */; };
+		0479FDD91E0D065A00E21A7B /* OpenNowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479FDD71E0D065A00E21A7B /* OpenNowViewController.swift */; };
+		0479FDDA1E0D065A00E21A7B /* OpenNowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0479FDD81E0D065A00E21A7B /* OpenNowViewController.xib */; };
+		0479FDDE1E0D06A700E21A7B /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479FDDC1E0D06A700E21A7B /* DistanceViewController.swift */; };
+		0479FDDF1E0D06A700E21A7B /* DistanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0479FDDD1E0D06A700E21A7B /* DistanceViewController.xib */; };
+		0479FDE21E0D06BF00E21A7B /* PriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479FDE01E0D06BF00E21A7B /* PriceViewController.swift */; };
+		0479FDE31E0D06BF00E21A7B /* PriceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0479FDE11E0D06BF00E21A7B /* PriceViewController.xib */; };
+		0479FDE61E0D06E200E21A7B /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479FDE41E0D06E200E21A7B /* RatingViewController.swift */; };
+		0479FDE71E0D06E200E21A7B /* RatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0479FDE51E0D06E200E21A7B /* RatingViewController.xib */; };
 		04CFBB0B1E0CB9D700928736 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFBB0A1E0CB9D700928736 /* BaseViewController.swift */; };
 		04CFBB171E0CE08D00928736 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFBB161E0CE08D00928736 /* ViewController.swift */; };
 		04CFBB1C1E0CE0C000928736 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFBB191E0CE0C000928736 /* TabBarController.swift */; };
@@ -110,6 +118,14 @@
 		0479FDC61E0CFAC900E21A7B /* VenueItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		0479FDCA1E0CFC2400E21A7B /* HomeSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSearchViewController.swift; sourceTree = "<group>"; };
 		0479FDCB1E0CFC2400E21A7B /* HomeSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeSearchViewController.xib; sourceTree = "<group>"; };
+		0479FDD71E0D065A00E21A7B /* OpenNowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenNowViewController.swift; path = MenuItem/OpenNow/OpenNowViewController.swift; sourceTree = "<group>"; };
+		0479FDD81E0D065A00E21A7B /* OpenNowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OpenNowViewController.xib; path = MenuItem/OpenNow/OpenNowViewController.xib; sourceTree = "<group>"; };
+		0479FDDC1E0D06A700E21A7B /* DistanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
+		0479FDDD1E0D06A700E21A7B /* DistanceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DistanceViewController.xib; sourceTree = "<group>"; };
+		0479FDE01E0D06BF00E21A7B /* PriceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PriceViewController.swift; path = MenuItem/Price/PriceViewController.swift; sourceTree = "<group>"; };
+		0479FDE11E0D06BF00E21A7B /* PriceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PriceViewController.xib; path = MenuItem/Price/PriceViewController.xib; sourceTree = "<group>"; };
+		0479FDE41E0D06E200E21A7B /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingViewController.swift; path = MenuItem/Rating/RatingViewController.swift; sourceTree = "<group>"; };
+		0479FDE51E0D06E200E21A7B /* RatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RatingViewController.xib; path = MenuItem/Rating/RatingViewController.xib; sourceTree = "<group>"; };
 		04CFBB0A1E0CB9D700928736 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		04CFBB161E0CE08D00928736 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04CFBB191E0CE0C000928736 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -329,6 +345,54 @@
 			path = HomeSearch;
 			sourceTree = "<group>";
 		};
+		0479FDCE1E0CFD3900E21A7B /* MenuItem */ = {
+			isa = PBXGroup;
+			children = (
+				0479FDDB1E0D06A700E21A7B /* Distance */,
+				0479FDD11E0CFD6700E21A7B /* OpenNow */,
+				0479FDD01E0CFD5D00E21A7B /* Price */,
+				0479FDD21E0CFD6E00E21A7B /* Rating */,
+			);
+			name = MenuItem;
+			sourceTree = "<group>";
+		};
+		0479FDD01E0CFD5D00E21A7B /* Price */ = {
+			isa = PBXGroup;
+			children = (
+				0479FDE01E0D06BF00E21A7B /* PriceViewController.swift */,
+				0479FDE11E0D06BF00E21A7B /* PriceViewController.xib */,
+			);
+			name = Price;
+			sourceTree = "<group>";
+		};
+		0479FDD11E0CFD6700E21A7B /* OpenNow */ = {
+			isa = PBXGroup;
+			children = (
+				0479FDD71E0D065A00E21A7B /* OpenNowViewController.swift */,
+				0479FDD81E0D065A00E21A7B /* OpenNowViewController.xib */,
+			);
+			name = OpenNow;
+			sourceTree = "<group>";
+		};
+		0479FDD21E0CFD6E00E21A7B /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				0479FDE41E0D06E200E21A7B /* RatingViewController.swift */,
+				0479FDE51E0D06E200E21A7B /* RatingViewController.xib */,
+			);
+			name = Rating;
+			sourceTree = "<group>";
+		};
+		0479FDDB1E0D06A700E21A7B /* Distance */ = {
+			isa = PBXGroup;
+			children = (
+				0479FDDC1E0D06A700E21A7B /* DistanceViewController.swift */,
+				0479FDDD1E0D06A700E21A7B /* DistanceViewController.xib */,
+			);
+			name = Distance;
+			path = MenuItem/Distance;
+			sourceTree = "<group>";
+		};
 		04CFBB151E0CDFCE00928736 /* PageBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -415,6 +479,7 @@
 				043B70E11E01097500D955F9 /* Profile */,
 				043B70DF1E01096400D955F9 /* Search */,
 				0479FDC91E0CFC2400E21A7B /* HomeSearch */,
+				0479FDCE1E0CFD3900E21A7B /* MenuItem */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -673,10 +738,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F91E8BE1DFEB9900053DFC7 /* Assets.xcassets in Resources */,
+				0479FDE71E0D06E200E21A7B /* RatingViewController.xib in Resources */,
+				0479FDE31E0D06BF00E21A7B /* PriceViewController.xib in Resources */,
 				0479FDCD1E0CFC2400E21A7B /* HomeSearchViewController.xib in Resources */,
 				04F1693E1E0A83F70032BD64 /* MapVenueCollectionViewCell.xib in Resources */,
 				043B70F11E0109E400D955F9 /* ListViewController.xib in Resources */,
 				043B70ED1E0109CF00D955F9 /* SearchViewController.xib in Resources */,
+				0479FDDF1E0D06A700E21A7B /* DistanceViewController.xib in Resources */,
 				0438F6461E03E06600230893 /* ListDefaultCollectionViewCell.xib in Resources */,
 				0438F64A1E03E06600230893 /* SearchCollectionViewCell.xib in Resources */,
 				0438F6441E03E06600230893 /* ListCollectionViewCell.xib in Resources */,
@@ -686,6 +754,7 @@
 				043B70E91E0109AE00D955F9 /* HistoryViewController.xib in Resources */,
 				3F91E8BC1DFEB9900053DFC7 /* LaunchScreen.storyboard in Resources */,
 				0438F6481E03E06600230893 /* ListMapCollectionViewCell.xib in Resources */,
+				0479FDDA1E0D065A00E21A7B /* OpenNowViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -849,6 +918,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04CFBB171E0CE08D00928736 /* ViewController.swift in Sources */,
+				0479FDDE1E0D06A700E21A7B /* DistanceViewController.swift in Sources */,
 				0438F6431E03E06600230893 /* ListCollectionViewCell.swift in Sources */,
 				043B70EC1E0109CF00D955F9 /* SearchViewController.swift in Sources */,
 				04F1693D1E0A83F70032BD64 /* MapVenueCollectionViewCell.swift in Sources */,
@@ -858,6 +928,7 @@
 				043B70F01E0109E400D955F9 /* ListViewController.swift in Sources */,
 				0438F6491E03E06600230893 /* SearchCollectionViewCell.swift in Sources */,
 				04515A321E030F0300319D93 /* Keys.swift in Sources */,
+				0479FDE21E0D06BF00E21A7B /* PriceViewController.swift in Sources */,
 				04515A361E030F7C00319D93 /* UIImage.swift in Sources */,
 				045D51C31E08C394008AEDD1 /* DisplaySwitchLayoutAttributes.swift in Sources */,
 				04D476F41E012BF600DBAEFE /* Strings.swift in Sources */,
@@ -867,6 +938,7 @@
 				04515A301E030E1100319D93 /* Color.swift in Sources */,
 				04515A341E030F3800319D93 /* NotificationCenter.swift in Sources */,
 				04515A2E1E030D4B00319D93 /* UIColor.swift in Sources */,
+				0479FDE61E0D06E200E21A7B /* RatingViewController.swift in Sources */,
 				3F91E8BB1DFEB9900053DFC7 /* AppDelegate.swift in Sources */,
 				043B70E81E0109AE00D955F9 /* HistoryViewController.swift in Sources */,
 				0438F6451E03E06600230893 /* ListDefaultCollectionViewCell.swift in Sources */,
@@ -874,6 +946,7 @@
 				0479FDCC1E0CFC2400E21A7B /* HomeSearchViewController.swift in Sources */,
 				045D51CA1E08C659008AEDD1 /* TransitionManager.swift in Sources */,
 				045D51C81E08C62E008AEDD1 /* TransitionLayout.swift in Sources */,
+				0479FDD91E0D065A00E21A7B /* OpenNowViewController.swift in Sources */,
 				0432CCFE1E0387640058112E /* UICollectionView.swift in Sources */,
 				045D51CC1E08C680008AEDD1 /* SwitchLayoutButton.swift in Sources */,
 				04CFBB1D1E0CE0C000928736 /* TabBarViewController.swift in Sources */,
