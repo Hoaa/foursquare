@@ -34,17 +34,25 @@ class HomeSearchViewController: BaseViewController {
     // MARK: - Property
     @IBOutlet private weak var viewOfPageMenu: UIView!
     var pageMenu : CAPSPageMenu?
-    var controllerArray : [MenuItemViewController] = []
+    var itemViewControllers : [MenuItemViewController] = []
     var parameters: [CAPSPageMenuOption] = [
-        .menuItemSeparatorWidth(4.3),
-        .useMenuLikeSegmentedControl(true),
-        .menuItemSeparatorPercentageHeight(0.1)
+        .menuHeight(35.0),
+        .menuItemWidth(UIScreen.main.bounds.width / 4),
+        .menuMargin(0),
+        .scrollMenuBackgroundColor(Color.Blue145),
+        .selectionIndicatorColor(Color.White255),
+        .selectedMenuItemLabelColor(Color.White255),
+        .unselectedMenuItemLabelColor(Color.White216)
     ]
     var distanceViewController: DistanceViewController = DistanceViewController.vc()
+    var priceViewController: PriceViewController = PriceViewController.vc()
+    var openNowViewController: OpenNowViewController = OpenNowViewController.vc()
+    var ratingViewController: RatingViewController = RatingViewController.vc()
     
     // MARK: - Cycle Life
     override func viewDidLoad() {
         super.viewDidLoad()
+        itemViewControllers = setDefaultMenuItems()
         configureMenuPage()
     }
     
@@ -61,14 +69,31 @@ class HomeSearchViewController: BaseViewController {
     }
     
     // MARK: - Private Function
+    private func setDefaultMenuItems() -> [MenuItemViewController] {
+        var viewControllers: [MenuItemViewController] = []
+        
+        distanceViewController.title = Strings.MenuItemDistance
+        viewControllers.append(distanceViewController)
+        
+        priceViewController.title = Strings.MenuItemPrice
+        viewControllers.append(priceViewController)
+        
+        openNowViewController.title = Strings.MenuItemOpenNow
+        viewControllers.append(openNowViewController)
+        
+        ratingViewController.title = Strings.MenuItemRating
+        viewControllers.append(ratingViewController)
+        return viewControllers
+    }
+    
     private func configureMenuPage() {
         setUpMenuPage()
     }
     
     private func setUpMenuPage() {
-        distanceViewController.title = "Distance"
-        controllerArray.append(distanceViewController)
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: viewOfPageMenu.frame, pageMenuOptions: parameters)
-        self.viewOfPageMenu.addSubview(pageMenu!.view)
+        pageMenu = CAPSPageMenu(viewControllers: itemViewControllers, frame: viewOfPageMenu.frame, pageMenuOptions: parameters)
+        if let pageMenu = self.pageMenu {
+            self.viewOfPageMenu.addSubview(pageMenu.view)
+        }
     }
 }

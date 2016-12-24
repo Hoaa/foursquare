@@ -47,6 +47,6 @@ class TabBarViewController: UITabBarController {
         historyVC.tabBarItem = itemHistory
         profileVC.tabBarItem = itemProfile
         tabBar.isTranslucent = false
-        tabBar.tintColor = Color.Blue153
+        tabBar.tintColor = Color.Blue255
     }
 }

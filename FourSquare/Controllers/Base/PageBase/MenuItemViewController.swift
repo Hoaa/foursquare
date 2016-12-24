@@ -8,6 +8,7 @@
 
 import UIKit
 
+let animationDuration: TimeInterval = 0.5
 private let listLayoutStaticCellHeight: CGFloat = 80
 private let cellPadding: CGFloat = 36.0
 private let CellInfo: CGFloat = 62.0
@@ -23,14 +24,14 @@ class MenuItemViewController: BaseViewController {
     fileprivate lazy var gridLayout = DisplaySwitchLayout(staticCellHeight: gridLayoutStaticCellHeight, nextLayoutStaticCellHeight: listLayoutStaticCellHeight, layoutState: .grid)
     
     // MARK: - LifeCycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupCollectionView()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupCollectionView()
     }
     
     // MARK: - Public funtion
@@ -51,7 +52,7 @@ class MenuItemViewController: BaseViewController {
     
     // MARK: - Private function
     private func setupCollectionView() {
-        venueCollectionView?.backgroundColor = Color.LightGray246
+        venueCollectionView?.backgroundColor = Color.Gray246
         venueCollectionView?.registerNib(aClass: VenueItemCollectionViewCell.self)
         venueCollectionView?.collectionViewLayout = listLayout
         venueCollectionView?.dataSource = self
@@ -84,10 +85,6 @@ extension MenuItemViewController: UICollectionViewDataSource {
 
 // MARK: - UICollectionViewDelegate
 extension MenuItemViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("ItemAt: \(indexPath.row)")
-    }
-    
     func collectionView(_ collectionView: UICollectionView, transitionLayoutForOldLayout fromLayout: UICollectionViewLayout, newLayout toLayout: UICollectionViewLayout) -> UICollectionViewTransitionLayout {
         let customTransitionLayout = TransitionLayout(currentLayout: fromLayout, nextLayout: toLayout)
         return customTransitionLayout

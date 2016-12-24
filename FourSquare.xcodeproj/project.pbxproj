@@ -47,6 +47,7 @@
 		0479FDE31E0D06BF00E21A7B /* PriceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0479FDE11E0D06BF00E21A7B /* PriceViewController.xib */; };
 		0479FDE61E0D06E200E21A7B /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479FDE41E0D06E200E21A7B /* RatingViewController.swift */; };
 		0479FDE71E0D06E200E21A7B /* RatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0479FDE51E0D06E200E21A7B /* RatingViewController.xib */; };
+		0479FDE91E0D1A0100E21A7B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479FDE81E0D1A0100E21A7B /* UIView.swift */; };
 		04CFBB0B1E0CB9D700928736 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFBB0A1E0CB9D700928736 /* BaseViewController.swift */; };
 		04CFBB171E0CE08D00928736 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFBB161E0CE08D00928736 /* ViewController.swift */; };
 		04CFBB1C1E0CE0C000928736 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFBB191E0CE0C000928736 /* TabBarController.swift */; };
@@ -126,6 +127,7 @@
 		0479FDE11E0D06BF00E21A7B /* PriceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PriceViewController.xib; path = MenuItem/Price/PriceViewController.xib; sourceTree = "<group>"; };
 		0479FDE41E0D06E200E21A7B /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingViewController.swift; path = MenuItem/Rating/RatingViewController.swift; sourceTree = "<group>"; };
 		0479FDE51E0D06E200E21A7B /* RatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RatingViewController.xib; path = MenuItem/Rating/RatingViewController.xib; sourceTree = "<group>"; };
+		0479FDE81E0D1A0100E21A7B /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		04CFBB0A1E0CB9D700928736 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		04CFBB161E0CE08D00928736 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04CFBB191E0CE0C000928736 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -537,6 +539,7 @@
 				04515A351E030F7C00319D93 /* UIImage.swift */,
 				0432CCFB1E03827D0058112E /* UIViewController.swift */,
 				0432CCFD1E0387640058112E /* UICollectionView.swift */,
+				0479FDE81E0D1A0100E21A7B /* UIView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -927,6 +930,7 @@
 				043B70E41E01098E00D955F9 /* ProfileViewController.swift in Sources */,
 				043B70F01E0109E400D955F9 /* ListViewController.swift in Sources */,
 				0438F6491E03E06600230893 /* SearchCollectionViewCell.swift in Sources */,
+				0479FDE91E0D1A0100E21A7B /* UIView.swift in Sources */,
 				04515A321E030F0300319D93 /* Keys.swift in Sources */,
 				0479FDE21E0D06BF00E21A7B /* PriceViewController.swift in Sources */,
 				04515A361E030F7C00319D93 /* UIImage.swift in Sources */,

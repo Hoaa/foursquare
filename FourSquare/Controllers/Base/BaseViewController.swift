@@ -8,8 +8,6 @@
 
 import UIKit
 
-let animationDuration: TimeInterval = 0.5
-
 class BaseViewController: ViewController {
 
     // MARK: - Property
@@ -47,8 +45,8 @@ class BaseViewController: ViewController {
     
     // MARK: - Private function
     private func configUINavigationBar() {
-        navigationController?.navigationBar.barTintColor = Color.Blue153
-        navigationController?.navigationBar.tintColor = Color.White
+        navigationController?.navigationBar.barTintColor = Color.Blue255
+        navigationController?.navigationBar.tintColor = Color.White255
     }
     
     private func addSearchBar() {

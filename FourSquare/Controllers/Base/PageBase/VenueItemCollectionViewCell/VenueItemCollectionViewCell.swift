@@ -20,7 +20,7 @@ class VenueItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var priceVenue: UILabel!
     @IBOutlet weak var rateVenue: UILabel!
     @IBOutlet weak var backgroundGradientView: UIView!
-    //Image constraint
+    //image constraint
     @IBOutlet weak var imageVenueViewWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageVenueViewHeightConstraint: NSLayoutConstraint!
     //nameListVenue constraint
