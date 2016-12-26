@@ -36,6 +36,23 @@ class MapViewController: ViewController {
         addVenueToGoogleMapView()
         setup()
     }
+    
+    // MARK: - Action
+    @IBAction func backVenue(_ sender: Any) {
+        let indexRow = self.visibleIndex() - 1
+        if indexRow < 0 {
+            return
+        }
+        self.scrollToCellAtIndex(index: indexRow, animated: true)
+    }
+    
+    @IBAction func nextVenue(_ sender: Any) {
+        let indexRow = self.visibleIndex() + 1
+        if indexRow == self.venues.count {
+            return
+        }
+        self.scrollToCellAtIndex(index: indexRow, animated: true)
+    }
 
     // MARK: - Private function
     private func loadData() {
@@ -90,6 +107,18 @@ class MapViewController: ViewController {
         collectionView.registerNib(aClass: MapVenueCollectionViewCell.self)
         collectionView.dataSource = self
         collectionView.delegate = self
+    }
+    
+    private func scrollToCellAtIndex(index: Int, animated: Bool) {
+        let indexPath: IndexPath = IndexPath(row: index, section: 0)
+        self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: animated)
+    }
+    
+    private func visibleIndex() -> Int {
+        guard let indexPathVisible = self.collectionView.indexPathsForVisibleItems.first else {
+            return -1
+        }
+        return indexPathVisible.row
     }
 }
 
@@ -154,7 +183,7 @@ extension MapViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return venues.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
