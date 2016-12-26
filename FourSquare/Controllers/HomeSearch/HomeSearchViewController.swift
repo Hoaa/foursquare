@@ -95,16 +95,12 @@ class HomeSearchViewController: BaseViewController {
     // MARK: - Private Function
     private func setDefaultMenuItems() -> [MenuItemViewController] {
         var viewControllers: [MenuItemViewController] = []
-        
         distanceViewController.title = Strings.MenuItemDistance
         viewControllers.append(distanceViewController)
-        
         priceViewController.title = Strings.MenuItemPrice
         viewControllers.append(priceViewController)
-        
         openNowViewController.title = Strings.MenuItemOpenNow
         viewControllers.append(openNowViewController)
-        
         ratingViewController.title = Strings.MenuItemRating
         viewControllers.append(ratingViewController)
         return viewControllers

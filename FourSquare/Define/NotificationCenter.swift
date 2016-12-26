@@ -7,13 +7,3 @@
 //
 
 import Foundation
-
-struct NotificationCenterKey {
-    static let changeToMapView = "ChangeToMapView"
-    static let changeToCollectionView = "ChangeToTableView"
-    static let loadVenue = "LoadVenue"
-}
-struct NotificationCenterUserInfo {
-    static let menuItem = "item"
-    static let indexCell = "index"
-}

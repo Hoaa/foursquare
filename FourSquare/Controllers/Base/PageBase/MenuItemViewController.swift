@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 let animationDuration: TimeInterval = 0.5
 private let listLayoutStaticCellHeight: CGFloat = 80
@@ -19,7 +20,6 @@ class MenuItemViewController: BaseViewController {
     // MARK: - Property
     @IBOutlet private(set) weak var venueCollectionView: UICollectionView?
     fileprivate var layoutState: LayoutState = .list
-    fileprivate var isTransitionAvailable = true
     fileprivate lazy var listLayout = DisplaySwitchLayout(staticCellHeight: listLayoutStaticCellHeight, nextLayoutStaticCellHeight: gridLayoutStaticCellHeight, layoutState: .list)
     fileprivate lazy var gridLayout = DisplaySwitchLayout(staticCellHeight: gridLayoutStaticCellHeight, nextLayoutStaticCellHeight: listLayoutStaticCellHeight, layoutState: .grid)
     
@@ -36,9 +36,6 @@ class MenuItemViewController: BaseViewController {
     
     // MARK: - Public funtion
     func isChangeStyle() {
-        if !isTransitionAvailable {
-            return
-        }
         let transitionManager: TransitionManager
         if layoutState == .list {
             layoutState = .grid
@@ -88,17 +85,5 @@ extension MenuItemViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, transitionLayoutForOldLayout fromLayout: UICollectionViewLayout, newLayout toLayout: UICollectionViewLayout) -> UICollectionViewTransitionLayout {
         let customTransitionLayout = TransitionLayout(currentLayout: fromLayout, nextLayout: toLayout)
         return customTransitionLayout
-    }
-    
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        isTransitionAvailable = false
-    }
-    
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        isTransitionAvailable = true
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        view.endEditing(true)
     }
 }
