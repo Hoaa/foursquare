@@ -63,7 +63,7 @@ class BaseViewController: ViewController {
         let mapButton = UIButton(type: UIButtonType.custom)
         mapButton.imageView?.contentMode = .scaleAspectFit
         mapButton.setImage(#imageLiteral(resourceName: "StyleMap"), for: UIControlState.normal)
-        mapButton.frame = menuButtonFrame
+        mapButton.frame = menuStyleButtonFrame
         mapButton.addTarget(self, action: #selector(changeMapStyle), for: UIControlEvents.touchUpInside)
         let mapBarButton = UIBarButtonItem(customView: mapButton)
         //gridButoon

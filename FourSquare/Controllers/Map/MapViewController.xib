@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="FourSquare" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="prb-Ia-j83" id="jpV-0X-6rl"/>
                 <outlet property="mapContainerView" destination="nFs-Wd-Wn9" id="zmM-Yh-6iF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,13 +24,13 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="prb-Ia-j83">
-                    <rect key="frame" x="0.0" y="543" width="375" height="124"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="prb-Ia-j83">
+                    <rect key="frame" x="10" y="577" width="355" height="80"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="124" id="jzr-Um-9cv"/>
+                        <constraint firstAttribute="height" constant="80" id="jzr-Um-9cv"/>
                     </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XlW-t4-a1P">
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="XlW-t4-a1P">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -37,7 +38,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqW-O1-i5d" userLabel="Back Button">
-                    <rect key="frame" x="0.0" y="543" width="25" height="124"/>
+                    <rect key="frame" x="0.0" y="555" width="25" height="124"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="124" id="3TW-7K-NNR"/>
                         <constraint firstAttribute="width" constant="25" id="onY-mi-pdo"/>
@@ -45,7 +46,7 @@
                     <state key="normal" image="back_collection_ic"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ms4-o8-7x8" userLabel="Next Button">
-                    <rect key="frame" x="350" y="543" width="25" height="124"/>
+                    <rect key="frame" x="350" y="555" width="25" height="124"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="124" id="3Bp-yn-U63"/>
                         <constraint firstAttribute="width" constant="25" id="JL2-fr-UIe"/>
@@ -56,16 +57,16 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="nFs-Wd-Wn9" secondAttribute="bottom" id="CmV-sc-wHZ"/>
-                <constraint firstItem="prb-Ia-j83" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Inx-zC-FdZ"/>
+                <constraint firstItem="prb-Ia-j83" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Inx-zC-FdZ"/>
                 <constraint firstItem="nFs-Wd-Wn9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NmK-ha-1UL"/>
                 <constraint firstItem="eqW-O1-i5d" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Nua-AR-7wp"/>
                 <constraint firstAttribute="trailing" secondItem="nFs-Wd-Wn9" secondAttribute="trailing" id="Prj-Pw-F51"/>
-                <constraint firstAttribute="bottom" secondItem="prb-Ia-j83" secondAttribute="bottom" id="Zb7-VP-h6U"/>
+                <constraint firstAttribute="bottom" secondItem="prb-Ia-j83" secondAttribute="bottom" constant="10" id="Zb7-VP-h6U"/>
                 <constraint firstItem="eqW-O1-i5d" firstAttribute="centerY" secondItem="prb-Ia-j83" secondAttribute="centerY" id="jVL-QE-jt4"/>
                 <constraint firstItem="nFs-Wd-Wn9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="jvJ-C1-gb1"/>
                 <constraint firstAttribute="trailing" secondItem="Ms4-o8-7x8" secondAttribute="trailing" id="mzE-rL-bzj"/>
                 <constraint firstItem="Ms4-o8-7x8" firstAttribute="centerY" secondItem="prb-Ia-j83" secondAttribute="centerY" id="tra-JP-K2A"/>
-                <constraint firstAttribute="trailing" secondItem="prb-Ia-j83" secondAttribute="trailing" id="zyy-9C-MF8"/>
+                <constraint firstAttribute="trailing" secondItem="prb-Ia-j83" secondAttribute="trailing" constant="10" id="zyy-9C-MF8"/>
             </constraints>
             <point key="canvasLocation" x="35.5" y="59.5"/>
         </view>

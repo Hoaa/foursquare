@@ -14,6 +14,7 @@ class MapViewController: ViewController {
 
     // MARK: - Property
     @IBOutlet weak var mapContainerView: UIView!
+    @IBOutlet weak var collectionView: UICollectionView!
     var venues: [(String, CLLocationCoordinate2D)] = []
     let markerImages = [#imageLiteral(resourceName: "bar"), #imageLiteral(resourceName: "burger"), #imageLiteral(resourceName: "fastfood")]
     var locationManager: CLLocationManager!
@@ -25,6 +26,7 @@ class MapViewController: ViewController {
     var markers: [GMSMarker] = []
     let infoMarkerOfOtherPlace = GMSMarker()
     var currentVenueCollectionViewPage = 0
+    fileprivate let sectionInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     
     // MARK: - Cycle life
     override func viewDidLoad() {
@@ -32,6 +34,7 @@ class MapViewController: ViewController {
         loadData()
         configGoogleMapView()
         addVenueToGoogleMapView()
+        setup()
     }
 
     // MARK: - Private function
@@ -43,7 +46,7 @@ class MapViewController: ViewController {
     }
     
     // MARK: - Public function
-    func configGoogleMapView() {
+    private func configGoogleMapView() {
         // CLLocationManager
         locationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -69,7 +72,7 @@ class MapViewController: ViewController {
         }
     }
     
-    func addVenueToGoogleMapView(){
+    private func addVenueToGoogleMapView(){
         for i in 0...venues.count - 1 {
             let marker = GMSMarker()
             marker.title = "Title of place"
@@ -81,6 +84,12 @@ class MapViewController: ViewController {
             marker.map = mapView
             markers.append(marker)
         }
+    }
+    
+    private func setup() {
+        collectionView.registerNib(aClass: MapVenueCollectionViewCell.self)
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
 }
 
@@ -135,6 +144,37 @@ extension MapViewController: GMSMapViewDelegate {
         infoMarkerOfOtherPlace.infoWindowAnchor.y = 1
         infoMarkerOfOtherPlace.map = mapView
         mapView.selectedMarker = infoMarkerOfOtherPlace
+    }
+}
+
+// MARK: - UICollectionViewDataSource
+extension MapViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeue(aClass: MapVenueCollectionViewCell.self, forIndexPath: indexPath)
+        return cell
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension MapViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
     }
 }
 
