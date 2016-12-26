@@ -17,6 +17,7 @@ target 'FourSquare' do
 
   # Utils
   pod 'PageMenu', :git => 'https://github.com/orazz/PageMenu'
+  pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
 
   target 'FourSquareTests' do
 

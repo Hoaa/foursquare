@@ -48,6 +48,7 @@ class HomeSearchViewController: BaseViewController {
     var priceViewController: PriceViewController = PriceViewController.vc()
     var openNowViewController: OpenNowViewController = OpenNowViewController.vc()
     var ratingViewController: RatingViewController = RatingViewController.vc()
+    var mapViewController: MapViewController?
     
     // MARK: - Cycle Life
     override func viewDidLoad() {
@@ -61,11 +62,34 @@ class HomeSearchViewController: BaseViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    override func changeStyle(sender: AnyObject) {
-        super.changeStyle(sender: sender)
-        distanceViewController.isChangeStyle()
-        gridButton.animationDuration = animationDuration
-        gridButton.isSelected = !gridButton.isSelected
+    override func changeCollectionStyle() {
+        super.changeCollectionStyle()
+        if didShowMapView {
+            self.mapViewController?.view.removeFromSuperview()
+            self.mapViewController?.removeFromParentViewController()
+            didShowMapView = false
+        } else {
+            distanceViewController.isChangeStyle()
+            gridButton.animationDuration = animationDuration
+            gridButton.isSelected = !gridButton.isSelected
+        }
+    }
+    
+    override func changeMapStyle() {
+        super.changeMapStyle()
+        if didShowMapView == false {
+            self.mapViewController = MapViewController.vc()
+            guard let pageMenuHeight = pageMenu?.menuHeight else {
+                return
+            }
+            let mapViewFrame = CGRect(x: viewOfPageMenu.frame.origin.x, y: viewOfPageMenu.frame.origin.y + pageMenuHeight, width: viewOfPageMenu.frame.width, height: viewOfPageMenu.frame.height - pageMenuHeight)
+            mapViewController?.view.frame = mapViewFrame
+            if let mapViewController = self.mapViewController {
+                self.addChildViewController(mapViewController)
+                self.viewOfPageMenu.addSubview(mapViewController.view)
+            }
+            didShowMapView = true
+        }
     }
     
     // MARK: - Private Function
@@ -92,8 +116,15 @@ class HomeSearchViewController: BaseViewController {
     
     private func setUpMenuPage() {
         pageMenu = CAPSPageMenu(viewControllers: itemViewControllers, frame: viewOfPageMenu.frame, pageMenuOptions: parameters)
+        pageMenu?.delegate = self
         if let pageMenu = self.pageMenu {
             self.viewOfPageMenu.addSubview(pageMenu.view)
         }
+    }
+}
+
+extension HomeSearchViewController: CAPSPageMenuDelegate {
+    func didMoveToPage(_ controller: UIViewController, index: Int) {
+        print("chuyen tab")
     }
 }

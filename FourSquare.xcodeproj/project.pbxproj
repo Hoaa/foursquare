@@ -48,6 +48,8 @@
 		0479FDE61E0D06E200E21A7B /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479FDE41E0D06E200E21A7B /* RatingViewController.swift */; };
 		0479FDE71E0D06E200E21A7B /* RatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0479FDE51E0D06E200E21A7B /* RatingViewController.xib */; };
 		0479FDE91E0D1A0100E21A7B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479FDE81E0D1A0100E21A7B /* UIView.swift */; };
+		04BE23FD1E108B3A002EB97A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE23FB1E108B3A002EB97A /* MapViewController.swift */; };
+		04BE23FE1E108B3A002EB97A /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BE23FC1E108B3A002EB97A /* MapViewController.xib */; };
 		04CFBB0B1E0CB9D700928736 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFBB0A1E0CB9D700928736 /* BaseViewController.swift */; };
 		04CFBB171E0CE08D00928736 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFBB161E0CE08D00928736 /* ViewController.swift */; };
 		04CFBB1C1E0CE0C000928736 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFBB191E0CE0C000928736 /* TabBarController.swift */; };
@@ -128,6 +130,8 @@
 		0479FDE41E0D06E200E21A7B /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingViewController.swift; path = MenuItem/Rating/RatingViewController.swift; sourceTree = "<group>"; };
 		0479FDE51E0D06E200E21A7B /* RatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RatingViewController.xib; path = MenuItem/Rating/RatingViewController.xib; sourceTree = "<group>"; };
 		0479FDE81E0D1A0100E21A7B /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		04BE23FB1E108B3A002EB97A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Map/MapViewController.swift; sourceTree = "<group>"; };
+		04BE23FC1E108B3A002EB97A /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapViewController.xib; path = Map/MapViewController.xib; sourceTree = "<group>"; };
 		04CFBB0A1E0CB9D700928736 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		04CFBB161E0CE08D00928736 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04CFBB191E0CE0C000928736 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -395,6 +399,15 @@
 			path = MenuItem/Distance;
 			sourceTree = "<group>";
 		};
+		04BE23FA1E108AE5002EB97A /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				04BE23FB1E108B3A002EB97A /* MapViewController.swift */,
+				04BE23FC1E108B3A002EB97A /* MapViewController.xib */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
 		04CFBB151E0CDFCE00928736 /* PageBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +494,7 @@
 				043B70E11E01097500D955F9 /* Profile */,
 				043B70DF1E01096400D955F9 /* Search */,
 				0479FDC91E0CFC2400E21A7B /* HomeSearch */,
+				04BE23FA1E108AE5002EB97A /* Map */,
 				0479FDCE1E0CFD3900E21A7B /* MenuItem */,
 			);
 			path = Controllers;
@@ -746,6 +760,7 @@
 				0479FDCD1E0CFC2400E21A7B /* HomeSearchViewController.xib in Resources */,
 				04F1693E1E0A83F70032BD64 /* MapVenueCollectionViewCell.xib in Resources */,
 				043B70F11E0109E400D955F9 /* ListViewController.xib in Resources */,
+				04BE23FE1E108B3A002EB97A /* MapViewController.xib in Resources */,
 				043B70ED1E0109CF00D955F9 /* SearchViewController.xib in Resources */,
 				0479FDDF1E0D06A700E21A7B /* DistanceViewController.xib in Resources */,
 				0438F6461E03E06600230893 /* ListDefaultCollectionViewCell.xib in Resources */,
@@ -951,6 +966,7 @@
 				045D51CA1E08C659008AEDD1 /* TransitionManager.swift in Sources */,
 				045D51C81E08C62E008AEDD1 /* TransitionLayout.swift in Sources */,
 				0479FDD91E0D065A00E21A7B /* OpenNowViewController.swift in Sources */,
+				04BE23FD1E108B3A002EB97A /* MapViewController.swift in Sources */,
 				0432CCFE1E0387640058112E /* UICollectionView.swift in Sources */,
 				045D51CC1E08C680008AEDD1 /* SwitchLayoutButton.swift in Sources */,
 				04CFBB1D1E0CE0C000928736 /* TabBarViewController.swift in Sources */,

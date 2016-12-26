@@ -10,28 +10,36 @@ PODS:
   - GooglePlaces (2.1.1):
     - GoogleMaps/Base (= 2.1.1)
   - PageMenu (1.2.9)
+  - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
   - PageMenu (from `https://github.com/orazz/PageMenu`)
+  - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
 
 EXTERNAL SOURCES:
   PageMenu:
     :git: https://github.com/orazz/PageMenu
+  SVProgressHUD:
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
 
 CHECKOUT OPTIONS:
   PageMenu:
     :commit: ace3d8d095c9c165113d3ac797f317fe7faecbae
     :git: https://github.com/orazz/PageMenu
+  SVProgressHUD:
+    :commit: 5d459e4bc09df23cbce92ad4d510004c1b58c1c7
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
 
 SPEC CHECKSUMS:
   GoogleMaps: a5b5bbe47734e2443bde781a6aa64e69fdb6d785
   GooglePlacePicker: 665f39f931f2df32f9dd3fcc45f7e8abf71e535c
   GooglePlaces: 35636d86e5020cba3856eb988c09a5491de0a65a
   PageMenu: ba19ff267f7a19e444e93c20a7847b78954a7011
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 75fd8122db000e5df28cd1ede4c9fcfe0a899828
+PODFILE CHECKSUM: e7f1cc78bfbb2506b4140fd22caab55482cafca8
 
 COCOAPODS: 1.1.1

@@ -14,6 +14,7 @@ class BaseViewController: ViewController {
     private lazy var searchBar = UISearchBar()
     private let menuStyleButtonFrame = CGRect(x: 0, y: 0, width: 25, height: 25)
     var gridButton = SwitchLayoutButton()
+    var didShowMapView: Bool = false
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -37,10 +38,10 @@ class BaseViewController: ViewController {
         }
     }
     
-    func showAndHideMapViewAction(sender: AnyObject) {
+    func changeMapStyle() {
     }
     
-    func changeStyle(sender: AnyObject) {
+    func changeCollectionStyle() {
     }
     
     // MARK: - Private function
@@ -54,22 +55,29 @@ class BaseViewController: ViewController {
         searchBar.placeholder = "Venue name..."
         searchBar.sizeToFit()
         navigationItem.titleView = searchBar
+        searchBar.delegate = self
     }
     
     private func addRightBarButton() {
+        //mapButton
         let mapButton = UIButton(type: UIButtonType.custom)
         mapButton.imageView?.contentMode = .scaleAspectFit
         mapButton.setImage(#imageLiteral(resourceName: "StyleMap"), for: UIControlState.normal)
         mapButton.frame = menuButtonFrame
-        mapButton.addTarget(self, action: #selector(showAndHideMapViewAction), for: UIControlEvents.touchUpInside)
+        mapButton.addTarget(self, action: #selector(changeMapStyle), for: UIControlEvents.touchUpInside)
         let mapBarButton = UIBarButtonItem(customView: mapButton)
         //gridButoon
         gridButton.frame = menuStyleButtonFrame
         gridButton.awakeFromNib()
         gridButton.isSelected = true
-        gridButton.addTarget(self, action: #selector(changeStyle), for: UIControlEvents.touchUpInside)
+        gridButton.addTarget(self, action: #selector(changeCollectionStyle), for: UIControlEvents.touchUpInside)
         let gridBarButton = UIBarButtonItem(customView: gridButton)
         navigationItem.rightBarButtonItems = [gridBarButton, mapBarButton]
     }
-    
+}
+
+extension BaseViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+    }
 }
