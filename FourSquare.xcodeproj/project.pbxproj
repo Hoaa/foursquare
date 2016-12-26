@@ -40,6 +40,8 @@
 		0479FDE61E0D06E200E21A7B /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479FDE41E0D06E200E21A7B /* RatingViewController.swift */; };
 		0479FDE71E0D06E200E21A7B /* RatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0479FDE51E0D06E200E21A7B /* RatingViewController.xib */; };
 		0479FDE91E0D1A0100E21A7B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479FDE81E0D1A0100E21A7B /* UIView.swift */; };
+		047D8B8F1E10CC9100BC5AB4 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D8B8D1E10CC9100BC5AB4 /* ListViewController.swift */; };
+		047D8B901E10CC9100BC5AB4 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047D8B8E1E10CC9100BC5AB4 /* ListViewController.xib */; };
 		04BE23FD1E108B3A002EB97A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE23FB1E108B3A002EB97A /* MapViewController.swift */; };
 		04BE23FE1E108B3A002EB97A /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BE23FC1E108B3A002EB97A /* MapViewController.xib */; };
 		04CFBB0B1E0CB9D700928736 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFBB0A1E0CB9D700928736 /* BaseViewController.swift */; };
@@ -49,8 +51,6 @@
 		04CFBB1E1E0CE0C000928736 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CFBB1B1E0CE0C000928736 /* TabBarViewController.xib */; };
 		04CFBB201E0CE0FA00928736 /* MenuItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFBB1F1E0CE0FA00928736 /* MenuItemViewController.swift */; };
 		04D476F41E012BF600DBAEFE /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D476F31E012BF600DBAEFE /* Strings.swift */; };
-		04D6FF081E10CADC004BAD73 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6FF061E10CADC004BAD73 /* ListViewController.swift */; };
-		04D6FF091E10CADC004BAD73 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D6FF071E10CADC004BAD73 /* ListViewController.xib */; };
 		04F1693D1E0A83F70032BD64 /* MapVenueCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1693B1E0A83F70032BD64 /* MapVenueCollectionViewCell.swift */; };
 		04F1693E1E0A83F70032BD64 /* MapVenueCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F1693C1E0A83F70032BD64 /* MapVenueCollectionViewCell.xib */; };
 		3F91E8911DFEB86D0053DFC7 /* FourSquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E8901DFEB86D0053DFC7 /* FourSquareTests.swift */; };
@@ -116,6 +116,8 @@
 		0479FDE41E0D06E200E21A7B /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingViewController.swift; path = MenuItem/Rating/RatingViewController.swift; sourceTree = "<group>"; };
 		0479FDE51E0D06E200E21A7B /* RatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RatingViewController.xib; path = MenuItem/Rating/RatingViewController.xib; sourceTree = "<group>"; };
 		0479FDE81E0D1A0100E21A7B /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		047D8B8D1E10CC9100BC5AB4 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = List/ListViewController.swift; sourceTree = "<group>"; };
+		047D8B8E1E10CC9100BC5AB4 /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListViewController.xib; path = List/ListViewController.xib; sourceTree = "<group>"; };
 		04BE23FB1E108B3A002EB97A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Map/MapViewController.swift; sourceTree = "<group>"; };
 		04BE23FC1E108B3A002EB97A /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapViewController.xib; path = Map/MapViewController.xib; sourceTree = "<group>"; };
 		04CFBB0A1E0CB9D700928736 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -125,8 +127,6 @@
 		04CFBB1B1E0CE0C000928736 /* TabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		04CFBB1F1E0CE0FA00928736 /* MenuItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuItemViewController.swift; path = PageBase/MenuItemViewController.swift; sourceTree = "<group>"; };
 		04D476F31E012BF600DBAEFE /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
-		04D6FF061E10CADC004BAD73 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = ../../../../.Trash/ListViewController.swift; sourceTree = "<group>"; };
-		04D6FF071E10CADC004BAD73 /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListViewController.xib; path = ../../../../.Trash/ListViewController.xib; sourceTree = "<group>"; };
 		04F1693B1E0A83F70032BD64 /* MapVenueCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapVenueCollectionViewCell.swift; path = CellMap/MapVenueCollectionViewCell.swift; sourceTree = "<group>"; };
 		04F1693C1E0A83F70032BD64 /* MapVenueCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapVenueCollectionViewCell.xib; path = CellMap/MapVenueCollectionViewCell.xib; sourceTree = "<group>"; };
 		0CE5188E0325E3C8E2C28B46 /* Pods-FourSquare-FourSquareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare-FourSquareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquare-FourSquareTests/Pods-FourSquare-FourSquareTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,8 +207,8 @@
 		043B70DE1E01095E00D955F9 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				04D6FF061E10CADC004BAD73 /* ListViewController.swift */,
-				04D6FF071E10CADC004BAD73 /* ListViewController.xib */,
+				047D8B8D1E10CC9100BC5AB4 /* ListViewController.swift */,
+				047D8B8E1E10CC9100BC5AB4 /* ListViewController.xib */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -714,7 +714,7 @@
 			files = (
 				3F91E8BE1DFEB9900053DFC7 /* Assets.xcassets in Resources */,
 				0479FDE71E0D06E200E21A7B /* RatingViewController.xib in Resources */,
-				04D6FF091E10CADC004BAD73 /* ListViewController.xib in Resources */,
+				047D8B901E10CC9100BC5AB4 /* ListViewController.xib in Resources */,
 				0479FDE31E0D06BF00E21A7B /* PriceViewController.xib in Resources */,
 				0479FDCD1E0CFC2400E21A7B /* HomeSearchViewController.xib in Resources */,
 				04F1693E1E0A83F70032BD64 /* MapVenueCollectionViewCell.xib in Resources */,
@@ -895,7 +895,7 @@
 				043B70EC1E0109CF00D955F9 /* SearchViewController.swift in Sources */,
 				04F1693D1E0A83F70032BD64 /* MapVenueCollectionViewCell.swift in Sources */,
 				045D51C11E08C322008AEDD1 /* DisplaySwitchLayout.swift in Sources */,
-				04D6FF081E10CADC004BAD73 /* ListViewController.swift in Sources */,
+				047D8B8F1E10CC9100BC5AB4 /* ListViewController.swift in Sources */,
 				0432CCFC1E03827D0058112E /* UIViewController.swift in Sources */,
 				043B70E41E01098E00D955F9 /* ProfileViewController.swift in Sources */,
 				0438F6491E03E06600230893 /* SearchCollectionViewCell.swift in Sources */,
