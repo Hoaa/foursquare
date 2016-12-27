@@ -8,7 +8,6 @@
 
 import UIKit
 import GoogleMaps
-import GooglePlaces
 
 class MapViewController: ViewController {
 
@@ -18,7 +17,6 @@ class MapViewController: ViewController {
     var venues: [(String, CLLocationCoordinate2D)] = []
     let markerImages = [#imageLiteral(resourceName: "bar"), #imageLiteral(resourceName: "burger"), #imageLiteral(resourceName: "fastfood")]
     var locationManager: CLLocationManager!
-    var placesClient: GMSPlacesClient!
     var currentLocation: CLLocation?
     var zoomLevel: Float = 15.0
     let defaultLocation = CLLocation(latitude: 16.0762723, longitude: 108.2221608)
@@ -71,9 +69,6 @@ class MapViewController: ViewController {
         locationManager.distanceFilter = 50
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
-        
-        // PlaceClient
-        placesClient = GMSPlacesClient.shared()
         
         // MapView
         let camera = GMSCameraPosition.camera(withLatitude: defaultLocation.coordinate.latitude,
