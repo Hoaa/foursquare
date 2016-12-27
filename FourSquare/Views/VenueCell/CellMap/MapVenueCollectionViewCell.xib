@@ -54,7 +54,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="51k-oh-xR9" userLabel="Rate">
-                        <rect key="frame" x="304" y="8" width="35" height="35"/>
+                        <rect key="frame" x="304" y="4" width="35" height="35"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rate" translatesAutoresizingMaskIntoConstraints="NO" id="a9h-04-fud">
                                 <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
@@ -88,7 +88,7 @@
                 <constraint firstItem="Xvw-Ah-0kg" firstAttribute="leading" secondItem="Wnw-1S-dga" secondAttribute="trailing" constant="8" id="71a-Mq-Tb5"/>
                 <constraint firstItem="VYi-Qf-VRA" firstAttribute="centerY" secondItem="kOh-kL-msK" secondAttribute="centerY" id="8Ic-Xf-N1g"/>
                 <constraint firstItem="Als-1G-wVx" firstAttribute="leading" secondItem="Wnw-1S-dga" secondAttribute="trailing" constant="8" id="CQi-He-sCc"/>
-                <constraint firstItem="51k-oh-xR9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="DP4-47-vwb"/>
+                <constraint firstItem="51k-oh-xR9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="DP4-47-vwb"/>
                 <constraint firstItem="kOh-kL-msK" firstAttribute="bottom" secondItem="Wnw-1S-dga" secondAttribute="bottom" id="EDE-mH-765"/>
                 <constraint firstItem="Xvw-Ah-0kg" firstAttribute="centerY" secondItem="Wnw-1S-dga" secondAttribute="centerY" id="LhR-gA-OUB"/>
                 <constraint firstItem="Als-1G-wVx" firstAttribute="top" secondItem="Wnw-1S-dga" secondAttribute="top" id="VbC-km-Cg8"/>
