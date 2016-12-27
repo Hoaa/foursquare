@@ -1070,7 +1070,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BB680EEF5993B544A639451C /* Pods-FourSquare.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B3D8J6662Y;
 				INFOPLIST_FILE = "$(SRCROOT)/FourSquare/Info/Info.plist";
@@ -1086,7 +1086,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BD59209DB5272329583BA872 /* Pods-FourSquare.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B3D8J6662Y;
 				INFOPLIST_FILE = "$(SRCROOT)/FourSquare/Info/Info.plist";
@@ -1102,7 +1102,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0CE5188E0325E3C8E2C28B46 /* Pods-FourSquare-FourSquareTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FourSquareTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1117,7 +1117,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1445D1CFC26AE55BE8AFEF40 /* Pods-FourSquare-FourSquareTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FourSquareTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1132,7 +1132,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 976D628244BD8FE6F482F6E8 /* Pods-FourSquare-FourSquareUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				INFOPLIST_FILE = FourSquareUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.duylinh.FourSquareUITests;
@@ -1146,7 +1146,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A3856FE0B24A35CDDDF4C40F /* Pods-FourSquare-FourSquareUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				INFOPLIST_FILE = FourSquareUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.duylinh.FourSquareUITests;
