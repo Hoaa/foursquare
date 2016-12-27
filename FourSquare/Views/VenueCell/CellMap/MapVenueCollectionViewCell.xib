@@ -82,7 +82,7 @@
                     </view>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Xvw-Ah-0kg" firstAttribute="leading" secondItem="Wnw-1S-dga" secondAttribute="trailing" constant="8" id="71a-Mq-Tb5"/>
