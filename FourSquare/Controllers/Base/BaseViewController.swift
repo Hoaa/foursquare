@@ -49,10 +49,10 @@ class BaseViewController: ViewController {
         navigationController?.navigationBar.barTintColor = Color.Blue255
         navigationController?.navigationBar.tintColor = Color.White255
     }
-    
+
     private func addSearchBar() {
         searchBar = UISearchBar()
-        searchBar.placeholder = "Venue name"
+        searchBar.placeholder = "Venue name                             "
         searchBar.sizeToFit()
         navigationItem.titleView = searchBar
         searchBar.delegate = self
@@ -78,6 +78,6 @@ class BaseViewController: ViewController {
 
 extension BaseViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.endEditing(true)
+        searchBar.resignFirstResponder()
     }
 }
