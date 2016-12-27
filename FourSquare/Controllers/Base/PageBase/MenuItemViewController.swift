@@ -55,9 +55,7 @@ class MenuItemViewController: BaseViewController {
         venueCollectionView?.dataSource = self
         venueCollectionView?.delegate = self
     }
-
 }
-
 
 // MARK: - UICollectionViewDataSource
 extension MenuItemViewController: UICollectionViewDataSource {
@@ -85,5 +83,12 @@ extension MenuItemViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, transitionLayoutForOldLayout fromLayout: UICollectionViewLayout, newLayout toLayout: UICollectionViewLayout) -> UICollectionViewTransitionLayout {
         let customTransitionLayout = TransitionLayout(currentLayout: fromLayout, nextLayout: toLayout)
         return customTransitionLayout
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if scrollView.contentOffset.y < -80.0 {
+            SVProgressHUD.setDefaultAnimationType(.native)
+            SVProgressHUD.show()
+        }
     }
 }
