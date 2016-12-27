@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.0.0)
   - GoogleMaps (2.1.1):
     - GoogleMaps/Maps (= 2.1.1)
   - GoogleMaps/Base (2.1.1)
@@ -9,37 +10,57 @@ PODS:
     - GooglePlaces (= 2.1.1)
   - GooglePlaces (2.1.1):
     - GoogleMaps/Base (= 2.1.1)
+  - ObjectMapper (2.2.0)
   - PageMenu (1.2.9)
+  - Realm (2.1.2):
+    - Realm/Headers (= 2.1.2)
+  - Realm/Headers (2.1.2)
+  - RealmSwift (2.1.2):
+    - Realm (= 2.1.2)
   - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
-  - GoogleMaps
-  - GooglePlacePicker
-  - GooglePlaces
-  - PageMenu (from `https://github.com/orazz/PageMenu`)
-  - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
+  - Alamofire (= 4.0)
+  - GoogleMaps (= 2.1.1)
+  - GooglePlacePicker (= 2.1.1)
+  - GooglePlaces (= 2.1.1)
+  - ObjectMapper (= 2.2)
+  - PageMenu (= 1.2.9)
+  - Realm (from `https://github.com/realm/realm-cocoa.git`, branch `master`)
+  - RealmSwift (from `https://github.com/realm/realm-cocoa.git`, branch `master`)
+  - SVProgressHUD (= 2.1.2)
 
 EXTERNAL SOURCES:
-  PageMenu:
-    :git: https://github.com/orazz/PageMenu
-  SVProgressHUD:
-    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
+  Realm:
+    :branch: master
+    :git: https://github.com/realm/realm-cocoa.git
+    :submodules: true
+  RealmSwift:
+    :branch: master
+    :git: https://github.com/realm/realm-cocoa.git
+    :submodules: true
 
 CHECKOUT OPTIONS:
-  PageMenu:
-    :commit: ace3d8d095c9c165113d3ac797f317fe7faecbae
-    :git: https://github.com/orazz/PageMenu
-  SVProgressHUD:
-    :commit: 5d459e4bc09df23cbce92ad4d510004c1b58c1c7
-    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
+  Realm:
+    :commit: 036945087fd0fe8ed5001aeb1f07c133dffe5571
+    :git: https://github.com/realm/realm-cocoa.git
+    :submodules: true
+  RealmSwift:
+    :commit: 036945087fd0fe8ed5001aeb1f07c133dffe5571
+    :git: https://github.com/realm/realm-cocoa.git
+    :submodules: true
 
 SPEC CHECKSUMS:
+  Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
   GoogleMaps: a5b5bbe47734e2443bde781a6aa64e69fdb6d785
   GooglePlacePicker: 665f39f931f2df32f9dd3fcc45f7e8abf71e535c
   GooglePlaces: 35636d86e5020cba3856eb988c09a5491de0a65a
+  ObjectMapper: 4060d739febae11ab0c6af8d786f98667c82e1bd
   PageMenu: ba19ff267f7a19e444e93c20a7847b78954a7011
+  Realm: efe855f4d977c8ce5a82d3116d9f1ff155a6550c
+  RealmSwift: 1ecd6f956dada3d1f9a0e577dd52518099b935bc
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: e7f1cc78bfbb2506b4140fd22caab55482cafca8
+PODFILE CHECKSUM: 5d4754ece3aff4436e1ca582b1d4301d57d2443b
 
 COCOAPODS: 1.1.1

@@ -7,13 +7,9 @@ target 'FourSquare' do
   use_frameworks!
 
   # Networking
+  pod 'Alamofire', '4.0'
 
   # Database
-
-  # GoogleMaps
-  pod 'GoogleMaps'
-  pod 'GooglePlaces'
-  pod 'GooglePlacePicker'
   pod 'Realm', git: 'https://github.com/realm/realm-cocoa.git', branch: 'master', submodules: true
   pod 'RealmSwift', git: 'https://github.com/realm/realm-cocoa.git', branch: 'master', submodules: true
   post_install do |installer|
@@ -24,9 +20,17 @@ target 'FourSquare' do
       end
   end
 
+  # GoogleMaps
+  pod 'GoogleMaps', '2.1.1'
+  pod 'GooglePlaces', '2.1.1'
+  pod 'GooglePlacePicker', '2.1.1'
+
+  # UI
+  pod 'PageMenu', '1.2.9'
+  pod 'SVProgressHUD', '2.1.2'
+  
   # Utils
-  pod 'PageMenu', :git => 'https://github.com/orazz/PageMenu'
-  pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
+  pod 'ObjectMapper', '2.2'
 
   target 'FourSquareTests' do
 

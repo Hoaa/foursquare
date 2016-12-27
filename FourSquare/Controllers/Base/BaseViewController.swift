@@ -52,7 +52,7 @@ class BaseViewController: ViewController {
 
     private func addSearchBar() {
         searchBar = UISearchBar()
-        searchBar.placeholder = "Venue name                             "
+        searchBar.placeholder = "Venue name"
         searchBar.sizeToFit()
         navigationItem.titleView = searchBar
         searchBar.delegate = self
