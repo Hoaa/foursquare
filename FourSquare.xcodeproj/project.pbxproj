@@ -42,6 +42,10 @@
 		0479FDE91E0D1A0100E21A7B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479FDE81E0D1A0100E21A7B /* UIView.swift */; };
 		047D8B8F1E10CC9100BC5AB4 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D8B8D1E10CC9100BC5AB4 /* ListViewController.swift */; };
 		047D8B901E10CC9100BC5AB4 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047D8B8E1E10CC9100BC5AB4 /* ListViewController.xib */; };
+		04BBC1EF1E134B9300453FCD /* VenueCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC1EE1E134B9300453FCD /* VenueCategory.swift */; };
+		04BBC1F11E134C3D00453FCD /* VenueLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC1F01E134C3D00453FCD /* VenueLocation.swift */; };
+		04BBC1F31E134CA400453FCD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC1F21E134CA400453FCD /* User.swift */; };
+		04BBC1F51E134CD800453FCD /* VenuePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BBC1F41E134CD800453FCD /* VenuePrice.swift */; };
 		04BE23FD1E108B3A002EB97A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE23FB1E108B3A002EB97A /* MapViewController.swift */; };
 		04BE23FE1E108B3A002EB97A /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04BE23FC1E108B3A002EB97A /* MapViewController.xib */; };
 		04CFBB0B1E0CB9D700928736 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CFBB0A1E0CB9D700928736 /* BaseViewController.swift */; };
@@ -53,6 +57,9 @@
 		04D476F41E012BF600DBAEFE /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D476F31E012BF600DBAEFE /* Strings.swift */; };
 		04F1693D1E0A83F70032BD64 /* MapVenueCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1693B1E0A83F70032BD64 /* MapVenueCollectionViewCell.swift */; };
 		04F1693E1E0A83F70032BD64 /* MapVenueCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F1693C1E0A83F70032BD64 /* MapVenueCollectionViewCell.xib */; };
+		04F74DE41E1344FE0074BD7A /* VenueTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F74DE31E1344FE0074BD7A /* VenueTip.swift */; };
+		04F74DE61E13454A0074BD7A /* UserTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F74DE51E13454A0074BD7A /* UserTip.swift */; };
+		04F74DE81E1345930074BD7A /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F74DE71E1345930074BD7A /* Photo.swift */; };
 		04F88C011E1204C7003D9016 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F88C001E1204C7003D9016 /* Venue.swift */; };
 		3F91E8911DFEB86D0053DFC7 /* FourSquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E8901DFEB86D0053DFC7 /* FourSquareTests.swift */; };
 		3F91E89C1DFEB86D0053DFC7 /* FourSquareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E89B1DFEB86D0053DFC7 /* FourSquareUITests.swift */; };
@@ -119,6 +126,10 @@
 		0479FDE81E0D1A0100E21A7B /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		047D8B8D1E10CC9100BC5AB4 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = List/ListViewController.swift; sourceTree = "<group>"; };
 		047D8B8E1E10CC9100BC5AB4 /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListViewController.xib; path = List/ListViewController.xib; sourceTree = "<group>"; };
+		04BBC1EE1E134B9300453FCD /* VenueCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueCategory.swift; sourceTree = "<group>"; };
+		04BBC1F01E134C3D00453FCD /* VenueLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueLocation.swift; sourceTree = "<group>"; };
+		04BBC1F21E134CA400453FCD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		04BBC1F41E134CD800453FCD /* VenuePrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuePrice.swift; sourceTree = "<group>"; };
 		04BE23FB1E108B3A002EB97A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Map/MapViewController.swift; sourceTree = "<group>"; };
 		04BE23FC1E108B3A002EB97A /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapViewController.xib; path = Map/MapViewController.xib; sourceTree = "<group>"; };
 		04CFBB0A1E0CB9D700928736 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +141,9 @@
 		04D476F31E012BF600DBAEFE /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		04F1693B1E0A83F70032BD64 /* MapVenueCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapVenueCollectionViewCell.swift; path = CellMap/MapVenueCollectionViewCell.swift; sourceTree = "<group>"; };
 		04F1693C1E0A83F70032BD64 /* MapVenueCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapVenueCollectionViewCell.xib; path = CellMap/MapVenueCollectionViewCell.xib; sourceTree = "<group>"; };
+		04F74DE31E1344FE0074BD7A /* VenueTip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueTip.swift; sourceTree = "<group>"; };
+		04F74DE51E13454A0074BD7A /* UserTip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTip.swift; sourceTree = "<group>"; };
+		04F74DE71E1345930074BD7A /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		04F88C001E1204C7003D9016 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		0CE5188E0325E3C8E2C28B46 /* Pods-FourSquare-FourSquareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare-FourSquareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquare-FourSquareTests/Pods-FourSquare-FourSquareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0D917DDDD19EDD78A4F81F00 /* Pods-FourSquareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquareUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquareUITests/Pods-FourSquareUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -541,6 +555,13 @@
 			isa = PBXGroup;
 			children = (
 				04F88C001E1204C7003D9016 /* Venue.swift */,
+				04BBC1F01E134C3D00453FCD /* VenueLocation.swift */,
+				04BBC1EE1E134B9300453FCD /* VenueCategory.swift */,
+				04BBC1F41E134CD800453FCD /* VenuePrice.swift */,
+				04F74DE31E1344FE0074BD7A /* VenueTip.swift */,
+				04BBC1F21E134CA400453FCD /* User.swift */,
+				04F74DE51E13454A0074BD7A /* UserTip.swift */,
+				04F74DE71E1345930074BD7A /* Photo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -893,6 +914,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04BBC1F51E134CD800453FCD /* VenuePrice.swift in Sources */,
+				04F74DE61E13454A0074BD7A /* UserTip.swift in Sources */,
+				04F74DE81E1345930074BD7A /* Photo.swift in Sources */,
 				04CFBB171E0CE08D00928736 /* ViewController.swift in Sources */,
 				04F88C011E1204C7003D9016 /* Venue.swift in Sources */,
 				0479FDDE1E0D06A700E21A7B /* DistanceViewController.swift in Sources */,
@@ -907,16 +931,19 @@
 				04515A321E030F0300319D93 /* Keys.swift in Sources */,
 				0479FDE21E0D06BF00E21A7B /* PriceViewController.swift in Sources */,
 				04515A361E030F7C00319D93 /* UIImage.swift in Sources */,
+				04F74DE41E1344FE0074BD7A /* VenueTip.swift in Sources */,
 				045D51C31E08C394008AEDD1 /* DisplaySwitchLayoutAttributes.swift in Sources */,
 				04D476F41E012BF600DBAEFE /* Strings.swift in Sources */,
 				04CFBB201E0CE0FA00928736 /* MenuItemViewController.swift in Sources */,
 				0479FDC71E0CFAC900E21A7B /* VenueItemCollectionViewCell.swift in Sources */,
+				04BBC1F11E134C3D00453FCD /* VenueLocation.swift in Sources */,
 				04515A301E030E1100319D93 /* Color.swift in Sources */,
 				04515A341E030F3800319D93 /* NotificationCenter.swift in Sources */,
 				04515A2E1E030D4B00319D93 /* UIColor.swift in Sources */,
 				0479FDE61E0D06E200E21A7B /* RatingViewController.swift in Sources */,
 				3F91E8BB1DFEB9900053DFC7 /* AppDelegate.swift in Sources */,
 				043B70E81E0109AE00D955F9 /* HistoryViewController.swift in Sources */,
+				04BBC1F31E134CA400453FCD /* User.swift in Sources */,
 				04CFBB1C1E0CE0C000928736 /* TabBarController.swift in Sources */,
 				0479FDCC1E0CFC2400E21A7B /* HomeSearchViewController.swift in Sources */,
 				045D51CA1E08C659008AEDD1 /* TransitionManager.swift in Sources */,
@@ -927,6 +954,7 @@
 				045D51CC1E08C680008AEDD1 /* SwitchLayoutButton.swift in Sources */,
 				04CFBB1D1E0CE0C000928736 /* TabBarViewController.swift in Sources */,
 				04CFBB0B1E0CB9D700928736 /* BaseViewController.swift in Sources */,
+				04BBC1EF1E134B9300453FCD /* VenueCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1070,7 +1098,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BB680EEF5993B544A639451C /* Pods-FourSquare.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B3D8J6662Y;
 				INFOPLIST_FILE = "$(SRCROOT)/FourSquare/Info/Info.plist";
@@ -1086,7 +1114,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BD59209DB5272329583BA872 /* Pods-FourSquare.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B3D8J6662Y;
 				INFOPLIST_FILE = "$(SRCROOT)/FourSquare/Info/Info.plist";
@@ -1102,7 +1130,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0CE5188E0325E3C8E2C28B46 /* Pods-FourSquare-FourSquareTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FourSquareTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1117,7 +1145,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1445D1CFC26AE55BE8AFEF40 /* Pods-FourSquare-FourSquareTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FourSquareTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1132,7 +1160,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 976D628244BD8FE6F482F6E8 /* Pods-FourSquare-FourSquareUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = FourSquareUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.duylinh.FourSquareUITests;
@@ -1146,7 +1174,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A3856FE0B24A35CDDDF4C40F /* Pods-FourSquare-FourSquareUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = FourSquareUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.duylinh.FourSquareUITests;

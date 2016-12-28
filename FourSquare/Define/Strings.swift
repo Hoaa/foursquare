@@ -16,4 +16,5 @@ struct Strings {
     static let MenuItemPrice = "Price"
     static let MenuItemOpenNow = "Open now"
     static let MenuItemRating = "Rating"
+    static let NotAvailable = "Not Available"
 }
