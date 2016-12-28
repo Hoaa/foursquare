@@ -66,7 +66,7 @@ class BaseViewController: ViewController {
         mapButton.frame = menuStyleButtonFrame
         mapButton.addTarget(self, action: #selector(changeMapStyle), for: UIControlEvents.touchUpInside)
         let mapBarButton = UIBarButtonItem(customView: mapButton)
-        //gridButoon
+        //gridButton
         gridButton.frame = menuStyleButtonFrame
         gridButton.awakeFromNib()
         gridButton.isSelected = true
