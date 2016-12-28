@@ -10,6 +10,10 @@ import UIKit
 private let imageListLayoutSize: CGFloat = 80.0
 class VenueItemCollectionViewCell: UICollectionViewCell {
     
+    // MARK: - Property
+    fileprivate var imageGridLayoutSize: CGFloat = 0.0
+    fileprivate var initialLabelsLeadingConstraintValue: CGFloat = 0.0
+    
     @IBOutlet weak var imageVenue: UIImageView!
     @IBOutlet weak var nameListVenue: UILabel!
     @IBOutlet weak var nameGridVenue: UILabel!
@@ -34,13 +38,25 @@ class VenueItemCollectionViewCell: UICollectionViewCell {
     //distanceToVenue constrait
     @IBOutlet weak var distanceVenueLeadingConstraint: NSLayoutConstraint!
     
-    fileprivate var imageGridLayoutSize: CGFloat = 0.0
-    fileprivate var initialLabelsLeadingConstraintValue: CGFloat = 0.0
-    
+    // MARK: - Cycle Life
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
+    override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
+        super.apply(layoutAttributes)
+        guard let attributes = layoutAttributes as? DisplaySwitchLayoutAttributes else { return }
+        if attributes.transitionProgress > 0 {
+            if attributes.layoutState == .grid {
+                setupGridLayoutConstraints(attributes.transitionProgress, cellWidth: attributes.nextLayoutCellFrame.width)
+                imageGridLayoutSize = attributes.nextLayoutCellFrame.width
+            } else {
+                setupListLayoutConstraints(attributes.transitionProgress, cellWidth: attributes.nextLayoutCellFrame.width)
+            }
+        }
+    }
+    
+    // MARK: - Puclic funtion
     func setupGridLayoutConstraints(_ transitionProgress: CGFloat, cellWidth: CGFloat) {
         imageVenueViewHeightConstraint.constant = ceil((cellWidth - imageListLayoutSize) * transitionProgress + imageListLayoutSize)
         imageVenueViewWidthConstraint.constant = imageVenueViewHeightConstraint.constant
@@ -69,19 +85,6 @@ class VenueItemCollectionViewCell: UICollectionViewCell {
         priceVenue.alpha = transitionProgress
         distanceToVenue.alpha = transitionProgress
         addressVenue.alpha = transitionProgress
-    }
-    
-    override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
-        super.apply(layoutAttributes)
-        guard let attributes = layoutAttributes as? DisplaySwitchLayoutAttributes else { return }
-        if attributes.transitionProgress > 0 {
-            if attributes.layoutState == .grid {
-                setupGridLayoutConstraints(attributes.transitionProgress, cellWidth: attributes.nextLayoutCellFrame.width)
-                imageGridLayoutSize = attributes.nextLayoutCellFrame.width
-            } else {
-                setupListLayoutConstraints(attributes.transitionProgress, cellWidth: attributes.nextLayoutCellFrame.width)
-            }
-        }
     }
     
 }

@@ -16,7 +16,7 @@ class BaseViewController: ViewController {
     var gridButton = SwitchLayoutButton()
     var didShowMapView: Bool = false
 
-    // MARK: - Life Cycle
+    // MARK: - Cycle Life
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
