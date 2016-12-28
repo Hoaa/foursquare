@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,12 +15,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions
                      launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
+        self.setup()
         window = UIWindow(frame: UIScreen.main.bounds)
+        self.changeRootToTabBar()
         window?.makeKeyAndVisible()
-        window?.backgroundColor = UIColor.white
-        let vc = UIViewController()
-        window?.rootViewController = vc
-        
         return true
+    }
+    private func changeRootToTabBar() {
+        let tabBarVC = TabBarViewController(nibName: "TabBarViewController", bundle: nil)
+        window?.rootViewController = tabBarVC
+    }
+    
+    func rootViewController() -> UIViewController {
+        let searchViewController = SearchViewController.vc()
+        let navigationController = UINavigationController(rootViewController: searchViewController)
+        navigationController.navigationBar.isHidden = true
+        return navigationController
+    }
+    
+    private func setup() {
+        setupGoogleMapAPIKey()
+    }
+    
+    private func setupGoogleMapAPIKey() {
+        GMSServices.provideAPIKey(GoogleMapsKeys.GoogleMapsAPIKey)
     }
 }

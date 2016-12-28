@@ -1,20 +1,33 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
+source 'https://github.com/CocoaPods/Specs.git'
+
 target 'FourSquare' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for FourSquare
-
-  target 'FourSquareTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'FourSquareUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
+    use_frameworks!
+    
+    # Networking
+    pod 'Alamofire', '4.0.0'
+    
+    # Database
+    pod 'RealmSwift', '2.1.2'
+    
+    # GoogleMaps
+    pod 'GoogleMaps', '2.1.1'
+    
+    # UI
+    pod 'PageMenu', '1.2.9'
+    pod 'SVProgressHUD', '2.1.2'
+    
+    # Utils
+    pod 'ObjectMapper', '2.2.0'
+    
+    target 'FourSquareTests' do
+        
+    end
+    
+    target 'FourSquareUITests' do
+        
+    end
+    
 end

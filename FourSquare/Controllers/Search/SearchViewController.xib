@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="FourSquare" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="oDo-Ma-KIH" id="jq8-pl-Bz1"/>
+                <outlet property="searchDisplayController" destination="mic-IE-vFf" id="NB9-Ug-jJX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnh-ny-x2f" userLabel="Background">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="JjD-5X-1c2">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wallpaper1" translatesAutoresizingMaskIntoConstraints="NO" id="oaa-TN-hHf">
+                            <rect key="frame" x="77.666666666666686" y="139.33333333333334" width="260" height="90"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="90" id="Y7E-uv-KSP"/>
+                                <constraint firstAttribute="width" constant="260" id="zSA-sJ-ApX"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="JjD-5X-1c2" secondAttribute="bottom" id="8aR-Eu-oeG"/>
+                        <constraint firstItem="oaa-TN-hHf" firstAttribute="centerY" secondItem="jnh-ny-x2f" secondAttribute="centerY" id="Ivb-YZ-QeH"/>
+                        <constraint firstItem="JjD-5X-1c2" firstAttribute="top" secondItem="jnh-ny-x2f" secondAttribute="top" id="UV7-Sp-N9H"/>
+                        <constraint firstAttribute="trailing" secondItem="JjD-5X-1c2" secondAttribute="trailing" id="V4e-hn-4MU"/>
+                        <constraint firstItem="JjD-5X-1c2" firstAttribute="leading" secondItem="jnh-ny-x2f" secondAttribute="leading" id="Xm9-fp-K0T"/>
+                        <constraint firstItem="oaa-TN-hHf" firstAttribute="centerX" secondItem="jnh-ny-x2f" secondAttribute="centerX" id="khF-vA-Bc9"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="oDo-Ma-KIH">
+                    <rect key="frame" x="0.0" y="368" width="414" height="368"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="kIf-Ew-1He">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="oDo-Ma-KIH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3So-th-Xqs"/>
+                <constraint firstItem="jnh-ny-x2f" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6rd-er-yyW"/>
+                <constraint firstItem="oDo-Ma-KIH" firstAttribute="top" secondItem="jnh-ny-x2f" secondAttribute="bottom" id="NkN-Dv-Gmf"/>
+                <constraint firstAttribute="trailing" secondItem="jnh-ny-x2f" secondAttribute="trailing" id="ehu-QF-p78"/>
+                <constraint firstItem="jnh-ny-x2f" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ghz-qM-Pku"/>
+                <constraint firstAttribute="bottom" secondItem="oDo-Ma-KIH" secondAttribute="bottom" id="klR-vo-yJC"/>
+                <constraint firstItem="jnh-ny-x2f" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1:2" id="uu7-Lg-2UZ"/>
+                <constraint firstAttribute="trailing" secondItem="oDo-Ma-KIH" secondAttribute="trailing" id="zhz-Kr-qgI"/>
+            </constraints>
+            <point key="canvasLocation" x="25" y="52"/>
+        </view>
+        <searchDisplayController id="mic-IE-vFf">
+            <connections>
+                <outlet property="delegate" destination="-1" id="v4Q-pc-Gzu"/>
+                <outlet property="searchContentsController" destination="-1" id="bCE-8t-ugo"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="hbv-PK-iNy"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="sD9-uK-G1W"/>
+            </connections>
+        </searchDisplayController>
+    </objects>
+    <resources>
+        <image name="Wallpaper1" width="283" height="63"/>
+        <image name="wallpaper" width="960" height="600"/>
+    </resources>
+</document>

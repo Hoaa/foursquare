@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SearchCollectionViewCell" customModule="FourSquare" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="202" height="190"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="202" height="190"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Kq-86-Jrb">
+                        <rect key="frame" x="0.0" y="0.0" width="202" height="190"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breakfast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwb-92-O3g">
+                        <rect key="frame" x="64.5" y="139" width="73" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="2Kq-86-Jrb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="5lm-eB-aRs"/>
+                <constraint firstAttribute="trailing" secondItem="2Kq-86-Jrb" secondAttribute="trailing" id="IHT-Of-ei2"/>
+                <constraint firstItem="2Kq-86-Jrb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="XZG-Y3-kuK"/>
+                <constraint firstAttribute="bottom" secondItem="vwb-92-O3g" secondAttribute="bottom" constant="30" id="eRN-fv-8Ds"/>
+                <constraint firstAttribute="bottom" secondItem="2Kq-86-Jrb" secondAttribute="bottom" id="hmZ-5Z-Aol"/>
+                <constraint firstItem="vwb-92-O3g" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="tGF-Wu-fRB"/>
+            </constraints>
+            <size key="customSize" width="202" height="190"/>
+            <connections>
+                <outlet property="imageSearch" destination="2Kq-86-Jrb" id="Z3e-Fw-u05"/>
+                <outlet property="searchKey" destination="vwb-92-O3g" id="kCl-jT-1xa"/>
+            </connections>
+            <point key="canvasLocation" x="-31" y="6"/>
+        </collectionViewCell>
+    </objects>
+</document>
