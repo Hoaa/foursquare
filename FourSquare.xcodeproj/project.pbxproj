@@ -559,8 +559,8 @@
 				04BBC1EE1E134B9300453FCD /* VenueCategory.swift */,
 				04BBC1F41E134CD800453FCD /* VenuePrice.swift */,
 				04F74DE31E1344FE0074BD7A /* VenueTip.swift */,
-				04BBC1F21E134CA400453FCD /* User.swift */,
 				04F74DE51E13454A0074BD7A /* UserTip.swift */,
+				04BBC1F21E134CA400453FCD /* User.swift */,
 				044FAAAC1E1350BD00BCA12A /* Photo.swift */,
 			);
 			path = Models;

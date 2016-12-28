@@ -14,11 +14,12 @@ class Venue: Object, Mappable {
     dynamic var id: String = ""
     dynamic var name: String = ""
     dynamic var rating: Double = 0.0
-    dynamic var ratingColorString: String = ""
+    dynamic var ratingColor: String = ""
     dynamic var isFavorite: Bool = false
-    dynamic var didFavorite: Bool = false
+    dynamic var isSaved: Bool = false
     dynamic var isHistory: Bool = false
     dynamic var thumbnail: Photo?
+    dynamic var location: VenueLocation?
     dynamic var price: VenuePrice?
     
     var categories = RealmSwift.List<VenueCategory>()
@@ -33,7 +34,8 @@ class Venue: Object, Mappable {
         id <- map["id"]
         name <- map["name"]
         rating <- map["rating"]
-        ratingColorString <- map["ratingColor"]
+        ratingColor <- map["ratingColor"]
         price <- map["price"]
+        location <- map["location"]
     }
 }
