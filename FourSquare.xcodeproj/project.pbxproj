@@ -17,6 +17,7 @@
 		043B70E91E0109AE00D955F9 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B70E71E0109AE00D955F9 /* HistoryViewController.xib */; };
 		043B70EC1E0109CF00D955F9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B70EA1E0109CF00D955F9 /* SearchViewController.swift */; };
 		043B70ED1E0109CF00D955F9 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043B70EB1E0109CF00D955F9 /* SearchViewController.xib */; };
+		044FAAAD1E1350BD00BCA12A /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044FAAAC1E1350BD00BCA12A /* Photo.swift */; };
 		04515A2E1E030D4B00319D93 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04515A2D1E030D4B00319D93 /* UIColor.swift */; };
 		04515A301E030E1100319D93 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04515A2F1E030E1100319D93 /* Color.swift */; };
 		04515A321E030F0300319D93 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04515A311E030F0300319D93 /* Keys.swift */; };
@@ -59,7 +60,6 @@
 		04F1693E1E0A83F70032BD64 /* MapVenueCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F1693C1E0A83F70032BD64 /* MapVenueCollectionViewCell.xib */; };
 		04F74DE41E1344FE0074BD7A /* VenueTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F74DE31E1344FE0074BD7A /* VenueTip.swift */; };
 		04F74DE61E13454A0074BD7A /* UserTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F74DE51E13454A0074BD7A /* UserTip.swift */; };
-		04F74DE81E1345930074BD7A /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F74DE71E1345930074BD7A /* Photo.swift */; };
 		04F88C011E1204C7003D9016 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F88C001E1204C7003D9016 /* Venue.swift */; };
 		3F91E8911DFEB86D0053DFC7 /* FourSquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E8901DFEB86D0053DFC7 /* FourSquareTests.swift */; };
 		3F91E89C1DFEB86D0053DFC7 /* FourSquareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F91E89B1DFEB86D0053DFC7 /* FourSquareUITests.swift */; };
@@ -101,6 +101,7 @@
 		043B70E71E0109AE00D955F9 /* HistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HistoryViewController.xib; path = History/HistoryViewController.xib; sourceTree = "<group>"; };
 		043B70EA1E0109CF00D955F9 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Search/SearchViewController.swift; sourceTree = "<group>"; };
 		043B70EB1E0109CF00D955F9 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchViewController.xib; path = Search/SearchViewController.xib; sourceTree = "<group>"; };
+		044FAAAC1E1350BD00BCA12A /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		04515A2D1E030D4B00319D93 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		04515A2F1E030E1100319D93 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		04515A311E030F0300319D93 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
@@ -143,7 +144,6 @@
 		04F1693C1E0A83F70032BD64 /* MapVenueCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapVenueCollectionViewCell.xib; path = CellMap/MapVenueCollectionViewCell.xib; sourceTree = "<group>"; };
 		04F74DE31E1344FE0074BD7A /* VenueTip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueTip.swift; sourceTree = "<group>"; };
 		04F74DE51E13454A0074BD7A /* UserTip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTip.swift; sourceTree = "<group>"; };
-		04F74DE71E1345930074BD7A /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		04F88C001E1204C7003D9016 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		0CE5188E0325E3C8E2C28B46 /* Pods-FourSquare-FourSquareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquare-FourSquareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquare-FourSquareTests/Pods-FourSquare-FourSquareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0D917DDDD19EDD78A4F81F00 /* Pods-FourSquareUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourSquareUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FourSquareUITests/Pods-FourSquareUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -561,7 +561,7 @@
 				04F74DE31E1344FE0074BD7A /* VenueTip.swift */,
 				04BBC1F21E134CA400453FCD /* User.swift */,
 				04F74DE51E13454A0074BD7A /* UserTip.swift */,
-				04F74DE71E1345930074BD7A /* Photo.swift */,
+				044FAAAC1E1350BD00BCA12A /* Photo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -916,7 +916,6 @@
 			files = (
 				04BBC1F51E134CD800453FCD /* VenuePrice.swift in Sources */,
 				04F74DE61E13454A0074BD7A /* UserTip.swift in Sources */,
-				04F74DE81E1345930074BD7A /* Photo.swift in Sources */,
 				04CFBB171E0CE08D00928736 /* ViewController.swift in Sources */,
 				04F88C011E1204C7003D9016 /* Venue.swift in Sources */,
 				0479FDDE1E0D06A700E21A7B /* DistanceViewController.swift in Sources */,
@@ -935,6 +934,7 @@
 				045D51C31E08C394008AEDD1 /* DisplaySwitchLayoutAttributes.swift in Sources */,
 				04D476F41E012BF600DBAEFE /* Strings.swift in Sources */,
 				04CFBB201E0CE0FA00928736 /* MenuItemViewController.swift in Sources */,
+				044FAAAD1E1350BD00BCA12A /* Photo.swift in Sources */,
 				0479FDC71E0CFAC900E21A7B /* VenueItemCollectionViewCell.swift in Sources */,
 				04BBC1F11E134C3D00453FCD /* VenueLocation.swift in Sources */,
 				04515A301E030E1100319D93 /* Color.swift in Sources */,
