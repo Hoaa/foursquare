@@ -8,8 +8,6 @@
 
 import UIKit
 import GoogleMaps
-import GooglePlaces
-import GooglePlacePicker
 
 class VenueDetailViewController: ViewController {
     
@@ -18,7 +16,7 @@ class VenueDetailViewController: ViewController {
     private var isLoadDone = false
     private var mapView: GMSMapView!
     var currentLocation: CLLocation?
-    var placesClient: GMSPlacesClient!
+//    var placesClient: GMSPlacesClient!
     // A default location to use when location permission is not granted.
     let defaultLocation = CLLocation(latitude: 16.0762723, longitude: 108.2221608)
     
@@ -59,8 +57,8 @@ class VenueDetailViewController: ViewController {
     
     override func loadData() {
         super.loadData()
-        tips = [(userAvatar: #imageLiteral(resourceName: "Feature_Price"), username: "Tam Tinh te", datePost: Date(), comment: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.", commentImage: #imageLiteral(resourceName: "Feature_Like")),
-                (userAvatar: #imageLiteral(resourceName: "Feature_Price"), username: "Tam Tinh te", datePost: Date(), comment: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ", commentImage: nil),
+        tips = [(userAvatar: #imageLiteral(resourceName: "Feature_Price"), username: "Tam Tinh te", datePost: Date(), comment: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.", commentImage: #imageLiteral(resourceName: "523159398")),
+                (userAvatar: #imageLiteral(resourceName: "Feature_Price"), username: "Tam Tinh te", datePost: Date(), comment: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ", commentImage: #imageLiteral(resourceName: "Feature_Rate")),
                 (userAvatar: #imageLiteral(resourceName: "Feature_Price"), username: "Tam Tinh te", datePost: Date(), comment: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ", commentImage: nil),
                 (userAvatar: #imageLiteral(resourceName: "Feature_Price"), username: "Tam Tinh te", datePost: Date(), comment: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ", commentImage: nil),
                 (userAvatar: #imageLiteral(resourceName: "Feature_Price"), username: "Tam Tinh te", datePost: Date(), comment: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ", commentImage: #imageLiteral(resourceName: "Feature_Like")),
@@ -96,7 +94,7 @@ class VenueDetailViewController: ViewController {
     }
     
     private func configGoogleMapView() {
-        placesClient = GMSPlacesClient.shared()
+//        placesClient = GMSPlacesClient.shared()
         let camera = GMSCameraPosition.camera(withLatitude: defaultLocation.coordinate.latitude,
                                               longitude: defaultLocation.coordinate.longitude,
                                               zoom: 15)
@@ -114,28 +112,6 @@ class VenueDetailViewController: ViewController {
     }
     
     private func addVenueToGoogleMapView(){
-//        let frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-//        for i in 0...coodinates.count - 1 {
-//            let marker = GMSMarker()
-//            
-//            let markerIconView = UIImageView(frame: frame)
-//            markerIconView.image = #imageLiteral(resourceName: "Marker_50")
-//            let label = UILabel(frame: frame)
-//            label.text = "\(i)"
-//            label.font.withSize(17)
-//            label.textColor = UIColor.black
-//            label.adjustsFontSizeToFitWidth = true
-//            label.adjustsFontForContentSizeCategory = true
-//            label.textAlignment = .center
-//            markerIconView.addSubview(label)
-//            
-//            marker.iconView = markerIconView
-//            marker.title = "Ahihi"
-//            marker.snippet = "Do ngok"
-//            marker.position = coodinates[i]
-//            marker.appearAnimation = kGMSMarkerAnimationPop
-//            marker.map = mapView
-//        }
     }
     
     private func configureTipTableView() {
@@ -173,6 +149,8 @@ class VenueDetailViewController: ViewController {
     }
     
     @IBAction func showDirection(_ sender: UIButton) {
+        let mapDirectionViewController = MapDirectionViewController(nibName: "MapDirectionViewController", bundle: nil)
+        self.navigationController?.pushViewController(mapDirectionViewController, animated: true)
     }
 }
 
@@ -196,6 +174,7 @@ extension VenueDetailViewController: UITableViewDataSource {
         tipTableViewCell.commentLabel.text = tips[indexPath.row].comment
         if let image = tips[indexPath.row].commentImage {
             tipTableViewCell.commentImageView.image = image
+            tipTableViewCell.commentImageViewHeightConstraint.constant = 167.5
         } else {
             tipTableViewCell.commentImageViewHeightConstraint.constant = 0
         }
@@ -205,7 +184,15 @@ extension VenueDetailViewController: UITableViewDataSource {
 
 extension VenueDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let image = tips[indexPath.row].commentImage {
+            let tipWithImageDetailViewController = TipWithImageDetailViewController(nibName: "TipWithImageDetailViewController", bundle: nil)
+            tipWithImageDetailViewController.tip = (username: tips[indexPath.row].username,
+                                                    datePost: tips[indexPath.row].datePost,
+                                                    comment: tips[indexPath.row].comment,
+                                                    commentImage: image)
+//            self.navigationController?.pushViewController(tipWithImageDetailViewController, animated: true)
+            self.navigationController?.present(tipWithImageDetailViewController, animated: true, completion: nil)
+        }
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
