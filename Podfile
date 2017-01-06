@@ -21,6 +21,12 @@ target 'FourSquare' do
     # Utils
     pod 'ObjectMapper', '2.2.0'
     
+    # SDWebImage
+    pod 'SDWebImage', '3.8'
+    
+    # SVPullToRefresh
+    pod 'SVPullToRefresh', '0.4.1'
+    
     target 'FourSquareTests' do
         
     end

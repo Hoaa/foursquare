@@ -45,15 +45,7 @@ class ListDetailViewController: ViewController {
     
     override func loadData() {
         super.loadData()
-        venues = [(venueName: "Pho xua", venueAddress: "Dien Bien Phu", venueRate: 9.0, image: #imageLiteral(resourceName: "Feature_Like")),
-                  (venueName: "Ca phe COng", venueAddress: "Bach Dang", venueRate: 8.0, image: #imageLiteral(resourceName: "Feature_Rate")),
-                  (venueName: "Ca phe COng", venueAddress: "Bach Dang", venueRate: 8.0, image: #imageLiteral(resourceName: "Feature_Rate")),
-                  (venueName: "Pho xua", venueAddress: "Dien Bien Phu", venueRate: 7.0, image: #imageLiteral(resourceName: "Feature_Price")),
-                  (venueName: "Ca phe COng", venueAddress: "Bach Dang", venueRate: 6.0, image: #imageLiteral(resourceName: "Feature_Rate")),
-                  (venueName: "Pho xua", venueAddress: "Dien Bien Phu", venueRate: 5.0, image: #imageLiteral(resourceName: "Feature_Like")),
-                  (venueName: "Ca phe COng", venueAddress: "Bach Dang", venueRate: 4.0, image: #imageLiteral(resourceName: "Feature_Like")),
-                  (venueName: "Pho xua", venueAddress: "Dien Bien Phu", venueRate: 3.0, image: #imageLiteral(resourceName: "Feature_Price")),
-                  (venueName: "Ca phe COng", venueAddress: "Bach Dang", venueRate: 1.0, image: #imageLiteral(resourceName: "Feature_Price"))]
+        venues = [(venueName: "Pho xua", venueAddress: "Dien Bien Phu", venueRate: 9.0, image: #imageLiteral(resourceName: "Feature_Like"))]
     }
     
     override func configureUI() {
@@ -179,6 +171,8 @@ extension ListDetailViewController: UITableViewDataSource {
 extension ListDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let venueDetailVC = VenueDetailViewController(nibName: "VenueDetailViewController", bundle: nil)
+        venueDetailVC.venue = Venue()
+        venueDetailVC.venue.id = "4da1078d540ea1cd69555fde"
         self.navigationController?.pushViewController(venueDetailVC, animated: true)
     }
 }

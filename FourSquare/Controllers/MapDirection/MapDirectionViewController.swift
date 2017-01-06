@@ -14,7 +14,7 @@ import ObjectMapper
 class MapDirectionViewController: ViewController {
     
     // MARK: - Properties
-    var destinationLocation = CLLocationCoordinate2D(latitude: 16.09, longitude: 108.223)
+    var venue: Venue!
     
     fileprivate var currentLocation: CLLocationCoordinate2D?
     fileprivate var locationManager = CLLocationManager()
@@ -26,8 +26,8 @@ class MapDirectionViewController: ViewController {
     private var isLoadDone = false
     
     // MARK: - Outlet
-    @IBOutlet weak var instructionView: UIView!
-    @IBOutlet weak var instructionLabel: UILabel!
+    @IBOutlet fileprivate weak var instructionView: UIView!
+    @IBOutlet fileprivate weak var instructionLabel: UILabel!
     
     // MARK: - Override func
     override func viewDidLoad() {
@@ -40,6 +40,8 @@ class MapDirectionViewController: ViewController {
     
     override func configureUI() {
         super.configureUI()
+        instructionView.alpha = 0
+        instructionView.layer.cornerRadius = 10
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,7 +51,7 @@ class MapDirectionViewController: ViewController {
         }
         isLoadDone = true
         configureGoogleMapView()
-        congigureInstructionView()
+        self.view.bringSubview(toFront: instructionView)
         addDestinationMarkerToGoogleMapView()
     }
     
@@ -60,7 +62,7 @@ class MapDirectionViewController: ViewController {
         locationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
         locationManager.requestAlwaysAuthorization()
-        locationManager.distanceFilter = 30 //The minimum distance (m) device must move horizontal before update event's generated.
+        locationManager.distanceFilter = 30
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
         
@@ -79,60 +81,53 @@ class MapDirectionViewController: ViewController {
         mapView.delegate = self
     }
     
-    private func congigureInstructionView() {
-        self.view.bringSubview(toFront: instructionView)
-        instructionView.alpha = 0
-        instructionView.layer.cornerRadius = 10
-    }
-    
     fileprivate func addDestinationMarkerToGoogleMapView() {
-        let marker = GMSMarker(position: destinationLocation)
-        marker.title = "Destination place"
-        marker.map = mapView
+        if let latitude = venue.location?.latitude, let longitude = venue.location?.longitude {
+            let marker = GMSMarker(position: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
+            marker.title = venue.name
+            marker.map = mapView
+        }
     }
     
     fileprivate func addRoute() {
-        if let currentLocation = currentLocation {
-            let urlString = "https://maps.googleapis.com/maps/api/directions/json?origin=\(currentLocation.latitude),\(currentLocation.longitude)&destination=\(destinationLocation.latitude),\(destinationLocation.longitude)&key=AIzaSyDwy_jU6BQwPfmr_pvkNEdqECd9Px6CR6E"
-            Alamofire.request(urlString).responseJSON { response in
-                
-                if let json = response.result.value as? [String : Any] {
-                    if let gmsDirectionAPIResponse = Mapper<GMSDirectionAPIResponse>().map(JSON: json) {
-                        if gmsDirectionAPIResponse.status == "OK" {
-                            self.addPolyline(gmsDirectionAPIResponse: gmsDirectionAPIResponse)
-                            self.addStepDirection(gmsDirectionAPIResponse: gmsDirectionAPIResponse)
-                        }
-                    }
+        if let currentLocation = currentLocation,
+            let latitude = venue.location?.latitude,
+            let longitude = venue.location?.longitude {
+            let destination = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            GMSDirectionService.loadDirection(startLocation: currentLocation, endLocation: destination, completion: { (success, route) in
+                if let route = route {
+                    self.addPolyline(route: route)
+                    self.addStepDirection(route: route)
                 }
-            }
+            })
         }
     }
     
-    private func addPolyline(gmsDirectionAPIResponse: GMSDirectionAPIResponse) {
-        if let overviewPolylineString = gmsDirectionAPIResponse.routes?[0].overviewPolyline {
-            let path = GMSMutablePath(fromEncodedPath: overviewPolylineString)
-            let polyline = GMSPolyline(path: path)
-            let strokeStyle = GMSStrokeStyle.gradient(from: #colorLiteral(red: 0, green: 0.6730770469, blue: 1, alpha: 1), to: #colorLiteral(red: 0, green: 0.5628422499, blue: 0.3188166618, alpha: 1))
-            polyline.spans = [GMSStyleSpan(style: strokeStyle)]
-            polyline.strokeColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
-            polyline.strokeWidth = 5
-            polyline.geodesic = true
-            polyline.map = self.mapView
-        }
+    private func addPolyline(route: Route) {
+        let path = GMSMutablePath(fromEncodedPath: route.overviewPolyline)
+        let polyline = GMSPolyline(path: path)
+        let strokeStyle = GMSStrokeStyle.gradient(from: #colorLiteral(red: 0, green: 0.6730770469, blue: 1, alpha: 1), to: #colorLiteral(red: 0, green: 0.5628422499, blue: 0.3188166618, alpha: 1))
+        polyline.spans = [GMSStyleSpan(style: strokeStyle)]
+        polyline.strokeColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
+        polyline.strokeWidth = 5
+        polyline.geodesic = true
+        polyline.map = self.mapView
+        
     }
     
-    private func addStepDirection(gmsDirectionAPIResponse: GMSDirectionAPIResponse){
-        if let steps = gmsDirectionAPIResponse.routes?[0].legs[0].steps {
-            for i in 0..<steps.count  {
-                if let stepLocation = steps[i].startLocation {
-                    let circle = GMSCircle(position: stepLocation, radius: 10)
-                    circle.fillColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-                    circle.strokeColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-                    circle.strokeWidth = 1
-                    circle.title = steps[i].instruction
-                    circle.isTappable = true
-                    circle.map = self.mapView
-                }
+    private func addStepDirection(route: Route){
+        let steps = route.legs[0].steps
+        for i in 0..<steps.count  {
+            if let stepLocation = steps[i].startLocation {
+                let circle = GMSCircle(position: stepLocation, radius: 10)
+                circle.fillColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                circle.strokeColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+                circle.strokeWidth = 1
+                circle.title = steps[i].distanceText
+                    + " ~ " + steps[i].durationText
+                    + "\n" + steps[i].instruction
+                circle.isTappable = true
+                circle.map = self.mapView
             }
         }
     }
@@ -141,10 +136,12 @@ class MapDirectionViewController: ViewController {
         if let currentLocation = currentLocation {
             if mapView.isHidden {
                 mapView.isHidden = false
-                let lat = (currentLocation.latitude + destinationLocation.latitude) / 2
-                let lng = (currentLocation.longitude + destinationLocation.longitude) / 2
-                let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: lng, zoom: zoomLevel)
-                mapView.camera = camera
+                if let latitude = venue.location?.latitude, let longitude = venue.location?.longitude {
+                    let lat = (currentLocation.latitude + latitude) / 2
+                    let lng = (currentLocation.longitude + longitude) / 2
+                    let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: lng, zoom: zoomLevel)
+                    mapView.camera = camera
+                }
             } else {
                 let camera = GMSCameraPosition.camera(withLatitude: currentLocation.latitude, longitude: currentLocation.longitude, zoom: mapView.camera.zoom)
                 mapView.animate(to: camera)

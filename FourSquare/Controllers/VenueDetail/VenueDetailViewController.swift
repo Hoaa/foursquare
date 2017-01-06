@@ -8,22 +8,26 @@
 
 import UIKit
 import GoogleMaps
+import SDWebImage
+import SVPullToRefresh
 
 class VenueDetailViewController: ViewController {
     
     // MARK: - Properties
-    fileprivate var tips: [(userAvatar: UIImage?, username: String, datePost: Date, comment: String, commentImage: UIImage?)] = []
+    var venue: Venue!
     private var isLoadDone = false
+    private var isRefreshingDataVenue = false
+    private var isLoadingMoreTips = false
     private var mapView: GMSMapView!
-    var currentLocation: CLLocation?
-//    var placesClient: GMSPlacesClient!
-    // A default location to use when location permission is not granted.
-    let defaultLocation = CLLocation(latitude: 16.0762723, longitude: 108.2221608)
+    fileprivate var currentLocation: CLLocation?
+    fileprivate let defaultLocation = CLLocation(latitude: 16.0762723, longitude: 108.2221608)
+    fileprivate var offset = 0
+    fileprivate var limit = 10
     
     // MARK: - Outlet
     @IBOutlet private weak var imagesContainerView: UIView!
     @IBOutlet private weak var numberOfRatingsLabel: UILabel!
-    @IBOutlet private weak var rateColorImageView: UIImageView!
+    @IBOutlet private weak var rateColorView: UIView!
     @IBOutlet private weak var rateLabel: UILabel!
     @IBOutlet private weak var saveButtonImageView: UIImageView!
     @IBOutlet private weak var likeButtonImageView: UIImageView!
@@ -33,57 +37,108 @@ class VenueDetailViewController: ViewController {
     @IBOutlet private weak var venueAddressLabel: UILabel!
     @IBOutlet private weak var venuePriceLabel: UILabel!
     @IBOutlet private weak var venueCategoryLabel: UILabel!
-    @IBOutlet private weak var venuePhoneNumberLabel: UILabel!
     @IBOutlet private weak var tipTableView: UITableView!
     
     // MARK: - Override func
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         if isLoadDone {
             return
         }
         isLoadDone = !isLoadDone
-        configureImagesContainerView()
-        configureVenueInforContainerView()
-        configGoogleMapView()
-        addVenueToGoogleMapView()
         configureTipTableView()
     }
     
     override func loadData() {
         super.loadData()
-        tips = [(userAvatar: #imageLiteral(resourceName: "Feature_Price"), username: "Tam Tinh te", datePost: Date(), comment: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.", commentImage: #imageLiteral(resourceName: "523159398")),
-                (userAvatar: #imageLiteral(resourceName: "Feature_Price"), username: "Tam Tinh te", datePost: Date(), comment: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ", commentImage: #imageLiteral(resourceName: "Feature_Rate")),
-                (userAvatar: #imageLiteral(resourceName: "Feature_Price"), username: "Tam Tinh te", datePost: Date(), comment: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ", commentImage: nil),
-                (userAvatar: #imageLiteral(resourceName: "Feature_Price"), username: "Tam Tinh te", datePost: Date(), comment: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ", commentImage: nil),
-                (userAvatar: #imageLiteral(resourceName: "Feature_Price"), username: "Tam Tinh te", datePost: Date(), comment: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ", commentImage: #imageLiteral(resourceName: "Feature_Like")),
-                (userAvatar: #imageLiteral(resourceName: "Feature_Price"), username: "Tam Tinh te", datePost: Date(), comment: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. ", commentImage: nil),
-                (userAvatar: #imageLiteral(resourceName: "Feature_Price"), username: "Tam Tinh te", datePost: Date(), comment: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.", commentImage: nil)]
+        
+        VenueDetailService.loadVenueDetail(venueID: venue.id) { (success, error) in
+            self.reloadVenueDetail()
+            
+            VenueTipsService.loadVenueTips(venueID: self.venue.id, sort: "recent", offset: self.offset, limit: self.limit, completion: { (success, error) in
+                self.reloadVenueTips()
+            })
+        }
     }
     
     override func configureUI() {
         super.configureUI()
+        self.navigationItem.hidesBackButton = true
+        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(back))
+        self.navigationItem.leftBarButtonItem = backButton
+        rateColorView.conerRadiusWith(value: 5)
     }
     
     // MARK: - Private func
-    private func configureVenueInforContainerView() {
+    
+    // This func is only called after pulling to refresh
+    private func refreshData() {
+        if isRefreshingDataVenue {
+            self.tipTableView.pullToRefreshView.stopAnimating()
+            return
+        }
+        isRefreshingDataVenue = true
+        // Clear all data of venue before refresh
+        RealmManager.sharedInstance.deleteAllVenuePhotos(venueID: venue.id)
+        RealmManager.sharedInstance.deleteAllVenueTips(venueID: venue.id)
+        
+        offset = 0
+        self.tipTableView.showsInfiniteScrolling = true
+        
+        VenueDetailService.loadVenueDetail(venueID: venue.id) { (success, error) in
+            self.reloadVenueDetail()
+            self.isRefreshingDataVenue = false
+            VenueTipsService.loadVenueTips(venueID: self.venue.id, sort: "recent", offset: self.offset, limit: self.limit, completion: { (success, error) in
+                self.reloadVenueTips()
+                self.tipTableView.pullToRefreshView.stopAnimating()
+            })
+        }
+    }
+    
+    // This func is called in func loadData() and refreshDataVenue()
+    private func reloadVenueDetail() {
+        venue = RealmManager.sharedInstance.getVenueDetail(id: venue.id)
+        configureImagesContainerView()
+        configureVenueInforContainerView()
+        configGoogleMapView()
+    }
+    
+    // This func is called in func loadData() and refreshDataVenue()
+    private func reloadVenueTips() {
+        venue = RealmManager.sharedInstance.getVenueDetail(id: venue.id)
+        tipTableView.reloadData()
+    }
+    
+    // This func is only called when loading more
+    private func loadMoreTips() {
+        VenueTipsService.loadVenueTips(venueID: venue.id, sort: "recent", offset: offset, limit: limit, completion: { (success, error) in
+            var indexPath: [IndexPath] = []
+            if self.offset > self.venue.tips.count{
+                self.tipTableView.infiniteScrollingView.stopAnimating()
+                return
+            }
+            for i in self.offset..<self.venue.tips.count {
+                indexPath.append(IndexPath(row: i, section: 0))
+            }
+            self.tipTableView.insertRows(at: indexPath, with: .fade)
+            self.tipTableView.infiniteScrollingView.stopAnimating()
+        })
     }
     
     private func configureImagesContainerView() {
         var count = 0
         let imageSize = CGSize(width: imagesContainerView.bounds.width / 3, height: imagesContainerView.bounds.height)
-        for i in 0..<tips.count {
-            if tips[i].commentImage != nil {
+        for i in 0..<venue.photos.count {
+            if let url = venue.photos[i].venuePhotoURL {
                 let frame = CGRect(x: imageSize.width * CGFloat(count), y: 0, width: imageSize.width, height: imageSize.height)
                 let imageView = UIImageView(frame: frame)
                 imageView.contentMode = .scaleAspectFill
                 imageView.clipsToBounds = true
-                imageView.image = tips[i].commentImage
+                imageView.sd_setImage(with: url)
                 imagesContainerView.addSubview(imageView)
                 count += 1
             }
@@ -93,25 +148,38 @@ class VenueDetailViewController: ViewController {
         }
     }
     
-    private func configGoogleMapView() {
-//        placesClient = GMSPlacesClient.shared()
-        let camera = GMSCameraPosition.camera(withLatitude: defaultLocation.coordinate.latitude,
-                                              longitude: defaultLocation.coordinate.longitude,
-                                              zoom: 15)
-        mapView = GMSMapView.map(withFrame: self.view.bounds, camera: camera)
-        let firstColor = UIColor(red: 254, green: 254, blue: 254, alpha: 1)
-        let secondColor = UIColor(red: 254, green: 254, blue: 254, alpha: 0)
-        mapView.applyGradientLayer(firstColor: firstColor, secondColor: secondColor)
-        mapContainerView.clipsToBounds = true
-        mapContainerView.addSubview(mapView)
-        
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: defaultLocation.coordinate.latitude, longitude: defaultLocation.coordinate.longitude)
-        marker.appearAnimation = kGMSMarkerAnimationPop
-        marker.map = mapView
+    private func configureVenueInforContainerView() {
+        rateColorView.backgroundColor = venue.ratingColor
+        rateLabel.text = "\(venue.rating)"
+        numberOfRatingsLabel.text = "Base on \(venue.ratingSignals) ratings"
+        venueNameLabel.text = venue.name
+        venueAddressLabel.text = venue.location?.address
+        venuePriceLabel.text = venue.price?.showCurrency()
+        venueCategoryLabel.text = venue.getCategoriesName()
     }
     
-    private func addVenueToGoogleMapView(){
+    private func configGoogleMapView() {
+        if let location = venue.location {
+            let camera = GMSCameraPosition.camera(withLatitude: location.latitude,
+                                                  longitude: location.longitude,
+                                                  zoom: 15)
+            let frame = CGRect(x: mapContainerView.bounds.width / 2, y: 0, width: mapContainerView.bounds.width / 2, height: mapContainerView.bounds.height)
+            mapView = GMSMapView.map(withFrame: frame, camera: camera)
+            
+            let whiteColor = UIColor(red: 254, green: 254, blue: 254, alpha: 1)
+            let whiteTransColor = UIColor(red: 254, green: 254, blue: 254, alpha: 0)
+            mapView.applyGradientLayerHorizontal(firstColor: whiteColor, secondColor: whiteTransColor)
+            let views = mapContainerView.subviews
+            for view in views {
+                view.removeFromSuperview()
+            }
+            mapContainerView.addSubview(mapView)
+            
+            let marker = GMSMarker()
+            marker.position = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+            marker.appearAnimation = kGMSMarkerAnimationPop
+            marker.map = mapView
+        }
     }
     
     private func configureTipTableView() {
@@ -126,6 +194,26 @@ class VenueDetailViewController: ViewController {
         // Datasource and Delegate
         tipTableView.dataSource = self
         tipTableView.delegate = self
+        
+        // Set up refresh and load more control
+        tipTableView.addPullToRefresh(actionHandler: {
+            self.refreshData()
+        })
+        
+        tipTableView.addInfiniteScrolling(actionHandler: {
+            if self.offset <= self.venue.tips.count {
+                self.offset += self.limit
+                self.loadMoreTips()
+            } else {
+                self.tipTableView.showsInfiniteScrolling = false
+            }
+        })
+    }
+    
+    @objc private func back() {
+        RealmManager.sharedInstance.deleteAllVenuePhotos(venueID: venue.id)
+        RealmManager.sharedInstance.deleteAllVenueTips(venueID: venue.id)
+        _ = self.navigationController?.popViewController(animated: true)
     }
     
     // MARK: - Action
@@ -150,8 +238,8 @@ class VenueDetailViewController: ViewController {
     
     @IBAction func showDirection(_ sender: UIButton) {
         let mapDirectionViewController = MapDirectionViewController(nibName: "MapDirectionViewController", bundle: nil)
-        self.navigationController?.pushViewController(mapDirectionViewController, animated: true)
-    }
+        mapDirectionViewController.venue = venue
+        self.navigationController?.pushViewController(mapDirectionViewController, animated: true)    }
 }
 
 extension VenueDetailViewController: UITableViewDataSource {
@@ -160,20 +248,20 @@ extension VenueDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tips.count
+        return venue.tips.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let tipTableViewCell = tableView.dequeueReusableCell(withIdentifier: "TipTableViewCell", for: indexPath) as? TipTableViewCell
             else { return UITableViewCell() }
-        if let image = tips[indexPath.row].userAvatar {
-            tipTableViewCell.userImageView.image = image
+        if let url = venue.tips[indexPath.row].userAvatarURL {
+            tipTableViewCell.userImageView.sd_setImage(with: url)
         }
-        tipTableViewCell.usernameLabel.text = tips[indexPath.row].username
-        tipTableViewCell.postDateLabel.text = String(describing: tips[indexPath.row].datePost)
-        tipTableViewCell.commentLabel.text = tips[indexPath.row].comment
-        if let image = tips[indexPath.row].commentImage {
-            tipTableViewCell.commentImageView.image = image
+        tipTableViewCell.usernameLabel.text = venue.tips[indexPath.row].userFullName
+        tipTableViewCell.postDateLabel.text = "\(venue.tips[indexPath.row].createdAt)"
+        tipTableViewCell.commentLabel.text = venue.tips[indexPath.row].text
+        if let url = venue.tips[indexPath.row].tipPhotoURL {
+            tipTableViewCell.commentImageView.sd_setImage(with: url)
             tipTableViewCell.commentImageViewHeightConstraint.constant = 167.5
         } else {
             tipTableViewCell.commentImageViewHeightConstraint.constant = 0
@@ -184,13 +272,9 @@ extension VenueDetailViewController: UITableViewDataSource {
 
 extension VenueDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let image = tips[indexPath.row].commentImage {
+        if let _ = venue.tips[indexPath.row].tipPhotoURL {
             let tipWithImageDetailViewController = TipWithImageDetailViewController(nibName: "TipWithImageDetailViewController", bundle: nil)
-            tipWithImageDetailViewController.tip = (username: tips[indexPath.row].username,
-                                                    datePost: tips[indexPath.row].datePost,
-                                                    comment: tips[indexPath.row].comment,
-                                                    commentImage: image)
-//            self.navigationController?.pushViewController(tipWithImageDetailViewController, animated: true)
+            tipWithImageDetailViewController.tip = venue.tips[indexPath.row]
             self.navigationController?.present(tipWithImageDetailViewController, animated: true, completion: nil)
         }
     }

@@ -11,7 +11,7 @@ import UIKit
 class TipWithImageDetailViewController: ViewController {
     
     // MARK: - Properties
-    var tip: (username: String, datePost: Date, comment: String, commentImage: UIImage)!
+    var tip: VenueTip!
     private var isLoadDone = false
     // MARK: - Outlet
     @IBOutlet private weak var imageContainerScrollView: UIScrollView!
@@ -30,7 +30,7 @@ class TipWithImageDetailViewController: ViewController {
     }
     
     fileprivate var imageSize: CGSize {
-        return tip.commentImage.size
+        return CGSize(width: tip.tipPhotoWidth, height: tip.tipPhotoHeight)
     }
     
     fileprivate var imageViewSize: CGSize {
@@ -41,7 +41,17 @@ class TipWithImageDetailViewController: ViewController {
         super.viewDidLoad()
         configureImageView()
         imageContainerScrollView.delegate = self
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if isLoadDone {
+            return
+        }
+        isLoadDone = !isLoadDone
+        let firstColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+        let secondColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        tipInforContainerView.applyGradientLayerVetical(firstColor: firstColor, secondColor: secondColor)
     }
 
     override func viewDidLayoutSubviews() {
@@ -56,13 +66,16 @@ class TipWithImageDetailViewController: ViewController {
     
     override func configureUI() {
         super.configureUI()
+        usernameLabel.text = tip.userFullName
+        postDateLabel.text = "\(tip.createdAt)"
+        commentLabel.text = tip.text
     }
     
     // MARK: - Private func
     
     private func configureImageView() {
-        imageView.image = tip.commentImage
-        imageView.frame.size = tip.commentImage.size
+        imageView.sd_setImage(with: tip.tipPhotoURL)
+        imageView.frame.size = CGSize(width: tip.tipPhotoWidth, height: tip.tipPhotoHeight)
     }
     
     private func updateMinZoomScaleForSize(size: CGSize) {
